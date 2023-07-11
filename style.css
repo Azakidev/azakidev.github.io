@@ -51,7 +51,7 @@ body {
   transform: translate(-50%, -50%);
   z-index: 2;
   
-  width: min(500px, 60vw);
+  width: min(500px, 80vw);
   aspect-ratio: 1;
   padding: max(0px, 1vh);
   
