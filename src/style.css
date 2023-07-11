@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@1000&display=swap');
+
+:root {
+  --bg-rgb: 25, 25, 25;
+  --container-border: 65, 65, 65;
+  --container-bg: 70, 70, 70;
+}
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: rgb(var(--bg-rgb));
+}
+
+.bg img {
+  position: absolute;
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  user-select: none;
+  opacity: 0.1;
+  filter: blur(5px);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+.gradient {
+  position: fixed;
+  bottom: 0px;
+  z-index: 1;
+  aspect-ratio:16/9;
+  margin: 0 auto;
+  
+  background: radial-gradient(circle at center bottom, #C22BDF, rgba(var(--bg-rgb), 0) 40%);
+  animation: breathe 10s infinite ease-in-out;
+}
+
+@keyframes breathe {
+  from, to {height: 50%;}
+  50% {height: 100%;}
+}
+
+.card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  
+  width: min(500px, 60vw);
+  aspect-ratio: 1;
+  padding: max(0px, 1vh);
+  
+  border: 2px solid rgb(var(--container-border));
+  border-radius: 2rem;
+  
+  background-color: rgba(var(--container-bg), 0.2);
+  backdrop-filter: blur(70px);
+}
+
+.text {
+  position: relative;
+  margin: 2vmin;
+  user-select: none;
+}
+
+.text h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: min(70.4px, 8vw);
+  text-align: center;
+  
+  color: #cacaca;
+  transition: 500ms;
+}
+.text h1:hover {
+  font-size: min(72px, 8.4vw);
+  color: white;
+}
+
+.text p {
+  font-family: 'Nunito sans', sans-serif;
+  font-size: min(24px, 4vmin);
+  text-align: center;
+  
+  color: #cacaca;
+}
+
+.socials {
+  font-size: min(32px, 6vmin);
+  text-align: center;
+  letter-spacing: 0.2em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  user-select: none;
+}
+.socials i {
+  color: white;
+  transition: 400ms;
+}
+
+.fa-twitter:hover {
+  color: #00a3e8;
+  font-size: min(36px, 7vmin);
+}
+
+.fa-mastodon:hover {
+  color: #2b8fda;
+  font-size: min(36px, 7vmin);
+}
+
+.fa-paw:hover {
+  color: #957779;
+  font-size: min(36px, 7vmin);
+}
+
+.fa-github:hover {
+  color: #51d4ff;
+  font-size: min(36px, 7vmin);
+}
