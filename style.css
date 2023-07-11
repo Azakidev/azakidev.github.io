@@ -57,8 +57,6 @@ body {
   
   border: 2px solid rgb(var(--container-border));
   border-radius: 2rem;
-  
-  background-color: rgba(var(--container-bg), 0.2);
   backdrop-filter: blur(70px);
 }
 
