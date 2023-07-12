@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@1000&display=swap');
+
+:root {
+  --bg-rgb: 25, 25, 25;
+  --container-border: 65, 65, 65;
+  --container-bg: 70, 70, 70;
+  --button: 90, 90, 90;
+}
+
+html, body {
+  background-color: rgb(var(--bg-rgb));
+  margin: 0;
+  overflow: hidden;
+}
+
+#blob {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  height: 200px;
+  aspect-ratio: 1;
+
+  scale: .5;
+  opacity: .5;
+  filter: blur(100px);
+  animation: rotate 20s infinite;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  z-index: 1;
+}
+
+.dot-grid  {
+  position: absolute;
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+  /* diameter of the circle */
+  --d: 2.5px; 
+   
+  background : radial-gradient(
+    circle at 
+       var(--d) 
+       var(--d), 
+       
+    rgba(255, 255, 255, 0.1) calc(var(--d) - 1px), 
+    #00000000 var(--d)
+  ) 10px 10px;
+  background-size: 40px 40px;
+}
+
+.prices {
+  position: absolute;
+  height: 100%;
+  margin-left: min(2%, 1.5vmin);
+  aspect-ratio: 1;
+  z-index: 2;
+  display: grid;
+  align-items: center;
+  object-fit: contain;
+}
+
+.prices img {
+  width: 90%;
+  border-radius: 1rem;
+  aspect-ratio: 1;
+  z-index: 1;
+  transition-duration: 200ms;
+  
+}
+
+.prices img:hover {
+  width: 91%;
+  border-radius: .5rem;
+  box-shadow: 0 0 20px #C22BDF;
+}
+
+.card {
+  position: fixed;
+  right: 0;
+  top: 10vh;
+  width: 45%;
+  height: 70%;
+  padding: 0;
+  z-index: 2;
+  display: grid;
+  text-align: center;
+  margin: 5vmin;
+  margin-right: min(4vmin, 5vh);
+  border: 2px solid rgb(var(--container-border));
+  border-radius: 4vmin;
+  backdrop-filter: blur(70px);
+}
+
+.text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 2rem;
+  z-index: 3;
+  text-align: center;
+}
+
+.text h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: max(72px, 8vmin);
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #cacaca;
+  transition: 500ms;
+}
+
+.text h1:hover {
+  color: white;
+}
+
+.text p {
+  font-family: 'Nunito sans', sans-serif;
+  font-size: max(24px, 2vmin);
+  text-align: center;
+  line-height: 8vmin;
+  color: #cacaca;
+}
+
+.contact {
+  font-family: 'Nunito', sans-serif;
+  font-size: max(24px, 2vmin);
+  text-decoration: none;
+  color: white;
+  padding: 2vmin;
+  border-radius: 1rem;
+  background: rgb(var(--button));
+  transition-duration: 500ms;
+}
+
+.contact:hover {
+  background: #C22BDF;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px #e27bf7;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  opacity: 0.5;
+  font-family: 'Nunito sans', sans-serif;
+  font-size: 1vmin;
+  user-select: none;
+  margin: 0.5vmin;
+}
