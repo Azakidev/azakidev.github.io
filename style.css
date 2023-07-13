@@ -17,7 +17,7 @@ body {
 }
 
 .bg img {
-  position: absolute;
+  position: fixed;
   z-index: 0;
   height: 100vh;
   width: 100vw;
@@ -27,7 +27,7 @@ body {
 }
 
 .dot-grid  {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   height: 100vh;
   width: 100vw;
@@ -150,6 +150,11 @@ body {
   transition: 400ms;
 }
 
+.fa-discord:hover {
+  color: #586aea;
+  font-size: clamp(36px, 7vw, 2.8rem);
+}
+
 .fa-twitter:hover {
   color: #00a3e8;
   font-size: clamp(36px, 7vw, 2.8rem);
@@ -164,9 +169,12 @@ body {
   color: #957779;
   font-size: clamp(36px, 7vw, 2.8rem);
 }
-
 .fa-github:hover {
   color: #51d4ff;
+  font-size: clamp(36px, 7vw, 2.8rem);
+}
+.fa-envelope:hover {
+  color: #C22BDF;
   font-size: clamp(36px, 7vw, 2.8rem);
 }
 
@@ -191,7 +199,7 @@ body {
 
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   color: white;
