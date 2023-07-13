@@ -69,7 +69,6 @@ html, body {
   scale: .5;
   opacity: .5;
   filter: blur(100px);
-  animation: rotate 20s infinite;
   
   position: absolute;
   left: 50%;
