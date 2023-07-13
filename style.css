@@ -5,6 +5,7 @@
   --container-border: 65, 65, 65;
   --container-bg: 70, 70, 70;
   --button: 90, 90, 90;
+  --d: 2.5px;
 }
 html,
 body {
@@ -12,7 +13,7 @@ body {
   width: 100vw;
   margin: 0;
   background-color: rgb(var(--bg-rgb));
-  overflow: hidden; 
+  
 }
 
 .bg img {
@@ -30,8 +31,7 @@ body {
   z-index: 1;
   height: 100vh;
   width: 100vw;
-  /* diameter of the circle */
-  --d: 2.5px; 
+  overflow: hidden;
    
   background : radial-gradient(
     circle at 
@@ -86,16 +86,23 @@ body {
   50% {height: 100%;}
 }
 
+.cardwrapper {
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+
 .card {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  place-self: center;
   z-index: 4;
   
-  width: min(500px, 60vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  width: clamp(600px, 40rem, 50%);
   aspect-ratio: 1;
-  padding: max(0px, 1vh);
+  padding: 2rem;
   
   border: 2px solid rgb(var(--container-border));
   border-radius: 2rem;
@@ -107,34 +114,35 @@ body {
   margin: 2vmin;
   user-select: none;
   margin-bottom: 6vmin;
+  text-align: center;
 }
 
 .text h1 {
   font-family: 'Nunito', sans-serif;
-  font-size: min(70.4px, 8vw);
-  text-align: center;
-  margin-bottom: 0;
+  font-size: clamp(70.4px, 8vw, 6rem);
+  margin: 0;
+  margin-bottom: 2rem;
   color: #cacaca;
   transition: 500ms;
 }
 .text h1:hover {
-  font-size: min(72px, 8.4vw);
+  font-size: clamp(72px, 8.4vw, 6.2rem);
   color: white;
 }
 
 .text p {
   font-family: 'Nunito sans', sans-serif;
-  font-size: min(24px, 4vmin);
-  text-align: center;
+  font-size: clamp(24px, 4vw, 2rem);
+  line-height: 3rem;
+  margin-top: 1rem;
   color: #cacaca;
 }
 
 .socials {
-  font-size: min(32px, 6vmin);
+  font-size: clamp(32px, 6vw, 2.5rem);
   text-align: center;
   letter-spacing: 0.2em;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   user-select: none;
 }
 .socials i {
@@ -144,31 +152,31 @@ body {
 
 .fa-twitter:hover {
   color: #00a3e8;
-  font-size: min(36px, 7vmin);
+  font-size: clamp(36px, 7vw, 2.8rem);
 }
 
 .fa-mastodon:hover {
   color: #2b8fda;
-  font-size: min(36px, 7vmin);
+  font-size: clamp(36px, 7vw, 2.8rem);
 }
 
 .fa-paw:hover {
   color: #957779;
-  font-size: min(36px, 7vmin);
+  font-size: clamp(36px, 7vw, 2.8rem);
 }
 
 .fa-github:hover {
   color: #51d4ff;
-  font-size: min(36px, 7vmin);
+  font-size: clamp(36px, 7vw, 2.8rem);
 }
 
 .prices {
   font-family: 'Nunito', sans-serif;
-  font-size: max(24px, 2vmin);
+  font-size: clamp(32px, 6vw, 2rem);
   text-decoration: none;
   color: white;
   letter-spacing: normal;
-  padding: 2vmin;
+  padding: 1.5rem;
   border-radius: 1rem;
   background: rgb(var(--button));
   transition-duration: 500ms;
