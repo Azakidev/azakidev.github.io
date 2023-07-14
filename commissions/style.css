@@ -75,6 +75,7 @@ html, body {
   top: 50%;
   translate: -50% -50%;
   z-index: 1;
+  user-select: none;
 }
 
 .dot-grid  {
@@ -112,8 +113,8 @@ html, body {
   border-radius: 1rem;
   aspect-ratio: 1;
   z-index: 1;
-  transition-duration: 200ms;
-  
+  user-select: none;
+  transition-duration: 200ms;  
 }
 
 .prices img:hover {
@@ -160,6 +161,11 @@ html, body {
   color: #cacaca;
 }
 
+.buttons {
+  display: flex;
+  gap: 2rem;
+}
+
 .contact {
   font-family: 'Nunito', sans-serif;
   font-size: clamp(24px, 3vmin, 2rem);
@@ -176,6 +182,26 @@ html, body {
   border-radius: 0.5rem;
   box-shadow: 0 0 20px #e27bf7;
   letter-spacing: 2px;
+}
+
+.labs {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(24px, 3vmin, 2rem);
+  text-decoration: none;
+  color: white;
+  padding: 2vmin;
+  border-radius: 1rem;
+  background: rgb(var(--button));
+  transition-duration: 500ms;
+}
+.labs:hover {
+  background: #51d4ff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px #83c9ca;
+  letter-spacing: 2px;
+}
+.labs i {
+    margin-right: 0.5rem;
 }
 
 footer {

@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@1000&display=swap');
+
+:root {
+  --bg-rgb: 10, 40, 75;
+  --container-border: 65, 65, 65;
+  --container-bg: 70, 70, 70;
+  --button: 90, 90, 90;
+  --d: 2.5px; 
+}
+
+@media only screen and (width < 1000px) {
+  .cards {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 2vh;
+  }
+  .card {
+    width: 90vw;
+    height: 60vh;
+  }
+  .card:hover {
+    width: 91vw;
+    height: 61vh;
+  }
+}
+
+@media only screen and (width < 1445px) {
+  .header > a > i {
+    top:20%;
+  }
+}
+
+@media only screen and (width > 1445px) {
+  .header > a > i {
+    top:50%;
+  }
+}
+
+@media only screen and (width > 1000px) {
+  .cards {
+    flex-direction: row;
+    height: 100%;
+    margin: 2vw;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 45rem;
+    height: 35rem;
+  }
+  .card:hover {
+    width: 46rem;
+    height: 35.5rem;
+  }
+}
+
+html, body {
+  background-color: rgb(var(--bg-rgb));
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dot-grid  {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+  background : radial-gradient(
+    circle at 
+       var(--d) 
+       var(--d), 
+       
+    rgba(255, 255, 255, 0.1) calc(var(--d) - 1px), 
+    #00000000 var(--d)
+  ) 10px 10px;
+  background-size: 40px 40px;
+}
+
+.header {
+  position: relative;
+  width: 100vw;
+  z-index: 1;
+  overflow: hidden;
+  height: auto;
+  margin: 0;
+  text-align: center;
+  color: white;
+
+  background-size: 2vh 1vw;
+  background: linear-gradient(90deg, rgba(255, 255, 255,.25) 2px, transparent 2px),
+              linear-gradient(0deg, rgba(255, 255, 255,.25) 2px, transparent 2px),#1d57a0;
+  background-size: 2vmin 2vmin;
+  background-position: 50% 50%;
+
+  transition-duration: 200ms;
+}
+
+.header:hover {
+  background-size: 4vmin 4vmin;
+}
+
+.header > a > i {
+  position: absolute;
+  left: 0;
+  translate: 0 -50%;
+  margin-left: 2vw;
+  text-decoration: none;
+  font-size: clamp(40px, 2vw, 2rem);
+  color: white;
+  background-color: rgba(var(--button), 0.8);
+  border-radius: 1rem;
+  padding: 1rem;
+  transition-duration: 200ms;
+}
+
+.header > a > i:hover {
+  background: #C22BDF;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px #e27bf7;
+}
+
+
+.header h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(80px, 4vw, 3rem);
+  margin: min(2vmin, 2vh);
+  margin-top: 0;
+  transition-duration: 200ms;
+}
+.header h2 {
+  font-family: 'Nunito sans', sans-serif;
+  font-size: clamp(40px, 2vw, 2rem);
+  margin: 0;
+  margin-bottom: min(2vmin,2vh);
+  transition-duration: 200ms;
+}
+
+.header:hover h1, .header:hover h2 {
+  text-shadow: 0 0 20px #000000 ;
+}
+.cards {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 1;
+  margin-top: 2rem;
+}
+.card {
+  position: relative;
+  display: inline-block;
+  transition-duration: 200ms;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-radius: .5rem;
+  box-shadow: 0 0 20px #C22BDF;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background-color: rgba(var(--button), .4);
+  backdrop-filter: blur(200px);
+  vertical-align: middle;
+}
+.overlay h1 {
+  color: white;
+  margin: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(43px, 4vw, 2rem);
+}
+
+.overlay h2 {
+  color: white;
+  margin: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(40px, 3vw, 2rem);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+}
+
+#lless {
+  object-position: 0 20%;
+}
+
+
+#animloop {
+  object-position: top;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: white;
+  opacity: 0.5;
+  font-family: 'Nunito sans', sans-serif;
+  font-size: 1vmin;
+  user-select: none;
+  margin: 0.5vmin;
+}
