@@ -57,6 +57,7 @@ body {
   translate: -50% -50%;
   z-index: 2;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .wrapper {
@@ -99,6 +100,7 @@ body {
   border: 2px solid rgb(var(--container-border));
   border-radius: 2rem;
   backdrop-filter: blur(70px);
+  -webkit-backdrop-filter: blur(70px);
 }
 
 .text {
@@ -135,6 +137,7 @@ body {
   letter-spacing: 0.2em;
   margin-bottom: 2rem;
   user-select: none;
+  -webkit-user-select: none;
 }
 .socials i {
   color: white;
@@ -198,5 +201,6 @@ footer {
   font-family: 'Nunito sans', sans-serif;
   font-size: 1vmin;
   user-select: none;
+  -webkit-user-select: none;
   margin: 0.5vmin;
 }

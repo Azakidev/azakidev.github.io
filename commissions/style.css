@@ -76,6 +76,7 @@ html, body {
   translate: -50% -50%;
   z-index: 1;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .dot-grid  {
@@ -114,6 +115,7 @@ html, body {
   aspect-ratio: 1;
   z-index: 1;
   user-select: none;
+  -webkit-user-select: none;
   transition-duration: 200ms;  
 }
 
@@ -129,6 +131,7 @@ html, body {
   border: 2px solid rgb(var(--container-border));
   border-radius: 4vmin;
   backdrop-filter: blur(70px);
+  -webkit-backdrop-filter: blur(70px);
 }
 
 .text {
@@ -163,10 +166,11 @@ html, body {
 
 .buttons {
   display: flex;
-  gap: 2rem;
+  justify-content: space-around;
+  width: 100%;
 }
 
-.contact {
+.button {
   font-family: 'Nunito', sans-serif;
   font-size: clamp(24px, 3vmin, 2rem);
   text-decoration: none;
@@ -177,31 +181,24 @@ html, body {
   transition-duration: 500ms;
 }
 
-.contact:hover {
+.button:hover {
+  border-radius: 0.5rem;
+  letter-spacing: 2px;
+}
+#contact:hover {
   background: #C22BDF;
-  border-radius: 0.5rem;
   box-shadow: 0 0 20px #e27bf7;
-  letter-spacing: 2px;
 }
-
-.labs {
-  font-family: 'Nunito', sans-serif;
-  font-size: clamp(24px, 3vmin, 2rem);
-  text-decoration: none;
-  color: white;
-  padding: 2vmin;
-  border-radius: 1rem;
-  background: rgb(var(--button));
-  transition-duration: 500ms;
+#ych:hover {
+  background: #831299;
+  box-shadow: 0 0 20px #C22BDF;
 }
-.labs:hover {
-  background: #51d4ff;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 20px #83c9ca;
-  letter-spacing: 2px;
-}
-.labs i {
+#labs i {
     margin-right: 0.5rem;
+}
+#labs:hover {
+  background: #51d4ff;
+  box-shadow: 0 0 20px #83c9ca;
 }
 
 footer {
@@ -213,5 +210,6 @@ footer {
   font-family: 'Nunito sans', sans-serif;
   font-size: 1vmin;
   user-select: none;
+  -webkit-user-select: none;
   margin: 0.5vmin;
 }
