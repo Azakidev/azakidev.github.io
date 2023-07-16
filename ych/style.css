@@ -199,15 +199,6 @@ html, body {
   user-select: none;
   -webkit-user-select: none;
 }
-
-#lless {
-  object-position: 0 20%;
-}
-
-
-#animloop {
-  object-position: top;
-}
 .bottom {
   position: relative;
   width: 100vw;
