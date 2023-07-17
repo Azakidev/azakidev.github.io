@@ -112,6 +112,7 @@ html, body {
 .prices img {
   width: 90%;
   border-radius: 1rem;
+  color: white;
   aspect-ratio: 1;
   z-index: 1;
   user-select: none;
