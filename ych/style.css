@@ -199,6 +199,9 @@ html, body {
   user-select: none;
   -webkit-user-select: none;
 }
+#bellyrub {
+  object-position: top;
+}
 .bottom {
   position: relative;
   width: 100%;
