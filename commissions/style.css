@@ -133,6 +133,7 @@ html, body {
   pointer-events: none;
   user-select: none;
   -webkit-user-select: none;
+  object-position: top;
 }
 .arrow {
   translate: 0 -75%;
