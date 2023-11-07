@@ -53,6 +53,7 @@
 @media only screen and (width > 1500px){
   .layout {
     align-items: center;
+    height: 100dvh;
   }
   .prices {
     width: 50%;
@@ -165,7 +166,7 @@ html, body {
 }
 
 .prices {
-  aspect-ratio: 1;
+  max-height: 100%;
   z-index: 2;
   display: grid;
   align-items: center;
@@ -173,7 +174,8 @@ html, body {
 }
 
 .prices img {
-  width: 90%;
+  width: 90dvh;
+  max-width: 90%;
   border-radius: 1rem;
   color: white;
   aspect-ratio: 1;
@@ -184,7 +186,7 @@ html, body {
 }
 
 .prices img:hover {
-  width: 91%;
+  width: 91dvh;
   border-radius: .5rem;
   box-shadow: 0 0 20px #C22BDF;
 }
