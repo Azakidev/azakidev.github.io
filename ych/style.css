@@ -17,12 +17,18 @@
     margin-bottom: 5vh;
     margin-bottom: 5vh;
   }
+}
 
+@media only screen and (width > 1000px) {
+  .header > a > i {
+    top:50%;
+    scale: 1.2;
+  }
+}
+
+@media only screen and (width < 92rem) {
   .cards {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    margin: 2vh;
+    grid-template-columns: 1fr;
   }
   .card {
     width: 90vw;
@@ -34,24 +40,18 @@
   }
 }
 
-@media only screen and (width > 1000px) {
-  .header > a > i {
-    top:50%;
-    scale: 1.2;
-  }
+@media only screen and (width > 92rem) {
   .cards {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
     height: 100%;
-    margin: 2vw;
-    flex-wrap: wrap;
   }
   .card {
-    width:  44rem;
-    height: 34.5rem;
+    width: 45rem;
+    height: 35rem;
   }
   .card:hover {
-    width:  45rem;
-    height: 35rem;
+    width: 46rem;
+    height: 35.5rem;
   }
 }
 
@@ -171,29 +171,29 @@ html, body {
 
 .cards {
   flex-shrink: 0;
+  width: 100%;
   height: auto;
   position: relative;
-  display: flex;
-  justify-content: center;
+  display: grid;
   gap: 2rem;
   z-index: 1;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  z-index: 3;
+  margin: 4vw;
 }
+
 .card {
   position: relative;
-  display: inline-block;
+  justify-self: center;
+  align-self: center;
+  transition-duration: 200ms;
   border-radius: 1rem;
   box-sizing: border-box;
   overflow: hidden;
-  transition-duration: 200ms;
 }
-
 .card:hover {
   border-radius: .5rem;
   box-shadow: 0 0 20px #C22BDF;
 }
+
 .overlay {
   position: absolute;
   bottom: -100%;
@@ -228,6 +228,7 @@ html, body {
   font-family: 'Nunito', sans-serif;
   font-size: clamp(40px, 3vw, 2rem);
 }
+
 .card img {
   width: 100%;
   height: 100%;
@@ -239,6 +240,7 @@ html, body {
 #bellyrub {
   object-position: top;
 }
+
 .bottom {
   position: relative;
   width: 100%;
@@ -248,6 +250,7 @@ html, body {
   align-self: flex-end;
   flex-shrink: 0;
 }
+
 footer {
   position: absolute;
   bottom: 0;
