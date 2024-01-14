@@ -3,7 +3,8 @@
   --container-border: 65, 65, 65;
   --container-bg: 70, 70, 70;
   --button: 90, 90, 90;
-  --d: 2.5px; 
+  --d: 2.5px;
+  --margin: 6vw;
 }
 
 @media only screen and (width < 1000px) {
@@ -104,13 +105,13 @@ html, body {
   position: absolute;
   left: 0;
   translate: 0 -50%;
-  margin-left: 2vw;
+  margin-left: 3vw;
   text-decoration: none;
-  font-size: clamp(40px, 2vw, 5rem);
+  font-size: clamp(14px, 2vw, 5rem);
   color: white;
   background-color: rgba(var(--button), 0.8);
-  border-radius: 1rem;
-  padding: 1rem;
+  border-radius: 25%;
+  padding: 2vmin;
   transition-duration: 200ms;
 }
 .grid > a > i:hover {
@@ -121,14 +122,14 @@ html, body {
 
 .header h1 {
   font-family: 'Nunito', sans-serif;
-  font-size: clamp(80px, 4vw, 3rem);
+  font-size: clamp(24px, 4vw, 3rem);
   margin: min(2vmin, 2vh);
   margin-top: 0;
   transition-duration: 200ms;
 }
 .header h2 {
   font-family: 'Nunito sans', sans-serif;
-  font-size: clamp(40px, 2vw, 2rem);
+  font-size: clamp(16px, 2vw, 2rem);
   margin: 0;
   transition-duration: 200ms;
 }
@@ -173,20 +174,18 @@ html, body {
   -webkit-backdrop-filter: blur(200px);
 }
 .overlay h1 {
+  align-self: center;
   color: white;
-  margin: 3rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-left: var(--margin);
   font-family: 'Nunito', sans-serif;
-  font-size: clamp(43px, 4vw, 2rem);
+  font-size: clamp(24px, 4vw, 2rem);
 }
 .overlay h2 {
+  align-self: center;
   color: white;
-  margin: 3rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-right: var(--margin);
   font-family: 'Nunito', sans-serif;
-  font-size: clamp(40px, 3vw, 2rem);
+  font-size: clamp(24px, 3vw, 2rem);
 }
 
 .card img {
