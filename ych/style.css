@@ -9,7 +9,7 @@
 
 @media only screen and (width < 1000px) {
   .header > a > i {
-    top:30%;
+    top:40%;
     scale: 1.3;
   }
 
