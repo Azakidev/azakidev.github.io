@@ -1,10 +1,4 @@
-:root {
-  --bg-rgb: 25, 25, 25;
-  --container-border: 65, 65, 65;
-  --container-bg: 70, 70, 70;
-  --button: 90, 90, 90;
-  --d: 2.5px; 
-}
+@import url(../styles/common.css);
 
 @media only screen and (width < 1300px){
   .arrow {
@@ -113,22 +107,6 @@ html, body {
   to {opacity: .5;}
 }
 
-.dot-grid  {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  z-index: 0;
-  background : radial-gradient(
-    circle at 
-       var(--d) 
-       var(--d), 
-       
-    rgba(255, 255, 255, 0.1) calc(var(--d) - 1px), 
-    #00000000 var(--d)
-  ) 10px 10px;
-  background-size: 40px 40px;
-}
 .banner {
   z-index: 2;
 }
@@ -194,37 +172,41 @@ html, body {
 .prices img:hover {
   width: 91dvh;
   border-radius: .5rem;
-  box-shadow: 0 0 20px #C22BDF;
+  box-shadow: 0 0 20px var(--main-accent);
 }
 
 .card {
   z-index: 2;
+
   text-align: center;
   border: 2px solid rgb(var(--container-border));
   border-radius: 4vmin;
+  
   backdrop-filter: blur(70px);
   -webkit-backdrop-filter: blur(70px);
 }
 
 .text {
   position: relative;
+
   display: flex;
   flex-direction: column;
+
   align-content: space-evenly;
   justify-content: center;
-  margin: 2rem;
-  z-index: 3;
   text-align: center;
+
+  z-index: 3;
+  margin: 2rem;
 }
 
 .text h1 {
   font-family: 'Nunito', sans-serif;
-  font-size: clamp(30px, 6vmin, 6rem);
+  font-size: clamp(28px, 6vmin, 6rem);
   margin-bottom: 20px;
-  color: #cacaca;
+  color: var(--text-soft);
   transition: 500ms;
 }
-
 .text h1:hover {
   color: white;
 }
@@ -233,13 +215,14 @@ html, body {
   font-family: 'Nunito sans', sans-serif;
   font-size: clamp(16px, 3vmin, 2rem);
   text-align: center;
-  color: #cacaca;
+  color: var(--text-soft);
 }
 
 .buttons {
   display: flex;
   justify-content: space-around;
   width: auto;
+  margin: 3rem 0 1rem 0;
 }
 
 .button {
@@ -248,40 +231,26 @@ html, body {
   text-decoration: none;
   color: white;
   padding: 2vmin;
-  border-radius: 1rem;
+  border-radius: var(--button-radius);
   background: rgb(var(--button));
   transition-duration: 500ms;
 }
-
 .button:hover {
-  border-radius: 0.5rem;
+  border-radius: calc(var(--button-radius) / 2);
   letter-spacing: 2px;
 }
 #contact:hover {
-  background: #C22BDF;
-  box-shadow: 0 0 20px #e27bf7;
+  background: var(--main-accent);
+  box-shadow: 0 0 20px var(--main-glow);
 }
 #ych:hover {
-  background: #831299;
-  box-shadow: 0 0 20px #C22BDF;
+  background: var(--ych-accent);
+  box-shadow: 0 0 20px var(--main-accent);
 }
 #labs i {
     margin-right: 0.5rem;
 }
 #labs:hover {
-  background: #51d4ff;
-  box-shadow: 0 0 20px #83c9ca;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  color: white;
-  opacity: 0.5;
-  font-family: 'Nunito sans', sans-serif;
-  font-size: 1vmin;
-  user-select: none;
-  -webkit-user-select: none;
-  margin: 0.5vmin;
+  background: var(--labs-accent);
+  box-shadow: 0 0 20px var(--labs-glow);
 }
