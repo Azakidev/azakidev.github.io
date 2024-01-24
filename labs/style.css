@@ -1,11 +1,5 @@
-:root {
-  --bg-rgb: 10, 40, 75;
-  --container-border: 65, 65, 65;
-  --container-bg: 70, 70, 70;
-  --button: 90, 90, 90;
-  --d: 2.5px;
-  --margin: 6vw;
-}
+@import url(../styles/common.css);
+@import url(../styles/ych-labs.css);
 
 @media only screen and (width < 1000px) {
   .grid > a > i {
@@ -13,14 +7,12 @@
     scale: 1.3;
   }
 }
-
 @media only screen and (width > 1000px) {
   .grid > a > i {
     top:50%;
     scale: 1.2;
   }
 }
-
 @media only screen and (width < 92rem) {
   .cards {
     grid-template-columns: 1fr;
@@ -49,11 +41,10 @@
   }
 }
 
-
 html, body {
   height: 100dvh;
   width: 100%;
-  background-color: rgb(var(--bg-rgb));
+  background-color: rgb(var(--labs-bg-rgb));
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -61,35 +52,6 @@ html, body {
   justify-content: space-between;
 }
 
-.dot-grid  {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  z-index: 0;
-  background : radial-gradient(
-    circle at 
-       var(--d) 
-       var(--d), 
-       
-    rgba(255, 255, 255, 0.1) calc(var(--d) - 1px), 
-    #00000000 var(--d)
-  ) 10px 10px;
-  background-size: 40px 40px;
-}
-
-.header {
-  flex-shrink: 0;
-  position: relative;
-  width: 100vw;
-  z-index: 1;
-  overflow: hidden;
-  height: auto;
-  margin: 0;
-  text-align: center;
-  color: white;
-
-}
 .grid {
   background: linear-gradient(90deg, rgba(255, 255, 255,.25) 2px, transparent 2px),
   linear-gradient(0deg, rgba(255, 255, 255,.25) 2px, transparent 2px),#1d57a0;
@@ -101,101 +63,16 @@ html, body {
 .header:hover > .grid {
   background-size: 7vmin 7vmin;
 }
-.grid > a > i {
-  position: absolute;
-  left: 0;
-  translate: 0 -50%;
-  margin-left: 3vw;
-  text-decoration: none;
-  font-size: clamp(14px, 2vw, 5rem);
-  color: white;
-  background-color: rgba(var(--button), 0.8);
-  border-radius: 25%;
-  padding: 2vmin;
-  transition-duration: 200ms;
-}
-.grid > a > i:hover {
-  background: #C22BDF;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 20px #e27bf7;
-}
 
-.header h1 {
-  font-family: 'Nunito', sans-serif;
-  font-size: clamp(24px, 4vw, 3rem);
-  margin: min(2vmin, 2vh);
-  margin-top: 0;
-  transition-duration: 200ms;
-}
-.header h2 {
-  font-family: 'Nunito sans', sans-serif;
-  font-size: clamp(16px, 2vw, 2rem);
-  margin: 0;
-  transition-duration: 200ms;
-}
-.header:hover h1, .header:hover h2 {
-  text-shadow: 0 0 20px #000000 ;
-}
-
-.cards {
-  flex-shrink: 0;
-  width: 100%;
-  height: auto;
-  position: relative;
-  display: grid;
-  gap: 2rem;
-  z-index: 1;
-  margin: 4vw;
-}
-
-.card {
-  position: relative;
-  justify-self: center;
-  align-self: center;
-  transition-duration: 200ms;
-  border-radius: 1rem;
-  box-sizing: border-box;
-  overflow: hidden;
-}
 .card:hover {
   border-radius: .5rem;
-  box-shadow: 0 0 20px #2b97df;
+  box-shadow: 0 0 20px var(--labs-accent);
 }
 
 .overlay {
-  position: absolute;
   bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  background-color: rgba(var(--button), .4);
-  backdrop-filter: blur(200px);
-  -webkit-backdrop-filter: blur(200px);
-}
-.overlay h1 {
-  align-self: center;
-  color: white;
-  margin-left: var(--margin);
-  font-family: 'Nunito', sans-serif;
-  font-size: clamp(24px, 4vw, 2rem);
-}
-.overlay h2 {
-  align-self: center;
-  color: white;
-  margin-right: var(--margin);
-  font-family: 'Nunito', sans-serif;
-  font-size: clamp(24px, 3vw, 2rem);
 }
 
-.card img {
-  width: 100%;
-  height: 100%;
-  color: white;
-  object-fit: cover;
-  user-select: none;
-  -webkit-user-select: none;
-}
 #refs {
   object-position: top;
 }
@@ -204,18 +81,4 @@ html, body {
 }
 #animloop {
   object-position: top;
-}
-
-footer {
-  flex-shrink: 0;
-  width: 100%;
-  text-align: end;
-  color: white;
-  opacity: 0.5;
-  font-family: 'Nunito sans', sans-serif;
-  font-size: 1vmin;
-  user-select: none;
-  -webkit-user-select: none;
-  margin: 0.5vmin;
-  margin-right: 1rem;
 }
