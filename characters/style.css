@@ -1,0 +1,216 @@
+@import url(../styles/common.css);
+@import url(accents.css);
+
+:root {
+  --margin: 10%
+}
+
+@media only screen and (width < 900px){
+  section{
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  h1 {
+    margin-bottom: 0;
+    margin-top: .5rem;
+  }
+  h2 {
+    margin-bottom: 0;
+  }
+  .reverse{
+    flex-direction: column;
+    text-align: center;
+  }
+  .card{
+    width: 100vw;
+    height: 60dvh;
+    padding: 1rem;
+    flex-shrink: 1;
+    text-align: center;
+  }
+  .character{
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+    height: 60%;
+  }
+  .back{
+    display: none;
+    transition-duration: 200ms;
+  }
+  img {
+    height: 90%;
+  }
+  #Maxwell img, #Nasu img, #Nath img {
+    height: 75%;
+  }
+}
+
+@media only screen and (width > 900px){
+  section {
+    flex-direction: row;
+  }
+  h1{
+    margin: 0;
+  }
+  h2 {
+    margin-bottom: var(--margin);
+  }
+  .reverse{
+    flex-direction: row-reverse;
+    text-align: end;
+  }
+  .card{
+    padding: 5rem;
+    padding-left: 6rem;
+    width: 60vw;
+  }
+  .character{
+    width: 40%;
+    height: 90%;
+  }
+  .back a i {
+    display: inline-block;
+    z-index: 999;
+    position: fixed;
+    margin: 1rem;
+    padding: 0.4em 0.45em;
+    scale: 0.9;
+    
+    background-color: rgba(var(--button), 0.8);
+    border-radius: 50%;
+    
+    animation: forwards fade-in 2.1s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition-duration: 200ms;
+    
+    text-decoration: none;
+    font-size: clamp(40px, 2vw, 2rem);
+    color: white;
+  }
+  #Reimi img {
+    scale: 1.1
+  }
+  #Reimi:hover img {
+    scale: 1.15
+  }
+}
+.back:hover a i {
+  background: var(--main-accent);
+  border-radius: 25%;
+  box-shadow: 0 0 20px var(--main-glow);
+}
+@keyframes fade-in {
+  from {opacity: 0;}
+  10% {opacity: 0;}
+  to {opacity: 1;}
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+#arrow{
+  z-index: 999;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  
+  
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+#arrow a {
+  color: white;
+  background-color: #555;
+  box-shadow: #000 0 0 1rem;
+  border-radius: 50%;
+  padding: .5rem;
+  width: 2rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsla(0,0%,25%,1);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.separator {
+  background: #222;
+  border-top: .5rem solid #FFFFFFDD;
+}
+
+#reverseimg img{
+  scale: -1 1;
+}
+#reverseimg:hover img {
+  scale: -1.05 1.05;
+}
+
+.character {
+  align-self: center;
+  background-color: transparent;
+  transition-property: scale;
+  display: flex;
+  justify-content: center;
+}
+.character:hover img {
+  scale: 1.05;
+}
+.character img {
+  transition-duration: 200ms;
+  width:  100%;
+  object-fit: contain;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.card {
+  display: grid;
+  place-items: center;
+  align-content: start;
+  
+  box-sizing: border-box;
+  color: white;
+}
+
+h1 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: clamp(20%, 9vmin, 7rem);
+  letter-spacing: 1.1px;
+
+  transition-duration: 200ms;
+}
+h2 {
+  margin-top: 0;
+  
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-size: clamp(20px, 4vmin, 6rem);
+  letter-spacing: 1.1px;
+  opacity: 0.6;
+
+  transition-duration: 200ms;
+}
+h2:hover {
+  opacity: 1;
+}
+p {
+  font-family: 'Nunito sans', sans-serif;
+  font-size: clamp(10%, 2rem, 5vmin);
+  margin-bottom: 0;
+}
