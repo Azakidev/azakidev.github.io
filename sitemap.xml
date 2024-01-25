@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://azakidev.github.io/index.html</loc>
-        <lastmod>2024-1-24</lastmod>
+        <lastmod>2024-01-24</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://azakidev.github.io/commissions/index.html</loc>
-        <lastmod>2024-1-24</lastmod>
+        <lastmod>2024-01-24</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://azakidev.github.io/ych/index.html</loc>
-        <lastmod>2024-1-24</lastmod>
+        <lastmod>2024-01-24</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://azakidev.github.io/labs/index.html</loc>
-        <lastmod>2024-1-24</lastmod>
+        <lastmod>2024-01-24</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://azakidev.github.io/characters/index.html</loc>
-        <lastmod>2024-1-24</lastmod>
+        <lastmod>2024-01-24</lastmod>
         <priority>0.5</priority>
     </url>
 </urlset>
