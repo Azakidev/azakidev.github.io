@@ -1,0 +1,133 @@
+@media only screen and (width < 1100px){
+    :root {
+        --card-height: 40dvh;
+        --big-card-width: 70%;
+        --text-large: 24px;
+        --text-medium: 16px;
+        --text-small: 14px;
+    }
+    .row {
+        margin: var(--margin);
+        gap: calc( var(--margin) / 2 );
+    }
+}
+
+@media only screen and (width > 1100px){
+  :root {
+      --card-height: 40dvh;
+      --big-card-width: 70%;
+      --text-large: 64px;
+      --text-medium: 26px;
+      --text-small: 24px;
+  }
+  .row {
+    margin: var(--margin) calc( var(--margin) * 3);
+    gap: var(--margin);
+  }
+  .row:hover {
+    height: calc(var(--card-height) * 1.8);
+
+    .pcard {
+        border-radius: calc( var(--margin) / 4 );
+    }
+
+    .name {
+        color: white;
+    }
+
+    .pcard:first-child {
+        box-shadow: 0 0 20px var(--main-accent);
+    }
+
+    h1 {
+        font-size: 86px;
+    }
+    }
+    .cards:hover > .row:not(:hover) {
+        height: calc( var(--card-height) - var(--card-height) / 7 )
+    }
+
+}
+
+.more {
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    z-index: 9;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+
+    height: var(--card-height);
+    transition-duration: 200ms;
+}
+
+#reverse {
+    flex-direction: row-reverse;
+}
+
+.pcard {
+    border-radius: calc( var(--margin) / 2 );
+    background-color: rgba(var(--container-bg), .6);
+    
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    transition-duration: 200ms;
+    transition-delay: 200ms;
+}
+.pcard:first-child {
+    width: var(--big-card-width);
+    background-size: cover;
+    background-position: center;
+}
+.pcard:last-child {
+    width: calc(100% - var(--big-card-width));
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1  {
+    color: white;
+    font-size: var(--text-large);
+    margin: 0;
+    margin-bottom: 10%;
+    transition-duration: 200ms;
+}
+
+h2 {
+    color: var(--text-soft);
+    font-size: var(--text-small);
+    margin: 0;
+    transition-duration: 200ms;
+}
+.name {
+    font-size: var(--text-medium);
+    margin-bottom: .5rem;
+    transition-duration: 200ms;
+}
+
+.llps { background-image: url(../images/prices/llps.png); }
+.lcs  { background-image: url(../images/prices/lcs.png);  }
+.css  { background-image: url(../images/prices/css.png);  }
+.cl   { background-image: url(../images/prices/cl.png);   }
+.cs   { background-image: url(../images/prices/cs.png);   }
+.l    { background-image: url(../images/prices/l.png);    }
+.ss   { background-image: url(../images/prices/ss.png);   }
+.s    { background-image: url(../images/prices/s.png);    }
