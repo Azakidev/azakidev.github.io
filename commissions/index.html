@@ -25,20 +25,22 @@
 <body>
   <div class="dot-grid"><div id="blob"></div></div>
   <script src="../scripts/blob.js"></script>
-  <!--<div class="banner">
+  <!--<section class="banner">
     <img src="../images/seasonsale/fall.png" alt="Sale banner" loading="lazy">
     <div class="arrow" id="scroller" onclick="scrollhandler()"><i class="fa-solid fa-arrow-down"></i></div>
-  </div>-->
-  <div class="layout">
+  </section>-->
+  <section class="layout">
+    <div class="arrow more" id="scroller" onclick="cardsscrollhandler()"><i class="fa-solid fa-arrow-down"></i></div>
     <div class="prices">
-      <img src="../images/prices.png" alt="A price sheet">
+      <img src="../images/prices/sheet.png" alt="A price sheet">
     </div>
     <div class="card">
       <div class="text">
         <h1>Commission pricing</h1>
-        <p>My commissions are priced per character per drawing</p>
-        <p>The first character depends of the style you want to commission.<br>
-          The second character and onwards is the price of the first divided by 2
+        <p>My commissions are priced per character per image.</p>
+        <p>The price of the first character is the one displayed here.<br>
+           Additional characters cost the price of the first divided by 2.<br>
+           More examples below!
         </p>
         <div class="buttons">
           <a href="../" id="contact" class="button">Contact me</a>
@@ -47,7 +49,78 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
+  <section class="cards">
+    <div class="row">
+      <div class="pcard llps">
+      </div>
+      <div class="pcard" id="text">
+        <h1>40€</h1>
+        <h2 class="name">Lineless painted shaded</h2>
+        <h2>Detailed, lively, textured</h2>
+      </div>
+    </div>
+    <div class="row" id="reverse">
+      <div class="pcard lcs"></div>
+      <div class="pcard">
+        <h1>40€</h1>
+        <h2 class="name">Lined colored shaded</h2>
+        <h2>Refined, clean, soft</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="pcard css">
+      </div>
+      <div class="pcard" id="text">
+        <h1>30€</h1>
+        <h2 class="name">Colored shaded sketch</h2>
+        <h2>Bold, expressive, textured</h2>
+      </div>
+    </div>
+    <div class="row" id="reverse">
+      <div class="pcard cl"></div>
+      <div class="pcard">
+        <h1>25€</h1>
+        <h2 class="name">Colored lineart</h2>
+        <h2>Flat, legible, simple</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="pcard cs">
+      </div>
+      <div class="pcard" id="text">
+        <h1>20€</h1>
+        <h2 class="name">Colored sketch</h2>
+        <h2>Expressive, clear, focused</h2>
+      </div>
+    </div>
+    <div class="row" id="reverse">
+      <div class="pcard l"></div>
+      <div class="pcard">
+        <h1>15€</h1>
+        <h2 class="name">Lineart</h2>
+        <h2>Budget conscious, clean, inspiring</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="pcard ss">
+      </div>
+      <div class="pcard" id="text">
+        <h1>15€</h1>
+        <h2 class="name">Shaded sketch</h2>
+        <h2>Conceptual, bold, budget conscious</h2>
+      </div>
+    </div>
+    <div class="row" id="reverse">
+      <div class="pcard s">
+      </div>
+      <div class="pcard" id="text">
+        <h1>10€</h1>
+        <h2 class="name">Sketch</h2>
+        <h2>Budget minded, scrappy, bold</h2>
+      </div>
+    </div>
+  </section>
   <footer>Website by FatDawlf</footer>
   <script src="../scripts/scroll.js"></script>
 </body>
