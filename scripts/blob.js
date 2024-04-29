@@ -6,7 +6,7 @@ document.body.onpointermove = event => {
     blob.animate({
         left: `${clientX}px`,
         top: `${clientY}px`,
-    }, {duration: 3000, fill: "forwards"});
+    }, {duration: 1500, fill: "forwards"});
 }
 
 document.body.ontouchmove = event => {
