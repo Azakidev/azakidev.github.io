@@ -1,6 +1,6 @@
 @media only screen and (width < 1100px){
     :root {
-        --card-height: 40dvh;
+        --card-height: 40vh;
         --big-card-width: 70%;
         --text-large: 24px;
         --text-medium: 16px;
