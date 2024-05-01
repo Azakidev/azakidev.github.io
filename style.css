@@ -85,6 +85,7 @@ html, body {
     overflow: hidden;
     z-index: 1;
 }
+
 .bg {
     position: absolute;
     z-index: 0;
@@ -94,6 +95,7 @@ html, body {
     opacity: 0.1;
     filter: blur(5px);
 }
+
 .navcont {
     position: fixed;
     top: 0;
@@ -169,31 +171,7 @@ nav {
 #logo:hover {
     scale: 1.1;
 }
-#blob {
-    background-color: rgb(255, 255, 255);
-    
-    border-radius: 50%;
-    height: 100px;
-    aspect-ratio: 1;
-    filter: blur(50px);
-    
-    opacity: 0;
-    animation: fade 1s ease-in 1s forwards;
-    
-    z-index: 0;
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    
-    user-select: none;
-    -webkit-user-select: none;
-}
-@keyframes fade {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
 .content {
     position: absolute;
     z-index: 2;
@@ -206,6 +184,7 @@ section > * {
     color: white;
     font-family: 'Nunito', sans-serif;
 }
+
 .hero {
     display: flex;
     flex-direction: column;
@@ -231,14 +210,13 @@ section > * {
     display: flex;
     align-items: center;
 }
-.socials a{
-    height: fit-content;
-}
+.socials a { height: fit-content; }
 .socials i {
     color: white;
     transition-duration: 200ms;
 }
 .socials i:hover { font-size: clamp(36px, 7vw, 2.8rem); }
+
 .fa-discord:hover { color: #586aea; }
 .fa-twitter:hover { color: #00a3e8; }
 .fa-mastodon:hover { color: #2b8fda; }
