@@ -3,16 +3,17 @@
     --d: 2.5px;
     --button-radius: 14px;
     --margin: 2rem;
-
+    --logo-size: 80px;
+    
     /*  Misc color  */
     --bg-rgb:      25, 25, 25;
     --ych-bg-rgb:       40, 25, 45;
     --labs-bg-rgb:      10, 40, 75;
-
+    
     --container-border: 65, 65, 65;
     --container-bg:     70, 70, 70;
     --button:           90, 90, 90;
-
+    
     /*  Brand Colors  */
     --main-accent:  #C22BDF;
     --ych-accent: #831299;
@@ -20,62 +21,62 @@
     
     --main-glow: #E27BF7;
     --labs-glow: #51D4FF;
-
+    
     --text-soft: #CACACA;
 }
 
 .dot-grid  {
-  position: fixed;
-  z-index: 0;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-   
-  background : radial-gradient(
+    position: fixed;
+    z-index: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    
+    background : radial-gradient(
     circle at 
-       var(--d) 
-       var(--d), 
-       
+    var(--d) 
+    var(--d), 
+    
     rgba(255, 255, 255, 0.1) calc(var(--d) - 1px), 
     #00000000 var(--d)
-  ) 10px 10px;
-  background-size: 40px 40px;
+    ) 10px 10px;
+    background-size: 40px 40px;
 }
 
 #blob {
-  background-color: #fff;
-  
-  border-radius: 50%;
-  height: 100px;
-  aspect-ratio: 1;
-  filter: blur(50px);
-  
-  opacity: 0;
-  animation: fade 1s ease-in 1s forwards;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  
-  user-select: none;
-  -webkit-user-select: none;
+    background-color: #fff;
+    
+    border-radius: 50%;
+    height: 100px;
+    aspect-ratio: 1;
+    filter: blur(50px);
+    
+    opacity: 0;
+    animation: fade 1s ease-in 1s forwards;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 @keyframes fade {
-  from {opacity: 0;}
-  to {opacity: 1;}
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  color: white;
-  opacity: 0.5;
-  font-family: 'Nunito sans', sans-serif;
-  font-size: 1vmin;
-  user-select: none;
-  -webkit-user-select: none;
-  margin: 0.5vmin;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: white;
+    opacity: 0.5;
+    font-family: 'Nunito sans', sans-serif;
+    font-size: 1vmin;
+    user-select: none;
+    -webkit-user-select: none;
+    margin: 0.5vmin;
 }
