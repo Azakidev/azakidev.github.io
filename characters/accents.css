@@ -1,45 +1,45 @@
 #Nath > .card {
-  --accent-color: #9172B1;
-  background-color: var(--accent-color);
-  box-shadow: 0 0 5rem 15rem var(--accent-color);
+    --accent-color: #9172B1;
+    background-color: var(--accent-color);
+    box-shadow: 0 0 5rem 15rem var(--accent-color);
 }
 
 #Kurae > .card {
-  --accent-color: #43436B;
-  background-color: var(--accent-color);
-  box-shadow: 0 0 5rem 15rem var(--accent-color);
+    --accent-color: #43436B;
+    background-color: var(--accent-color);
+    box-shadow: 0 0 5rem 15rem var(--accent-color);
 }
 
 #Maxwell > .card {
-  --accent-color: #AAE3D3;
-  background-color: var(--accent-color);
-  box-shadow: 0 0 5rem 15rem var(--accent-color);
-  color: #333;
+    --accent-color: #AAE3D3;
+    background-color: var(--accent-color);
+    box-shadow: 0 0 5rem 15rem var(--accent-color);
+    color: #333;
 }
 
 #Reimi > .card {
-  --accent-color: #70A949;
-  background-color: var(--accent-color);
-  box-shadow: 0 0 5rem 15rem var(--accent-color);
+    --accent-color: #70A949;
+    background-color: var(--accent-color);
+    box-shadow: 0 0 5rem 15rem var(--accent-color);
 }
 #Reimi h2 {
-  margin-bottom: calc(15% / 2);
+    margin-bottom: calc(15% / 2);
 }
 
 #Aeon > .card {
-  --accent-color: #7a91e9;
-  background-color: var(--accent-color);
-  box-shadow: 0 0 5rem 15rem var(--accent-color);
+    --accent-color: #7a91e9;
+    background-color: var(--accent-color);
+    box-shadow: 0 0 5rem 15rem var(--accent-color);
 }
 
 #Nasu > .card {
-  --accent-color: #049BFB;
-  background-color: var(--accent-color);
-  box-shadow: 0 0 5rem 15rem var(--accent-color);
+    --accent-color: #049BFB;
+    background-color: var(--accent-color);
+    box-shadow: 0 0 5rem 15rem var(--accent-color);
 }
 
 #Clank > .card {
-  --accent-color: #FFBC55;
-  background-color: var(--accent-color);
-  box-shadow: 0 0 5rem 15rem var(--accent-color);
+    --accent-color: #FFBC55;
+    background-color: var(--accent-color);
+    box-shadow: 0 0 5rem 15rem var(--accent-color);
 }
