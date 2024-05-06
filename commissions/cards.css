@@ -1,10 +1,10 @@
 @media only screen and (width < 1100px){
     :root {
-        --card-height: 40vh;
+        --small-card-height: 40vh;
         --big-card-width: 70%;
-        --text-large: 24px;
-        --text-medium: 16px;
-        --text-small: 14px;
+        --card-text-large: 24px;
+        --card-text-medium: 16px;
+        --card-text-small: 14px;
     }
     .row {
         margin: var(--margin);
@@ -14,18 +14,18 @@
 
 @media only screen and (width > 1100px){
   :root {
-      --card-height: 40dvh;
+      --small-card-height: 40vh;
       --big-card-width: 70%;
-      --text-large: 64px;
-      --text-medium: 26px;
-      --text-small: 24px;
+      --card-text-large: 64px;
+      --card-text-medium: 26px;
+      --card-text-small: 24px;
   }
   .row {
     margin: var(--margin) calc( var(--margin) * 3);
     gap: var(--margin);
   }
   .row:hover {
-    height: calc(var(--card-height) * 1.8);
+    height: calc(var(--small-card-height) * 1.8);
 
     .pcard {
         border-radius: calc( var(--margin) / 4 );
@@ -44,16 +44,9 @@
     }
     }
     .cards:hover > .row:not(:hover) {
-        height: calc( var(--card-height) - var(--card-height) / 7 )
+        height: calc( var(--small-card-height) - var(--small-card-height) / 7 )
     }
 
-}
-
-.more {
-    position: absolute;
-    bottom: -1rem;
-    left: 50%;
-    z-index: 9;
 }
 
 .cards {
@@ -66,7 +59,7 @@
     display: flex;
     flex-direction: row;
 
-    height: var(--card-height);
+    height: var(--small-card-height);
     transition-duration: 200ms;
 }
 
@@ -105,7 +98,7 @@ img {
 
 h1  {
     color: white;
-    font-size: var(--text-large);
+    font-size: var(--card-text-large);
     margin: 0;
     margin-bottom: 10%;
     transition-duration: 200ms;
@@ -113,12 +106,12 @@ h1  {
 
 h2 {
     color: var(--text-soft);
-    font-size: var(--text-small);
+    font-size: var(--card-text-small);
     margin: 0;
     transition-duration: 200ms;
 }
 .name {
-    font-size: var(--text-medium);
+    font-size: var(--card-text-medium);
     margin-bottom: .5rem;
     transition-duration: 200ms;
 }
