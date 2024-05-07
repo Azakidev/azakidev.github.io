@@ -27,23 +27,17 @@
   .row:hover {
     height: calc(var(--small-card-height) * 1.8);
 
-    .pcard {
-        border-radius: calc( var(--margin) / 4 );
-    }
+    .pcard { border-radius: calc( var(--margin) / 4 ); }
 
-    .name {
-        color: white;
-    }
+    .name { color: white; }
 
     .pcard:first-child {
         box-shadow: 0 0 20px var(--main-accent);
     }
 
-    h1 {
-        font-size: 86px;
+    .pcard h1 { font-size: 86px; }
     }
-    }
-    .cards:hover > .row:not(:hover) {
+    .cards:hover > .row:not(:hover) { 
         height: calc( var(--small-card-height) - var(--small-card-height) / 7 )
     }
 
@@ -63,9 +57,7 @@
     transition-duration: 200ms;
 }
 
-#reverse {
-    flex-direction: row-reverse;
-}
+#reverse { flex-direction: row-reverse; }
 
 .pcard {
     border-radius: calc( var(--margin) / 2 );
@@ -92,19 +84,14 @@
     justify-content: center;
 }
 
-img {
-    max-width: 100%;
-}
-
-h1  {
+.pcard h1  {
     color: white;
     font-size: var(--card-text-large);
     margin: 0;
     margin-bottom: 10%;
     transition-duration: 200ms;
 }
-
-h2 {
+.pcard h2 {
     color: var(--text-soft);
     font-size: var(--card-text-small);
     margin: 0;
@@ -115,12 +102,3 @@ h2 {
     margin-bottom: .5rem;
     transition-duration: 200ms;
 }
-
-.llps { background-image: url(../images/prices/llps.png); }
-.lcs  { background-image: url(../images/prices/lcs.png);  }
-.css  { background-image: url(../images/prices/css.png);  }
-.cl   { background-image: url(../images/prices/cl.png);   }
-.cs   { background-image: url(../images/prices/cs.png);   }
-.l    { background-image: url(../images/prices/l.png);    }
-.ss   { background-image: url(../images/prices/ss.png);   }
-.s    { background-image: url(../images/prices/s.png);    }
