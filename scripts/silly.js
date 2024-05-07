@@ -18,15 +18,10 @@ function parseQuery(str) {
     },{})
 }
 
-//This function will change certain keywords on the page
-function sillyImage() {
-    image.src = "../images/sillypeek.png"
-}
-
 //How to get the data from the browser for real:
 var profile = parseQuery(window.location.search);
 
 //Personalize the headline
 if(profile.silly == "true") {
-    sillyImage()
+    image.src = "../images/sillypeek.png"
 }
