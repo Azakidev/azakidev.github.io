@@ -23,7 +23,7 @@ document.body.onpointermove = event => {
 
         let compX = Math.min(0.45, wY) *  0.5,
             compY = Math.min(0.45, wX) * -0.8,
-            compZ = Math.min(0.15, wY) * -0.2;
+            compZ = Math.min(0.15, wY) * -0.1;
 
         image.animate({
             transform: `rotate3d( ${compX}, ${compY}, ${compZ}, 15deg)`
