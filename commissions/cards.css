@@ -78,6 +78,7 @@
 }
 .pcard:last-child {
     width: calc(100% - var(--big-card-width));
+    padding: calc(var(--margin) / 2);
     
     display: flex;
     flex-direction: column;
