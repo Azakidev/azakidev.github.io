@@ -106,10 +106,11 @@ section > * {
 }
 .socials i:hover { font-size: clamp(36px, 7vw, 2.8rem); }
 
-.fa-discord:hover { color: #586aea; }
+.fa-discord:hover { color: #5865F2; }
 .fa-twitter:hover { color: #00a3e8; }
 .fa-mastodon:hover { color: #2b8fda; }
 .fa-paw:hover { color: #957779; }
+.fa-bandcamp:hover { color: #3c9aaa; }
 .fa-github:hover { color: #51d4ff; }
 .fa-envelope:hover { color: var(--main-accent); }
 
