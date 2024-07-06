@@ -1,5 +1,5 @@
 const blob = document.getElementById("blob");
-let image = document.getElementById("image");
+let rotateable = document.getElementsByClassName("rotateable");
 
 document.body.onpointermove = event => {
     const {clientX, clientY} = event
@@ -11,9 +11,11 @@ document.body.onpointermove = event => {
 
     //Image rotation on the landing page is handled here, why? Javascript is weird
 
-    if ( image != undefined ) {
+    for ( let i = 0; i < rotateable.length; i++ ) {
+        
+        let thing = rotateable.item(i)
 
-        let rect = image.getBoundingClientRect();
+        let rect = thing.getBoundingClientRect();
 
         let centX = (rect.x + (rect.width / 2)),
             centY = (rect.y + (rect.height / 2));
@@ -25,7 +27,7 @@ document.body.onpointermove = event => {
             compY = Math.min(0.45, wX) * -0.8,
             compZ = Math.min(0.15, wY) * -0.1;
 
-        image.animate({
+        thing.animate({
             transform: `rotate3d( ${compX}, ${compY}, ${compZ}, 15deg)`
         }, {duration: 1200, fill: "forwards"});
     }
