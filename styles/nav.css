@@ -66,6 +66,8 @@
     }
 }
 
+:root { --nav-timing: cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
 .navcont {
     position: fixed;
     top: 0;
@@ -80,9 +82,9 @@ nav {
     -webkit-backdrop-filter: blur(40px);
 
     translate: 0 -150%;
-    animation: appear .6s 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation: appear .6s 1s var(--nav-timing) forwards;
     transition-duration: 200ms;
-    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-timing-function: var(--nav-timing);
 
     display: flex;
     align-items: center;
@@ -101,6 +103,7 @@ nav {
 .left > h1 {
     font-family: 'Nunito', sans-serif;
     font-size: var(--nav-text-title);
+    font-weight: 1000 !important;
     color: white;
 }
 
@@ -119,6 +122,7 @@ nav {
 .right > a {
     font-family: 'Nunito', sans-serif;
     font-size: var(--nav-text-link);
+    font-weight: 1000 !important;
     letter-spacing: normal;
     text-decoration: none;
     
