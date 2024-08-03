@@ -142,7 +142,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: hsla(0,0%,25%,1);
+    background-color: rgb(var(--bg-rgb));
     height: 100vh;
     overflow: hidden;
 }
