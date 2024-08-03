@@ -113,7 +113,17 @@ nav {
     transition-duration: 200ms;
     filter: drop-shadow(0px 0px 2px #00000044);
 }
-#logo:hover { scale: 1.1; }
+#logo:hover { 
+    scale: 1.1;
+    animation: spinny 400ms forwards;
+}
+
+@keyframes spinny {
+    from {rotate: 0;}
+    33% {rotate: -8deg;}
+    66% {rotate: 8deg;}
+    to {rotate: 0;}
+}
 
 .right{
     display: flex;
