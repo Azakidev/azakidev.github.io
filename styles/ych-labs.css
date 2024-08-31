@@ -1,3 +1,32 @@
+@media only screen and (width < 1000px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        width: 100%;
+        height: 60vh;
+    }
+    .card:hover {
+        width: 105%;
+        height: 61vh;
+    }
+}
+
+@media only screen and (width > 1000px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        height: 100%;
+    }
+    .card {
+        width: 100%;
+        height: 35rem;
+    }
+    .card:hover {
+        width: 105%;
+        height: 35.5rem;
+    }
+}
+
 /* Arrow */
 .grid > a > i, .header > a > i {
     position: absolute;
@@ -51,13 +80,12 @@
 
 .cards {
     flex-shrink: 0;
-    width: 100%;
     height: auto;
     position: relative;
     display: grid;
     gap: 2rem;
     z-index: 1;
-    margin: 4vw;
+    margin: calc(var(--margin) * 2);
 }
 .card {
     position: relative;
