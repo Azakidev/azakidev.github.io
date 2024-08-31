@@ -202,6 +202,8 @@ html, body {
     
     align-self: center;
     transition-duration: 200ms;
+
+    cursor: pointer;
 }
 .button:hover {
     letter-spacing: 2px;

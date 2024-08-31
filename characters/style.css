@@ -125,7 +125,7 @@ body {
     flex-direction: column;
     gap: .5rem;
 }
-#arrow a {
+#arrow span {
     color: white;
     background-color: #555;
     box-shadow: #000 0 0 1rem;
