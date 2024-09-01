@@ -1,6 +1,7 @@
 @media only screen and (width < 1000px) {
     .cards {
         grid-template-columns: 1fr;
+        margin: calc(var(--margin) * 2) var(--margin) !important;
     }
     .card {
         width: 100%;
