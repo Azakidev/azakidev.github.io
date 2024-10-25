@@ -3,6 +3,9 @@
 
 
 @media only screen and (width < 1400px) {
+    p {
+        width: auto !important;
+    }
     .circle {
         height: auto !important;
         width: 80% !important;
@@ -41,8 +44,12 @@ p {
     font-family: "Nunito sans", sans-serif;
     color: var(--text-soft);
     font-size: var(--text-medium);
+    width: 100%;
     max-width: 80ch;
     margin-inline: var(--margin);
+}
+b {
+    color: white;
 }
 ul {
     margin: 0;
@@ -60,7 +67,6 @@ h1 {
     color: white;
     font-weight: 800;
     font-size: clamp(1.8rem, 6vw, var(--text-title));
-    margin-inline: var(--margin);
 }
 
 h2 {
