@@ -33,6 +33,20 @@
     .wrap img { width: 100% !important; }
     .card { width: auto !important; }
 }
+@media only screen and (width > 1200px) {
+    .pricespeek {
+        align-items: initial !important;
+        height: fit-content !important;
+    }
+    .pricespeek .wrap {
+        justify-content: center !important;
+        gap: calc(var(--margin) * 4);
+    }
+    .projects {
+        height: fit-content !important;
+    }
+}
+
 :root {
     --text-large: 64px;
     --text-medium: 26px;
@@ -162,6 +176,8 @@ section > * {
 
 .wrap img {
     width: 45%;
+    max-width: 1000px;
+    max-height: 1000px;
     border-radius: 1rem;
     aspect-ratio: 1;
     user-select: none;
@@ -190,6 +206,7 @@ section > * {
 
 .card h1 {
     font-size: clamp(28px, 6vmin, 6rem);
+    margin-left: unset !important;
     font-weight: 1000;
     margin: 0;
     margin-bottom: 20px;
@@ -222,4 +239,40 @@ section > * {
     box-shadow: 0 0 20px var(--main-glow);
     letter-spacing: 2px;
     font-weight: 1000;
+}
+
+.projects {
+    height: fit-content;
+    background : radial-gradient(
+    circle at 
+       var(--d) 
+       var(--d), 
+       
+    rgba(255, 255, 255, 0.1) calc(var(--d) - 1px), 
+    #00000000 var(--d)
+    ) 10px 10px;
+    background-size: 40px 40px;
+}
+
+.projects h1 {
+    font-size: clamp(28px, 6vmin, 6rem);
+    text-align: center;
+    margin-left: calc(var(--margin) * 2);
+    margin-top: 20px; /* Trust me bro */
+}
+
+.projects .wrap {
+    justify-content: center;
+    padding: var(--margin);
+    flex-wrap: wrap;
+}
+
+.projects .card {
+    max-width: 65ch;
+    transition-duration: 200ms;
+    scale: 1;
+}
+
+.projects .card:hover.rotateable {
+    scale: 1.05;
 }

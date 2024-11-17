@@ -27,9 +27,15 @@ document.body.onpointermove = event => {
             compY = Math.min(0.45, wX) * -0.8,
             compZ = Math.min(0.15, wY) * -0.1;
 
-        thing.animate({
-            transform: `rotate3d( ${compX}, ${compY}, ${compZ}, 15deg)`
-        }, {duration: 1200, fill: "forwards"});
+        if (thing != document.querySelector(".card:hover.rotateable")) {
+            thing.animate({
+                transform: `rotate3d( ${compX}, ${compY}, ${compZ}, 15deg)`
+            }, {duration: 1200, fill: "forwards"});
+        } else {
+            thing.animate({
+                transform: `rotate3d( 0, 0, 0, 0deg)`
+            }, {duration: 1200, fill: "forwards"});
+        }
     }
 }
 
