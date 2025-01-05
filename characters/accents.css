@@ -18,7 +18,7 @@
 }
 
 #Reimi > .card {
-    --accent-color: #70A949;
+    --accent-color: #6c9d66;
     background-color: var(--accent-color);
     box-shadow: 0 0 5rem 15rem var(--accent-color);
 }
@@ -27,7 +27,7 @@
 }
 
 #Aeon > .card {
-    --accent-color: #7a91e9;
+    --accent-color: #708fa7;
     background-color: var(--accent-color);
     box-shadow: 0 0 5rem 15rem var(--accent-color);
 }
