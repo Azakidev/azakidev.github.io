@@ -19,6 +19,10 @@
     }
 }
 
+:root {
+    --hover-accent: var(--main-accent);
+}
+
 html, body {
     background-color: rgb(var(--ych-bg-rgb));
     margin: 0;
@@ -68,11 +72,6 @@ html, body {
     font-size: clamp(18px, 3vw, 1rem);
 }
 
-.card:hover {
-    border-radius: .5rem;
-    box-shadow: 0 0 20px var(--main-accent);
-}
-
 .overlay {
     bottom: -100%;
     opacity: 0;
@@ -82,10 +81,6 @@ html, body {
 .card:hover > .overlay {
     bottom: 0;
     opacity: 1;
-}
-
-#bellyrub {
-    object-position: top;
 }
 
 .bottom {
