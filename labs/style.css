@@ -40,10 +40,6 @@ html, body {
     background-size: 7vmin 7vmin;
 }
 
-.overlay {
-    bottom: 0;
-}
-
 #refs {
     object-position: top;
 }

@@ -71,7 +71,7 @@ html, body {
     font-family: 'Nunito', sans-serif;
     font-size: clamp(18px, 3vw, 1rem);
 }
-
+/*
 .overlay {
     bottom: -100%;
     opacity: 0;
@@ -82,7 +82,7 @@ html, body {
     bottom: 0;
     opacity: 1;
 }
-
+*/
 .bottom {
     position: relative;
     width: 100%;
