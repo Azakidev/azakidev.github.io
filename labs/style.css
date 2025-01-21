@@ -33,7 +33,7 @@ html, body {
     linear-gradient(0deg, rgba(255, 255, 255,.25) 2px, transparent 2px),#1d57a0;
     background-size: 5vmin 5vmin;
     background-position: 50% 50%;
-    padding-bottom: min(2vmin,2vh);
+    padding: min(2vmin,2vh) 0;
     transition-duration: 200ms;
 }
 .header:hover > .grid {

@@ -36,6 +36,7 @@ html, body {
 
 .header {
     background: linear-gradient(var(--ych-accent) 50%, transparent);
+    padding: min(2vmin,2vh) 0
 }
 
 #banner {
