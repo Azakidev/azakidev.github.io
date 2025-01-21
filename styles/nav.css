@@ -72,7 +72,7 @@
     position: fixed;
     top: 0;
     width: 100vw;
-    z-index: 3;
+    z-index: 99;
 }
 nav {
     border: solid 2px rgba(var(--button), 0.6);

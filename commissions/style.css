@@ -209,7 +209,7 @@ html, body {
 }
 .button:hover {
     font-style: italic;
-    font-weight: 200;
+    font-weight: 400;
     letter-spacing: 2px;
     background: var(--main-accent);
     box-shadow: 0 0 20px var(--main-glow);
