@@ -116,7 +116,7 @@
     justify-content: space-between;
     align-content: center;
     
-    background-color: rgba(var(--button), .1);
+    background-color: rgba(var(--button), 0);
 }
 
 .overlay::before {
