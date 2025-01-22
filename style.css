@@ -206,7 +206,7 @@ section > * {
 }
 
 .card h1 {
-    font-size: clamp(28px, 6vmin, 6rem);
+    font-size: var(--text-large);
     margin-left: unset !important;
     font-weight: 1000;
     margin: 0;
@@ -215,7 +215,7 @@ section > * {
 }
   
 .card p {
-    font-size: clamp(24px, 1.5vw, 2rem);
+    font-size: var(--text-medium);
     color: var(--text-soft);
     text-align: center;
     font-weight: 200;
@@ -230,7 +230,7 @@ section > * {
 }
 
 .projects > h1 {
-    font-size: clamp(28px, 6vmin, 6rem);
+    font-size: var(--text-large);
     font-weight: 200;
     font-style: italic;
     text-align: center;
