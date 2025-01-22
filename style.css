@@ -52,9 +52,7 @@
     --text-medium: 26px;
 }
 
-html, body {
-    height: 100vh;
-    width: 100vw;
+body {
     overflow-x: hidden;
     margin: 0;
     background-color: rgb(var(--bg-rgb));
@@ -67,19 +65,18 @@ html, body {
     z-index: 1;
 }
 
-.bg {
-    position: absolute;
-    z-index: 0;
-    height: 100dvh;
-    width: 100dvw;
-    object-fit: cover;
-    opacity: 0.3;
-    filter: blur(5px);
-}
-
 .content {
     position: absolute;
     z-index: 2;
+    background : radial-gradient(
+    circle at 
+       var(--d) 
+       var(--d), 
+       
+    rgba(255, 255, 255, 0.1) calc(var(--d) - 1px), 
+    #00000000 var(--d)
+    ) 10px 10px;
+    background-size: 40px 40px;
 }
 section {
     height: 100vh;
@@ -98,6 +95,20 @@ section > * {
     justify-content: center;
     text-align: center;
 }
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    background: url(images/bg.png);
+    background-position: center;
+    opacity: 0.3;
+    filter: blur(5px);
+    scale: 1.01;
+    z-index: -1;
+}
+
 .hero #text { margin: var(--margin); }
 #text > * { transition-duration: 200ms;}
 #text h1 { 
@@ -106,7 +117,7 @@ section > * {
 }
 #text h2 {
     font-size: var(--text-medium);
-    font-weight: 600;
+    font-weight: 200;
     color: var(--text-soft);
     max-width: 80ch;
 }
@@ -153,16 +164,6 @@ section > * {
     display: flex;
     justify-content: space-between;
     align-items: end;
-
-    background : radial-gradient(
-    circle at 
-       var(--d) 
-       var(--d), 
-       
-    rgba(255, 255, 255, 0.1) calc(var(--d) - 1px), 
-    #00000000 var(--d)
-    ) 10px 10px;
-    background-size: 40px 40px;
 }
 .wrap {
     display: flex;
@@ -214,52 +215,26 @@ section > * {
 }
   
 .card p {
-    font-size: clamp(16px, 3vmin, 1.5rem);
+    font-size: clamp(24px, 1.5vw, 2rem);
     color: var(--text-soft);
     text-align: center;
+    font-weight: 200;
 }
 
 .button {
     margin-top: calc(var(--margin) / 2);
-    padding: calc(var(--margin) / 1.5);
-
-    color: white;
-    font-family: 'Nunito', sans-serif;
-    font-size: clamp(20px, 5vw, 2rem);
-    font-weight: 1000;
-    text-decoration: none;
-    letter-spacing: normal;
-
-    border-radius: 6rem;
-    background: rgb(var(--button));
-    transition-duration: 200ms;
-}
-.button:hover {
-    background: var(--main-accent);
-    box-shadow: 0 0 20px var(--main-glow);
-    letter-spacing: 2px;
-    font-weight: 400;
-    font-style: italic;
 }
 
 .projects {
     height: fit-content;
-    background : radial-gradient(
-    circle at 
-       var(--d) 
-       var(--d), 
-       
-    rgba(255, 255, 255, 0.1) calc(var(--d) - 1px), 
-    #00000000 var(--d)
-    ) 10px 10px;
-    background-size: 40px 40px;
 }
 
-.projects h1 {
+.projects > h1 {
     font-size: clamp(28px, 6vmin, 6rem);
+    font-weight: 200;
+    font-style: italic;
     text-align: center;
-    margin-left: calc(var(--margin) * 2);
-    margin-top: 20px; /* Trust me bro */
+    margin: var(--margin);
 }
 
 .projects .wrap {
