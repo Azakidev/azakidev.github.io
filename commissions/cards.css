@@ -2,9 +2,6 @@
     :root {
         --small-card-height: 40vh;
         --big-card-width: 70%;
-        --card-text-large: 24px;
-        --card-text-medium: 16px;
-        --card-text-small: 14px;
     }
     .row {
         margin: var(--margin);
@@ -16,9 +13,6 @@
   :root {
       --small-card-height: 40vh;
       --big-card-width: 70%;
-      --card-text-large: 64px;
-      --card-text-medium: 26px;
-      --card-text-small: 24px;
   }
   .row {
     margin: var(--margin) calc( var(--margin) * 3);
@@ -38,7 +32,7 @@
         box-shadow: 0 0 20px var(--main-accent);
     }
 
-    .pcard h1 { font-size: 86px; }
+    .pcard h1 { font-size: 96px; }
     }
     .cards:hover > .row:not(:hover) { 
         height: calc( var(--small-card-height) - var(--small-card-height) / 7 )
@@ -89,22 +83,22 @@
 
 .pcard h1  {
     color: white;
-    font-size: var(--card-text-large);
+    font-size: var(--text-large);
     font-weight: 1000;
     margin: 0;
-    margin-bottom: 10%;
+    margin-bottom: calc(var(--margin) / 2);
     transition-duration: 200ms;
 }
 .pcard h2 {
     color: var(--text-soft);
-    font-size: var(--card-text-small);
+    font-size: var(--text-small);
     font-weight: 200;
     font-style: italic;
     margin: 0;
     transition-duration: 200ms;
 }
 .name {
-    font-size: var(--card-text-medium);
+    font-size: var(--text-medium);
     margin-bottom: .5rem;
     transition-duration: 200ms;
 }

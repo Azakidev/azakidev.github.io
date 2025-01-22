@@ -2,10 +2,6 @@
 @import url(styles/nav.css);
 
 @media only screen and (width < 500px) {
-    :root {
-        --text-large: 42px !important;
-        --text-medium: 16px !important;
-    }
     .socials {
         flex-direction: column;
         gap: calc(var(--margin) / 2) !important;
@@ -20,10 +16,6 @@
     .card { width: auto !important; }
 }
 @media only screen and (width < 800px) and (width > 500px) {
-    :root {
-        --text-large: 42px !important;
-        --text-medium: 16px !important;
-    }
     .pricespeek {
         padding: calc(var(--margin) * 2) var(--margin) !important;
         height: auto !important;
@@ -45,11 +37,6 @@
     .projects {
         height: fit-content !important;
     }
-}
-
-:root {
-    --text-large: 64px;
-    --text-medium: 26px;
 }
 
 body {
@@ -101,7 +88,7 @@ section > * {
     width: 100vw;
     height: 100vh;
 
-    background: url(images/bg.png);
+    background-image: url(images/bg.png);
     background-position: center;
     opacity: 0.3;
     filter: blur(5px);

@@ -171,7 +171,7 @@ html, body {
 
 .text h1 {
     font-family: 'Nunito', sans-serif;
-    font-size: clamp(28px, 5vw, 4rem);
+    font-size: var(--text-large);
     font-weight: 1000;
     color: var(--text-soft);
     transition: 500ms;
@@ -183,7 +183,7 @@ html, body {
 
 .text p {
     font-family: 'Nunito', sans-serif;
-    font-size: clamp(24px, 1.5vw, 2rem);
+    font-size: var(--text-medium);
     font-weight: 200;
     text-align: center;
     color: var(--text-soft);

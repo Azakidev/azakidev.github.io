@@ -1,3 +1,26 @@
+
+@media only screen and (width < 500px) {
+    :root {
+        --text-large: 42px;
+        --text-medium: 16px;
+        --text-small: 14px;
+    }
+}
+@media only screen and (width < 800px) and (width > 500px) {
+    :root {
+        --text-large: 48px;
+        --text-medium: 20px;
+        --text-small: 16px;
+    }
+}
+@media only screen and (width > 800px){
+    :root {
+        --text-large: 64px;
+        --text-medium: 26px;
+        --text-small: 20px;
+    }
+}
+
 :root {
     /*  Sizes   */
     --d: 2.5px;
