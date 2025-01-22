@@ -41,9 +41,6 @@
     img {
         height: 90%;
     }
-    #Maxwell img, #Nasu img, #Nath img {
-        height: 75%;
-    }
 }
 
 @media only screen and (width > 900px){
@@ -189,8 +186,8 @@ section {
 
 h1 {
     font-family: 'Nunito', sans-serif;
-    font-weight: 800;
-    font-size: clamp(20%, 9vmin, 7rem);
+    font-weight: 1000;
+    font-size: var(--text-large);
     letter-spacing: 1.1px;
     
     transition-duration: 200ms;
@@ -199,7 +196,8 @@ h2 {
     margin-top: 0;
     
     font-family: 'Nunito', sans-serif;
-    font-weight: 400;
+    font-weight: 200;
+    font-style: italic;
     font-size: clamp(20px, 4vmin, 6rem);
     letter-spacing: 1.1px;
     opacity: 0.6;
@@ -211,6 +209,6 @@ h2:hover {
 }
 p {
     font-family: 'Nunito sans', sans-serif;
-    font-size: clamp(10%, 2rem, 5vmin);
+    font-size: var(--text-medium);
     margin-bottom: 0;
 }
