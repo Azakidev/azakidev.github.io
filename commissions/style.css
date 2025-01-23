@@ -1,6 +1,6 @@
 @import url(../styles/common.css);
 @import url(../styles/nav.css);
-@import url(cards.css);
+@import url(prices.css);
 
 @media only screen and (width < 500px) {
     .layout { 
