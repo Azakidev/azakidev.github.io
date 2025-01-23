@@ -2,12 +2,22 @@
 @import url(nav.css);
 
 @media only screen and (width < 800px) {
-    .content { flex-direction: column !important; justify-content: space-evenly; }
-    .content img { width: 100% !important; }
-    .card { width: auto !important; }
+    .content {
+        flex-direction: column !important;
+        justify-content: space-evenly;
+    }
+
+    .content img {
+        width: 100% !important;
+    }
+
+    .card {
+        width: auto !important;
+    }
 }
 
-html, body {
+html,
+body {
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
@@ -31,7 +41,7 @@ nav {
     flex-direction: row;
     gap: var(--margin);
     align-items: center;
-    
+
     margin: calc(var(--margin) * 4) calc(var(--margin) * 2);
     margin-bottom: var(--margin);
 }
@@ -40,7 +50,7 @@ nav {
     text-align: center;
     border: 2px solid rgb(var(--container-border));
     border-radius: 2rem;
-    
+
     backdrop-filter: blur(70px);
     -webkit-backdrop-filter: blur(70px);
 
@@ -55,16 +65,19 @@ nav {
 }
 
 .card h1 {
-    font-size: clamp(28px, 6vmin, 6rem);
+    font-size: var(--text-large);
     font-weight: 1000;
+    color: white;
+
     margin: 0;
     margin-bottom: 20px;
-    color: white;
 }
 
 .card p {
-    font-size: clamp(16px, 3vmin, 1.5rem);
+    font-size: var(--text-medium);
+    font-weight: 200;
     color: var(--text-soft);
+    
     text-align: center;
 }
 
