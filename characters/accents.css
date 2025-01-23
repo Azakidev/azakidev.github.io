@@ -1,44 +1,45 @@
-#Nath > .card {
+#Nath>.card {
     --accent-color: #9172B1;
     background-color: var(--accent-color);
     box-shadow: 0 0 5rem 15rem var(--accent-color);
 }
 
-#Kurae > .card {
+#Kurae>.card {
     --accent-color: #43436B;
     background-color: var(--accent-color);
     box-shadow: 0 0 5rem 15rem var(--accent-color);
 }
 
-#Maxwell > .card {
+#Maxwell>.card {
     --accent-color: #AAE3D3;
     background-color: var(--accent-color);
     box-shadow: 0 0 5rem 15rem var(--accent-color);
     color: #333;
 }
 
-#Reimi > .card {
+#Reimi>.card {
     --accent-color: #6c9d66;
     background-color: var(--accent-color);
     box-shadow: 0 0 5rem 15rem var(--accent-color);
 }
+
 #Reimi h2 {
     margin-bottom: calc(15% / 2);
 }
 
-#Aeon > .card {
+#Aeon>.card {
     --accent-color: #708fa7;
     background-color: var(--accent-color);
     box-shadow: 0 0 5rem 15rem var(--accent-color);
 }
 
-#Nasu > .card {
+#Nasu>.card {
     --accent-color: #049BFB;
     background-color: var(--accent-color);
     box-shadow: 0 0 5rem 15rem var(--accent-color);
 }
 
-#Clank > .card {
+#Clank>.card {
     --accent-color: #FFBC55;
     background-color: var(--accent-color);
     box-shadow: 0 0 5rem 15rem var(--accent-color);

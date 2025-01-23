@@ -3,10 +3,12 @@
         grid-template-columns: 1fr;
         margin: calc(var(--margin) * 2) var(--margin) !important;
     }
+
     .card {
         width: 100%;
         height: 60vh;
     }
+
     .card:hover {
         width: 105%;
         height: 61vh;
@@ -18,10 +20,12 @@
         grid-template-columns: 1fr 1fr;
         height: 100%;
     }
+
     .card {
         width: 100%;
         height: 35rem;
     }
+
     .card:hover {
         width: 105%;
         height: 35.5rem;
@@ -31,29 +35,35 @@
 body {
     display: flex;
     flex-direction: column;
-    
+
     align-items: center;
     justify-content: space-between;
-    
+
     margin: 0;
     overflow-x: hidden;
 }
 
 /* Arrow */
-.grid > a > i, .header > a > i {
+.grid>a>i,
+.header>a>i {
     position: absolute;
     left: 0;
     translate: 0 -50%;
     margin-left: 3vw;
+
     text-decoration: none;
     font-size: clamp(14px, 2vw, 5rem);
     color: white;
+
     background-color: rgba(var(--button), 0.8);
     border-radius: 25%;
     padding: 2vmin;
+
     transition-duration: 200ms;
 }
-.grid > a > i:hover, .header > a > i:hover {
+
+.grid>a>i:hover,
+.header>a>i:hover {
     background: #C22BDF;
     border-radius: 0.5rem;
     box-shadow: 0 0 20px #e27bf7;
@@ -62,17 +72,18 @@ body {
 .header {
     position: relative;
     z-index: 1;
-    
+
     width: 100vw;
     height: auto;
     flex-shrink: 0;
     margin: 0;
-    
+
     overflow: hidden;
-    
+
     text-align: center;
     color: white;
 }
+
 .header h1 {
     font-family: 'Nunito', sans-serif;
     font-size: clamp(24px, 4vw, 3rem);
@@ -80,6 +91,7 @@ body {
     margin: 0;
     transition-duration: 200ms;
 }
+
 .header h2 {
     font-family: 'Nunito', sans-serif;
     font-size: clamp(16px, 2vw, 2rem);
@@ -88,8 +100,10 @@ body {
     margin: 0;
     transition-duration: 200ms;
 }
-.header:hover h1, .header:hover h2 {
-    text-shadow: 0 0 20px #000000 ;
+
+.header:hover h1,
+.header:hover h2 {
+    text-shadow: 0 0 20px #000000;
 }
 
 .cards {
@@ -101,6 +115,7 @@ body {
     z-index: 1;
     margin: calc(var(--margin) * 2);
 }
+
 .card {
     position: relative;
     justify-self: center;
@@ -110,6 +125,7 @@ body {
     box-sizing: border-box;
     overflow: hidden;
 }
+
 .card img {
     width: 100%;
     height: 100%;
@@ -118,11 +134,12 @@ body {
     user-select: none;
     -webkit-user-select: none;
 }
+
 .overlay {
     position: absolute;
     bottom: 0;
     width: 100%;
-    
+
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -138,7 +155,7 @@ body {
     width: 100%;
     height: 8rem;
 
-    mask: linear-gradient(0deg,#000 40%,rgba(0,0,0,0.8) 80%,#0000 100%);
+    mask: linear-gradient(0deg, #000 40%, rgba(0, 0, 0, 0.8) 80%, #0000 100%);
     backdrop-filter: blur(70px);
 }
 
@@ -156,6 +173,7 @@ body {
     font-weight: 1000;
     z-index: 2;
 }
+
 .overlay h2 {
     align-self: center;
     color: white;
