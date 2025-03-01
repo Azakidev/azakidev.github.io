@@ -84,13 +84,8 @@
 }
 
 @keyframes fade {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .button {
@@ -107,19 +102,19 @@
     border-radius: 6rem;
 
     transition-duration: 200ms;
-}
-
-.button:hover {
-    letter-spacing: 2px;
-    font-weight: 400;
-    font-style: italic;
-
-    background: var(--main-accent);
-    box-shadow: 0 0 20px var(--main-glow);
-}
-
-.button:active {
-    padding: calc(var(--margin) / 1.8);
+    
+    &:hover {
+        letter-spacing: 2px;
+        font-weight: 400;
+        font-style: italic;
+    
+        background: var(--main-accent);
+        box-shadow: 0 0 20px var(--main-glow);
+    }
+    
+    &:active {
+        padding: calc(var(--margin) / 1.8);
+    }
 }
 
 footer {

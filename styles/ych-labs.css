@@ -7,11 +7,11 @@
     .card {
         width: 100%;
         height: 60vh;
-    }
-
-    .card:hover {
-        width: 105%;
-        height: 61vh;
+        
+        &:hover {
+            width: 105%;
+            height: 61vh;
+        }
     }
 }
 
@@ -24,11 +24,11 @@
     .card {
         width: 100%;
         height: 35rem;
-    }
-
-    .card:hover {
-        width: 105%;
-        height: 35.5rem;
+        
+        &:hover {
+            width: 105%;
+            height: 35.5rem;
+        }
     }
 }
 
@@ -82,28 +82,28 @@ body {
 
     text-align: center;
     color: white;
-}
-
-.header h1 {
-    font-family: 'Nunito', sans-serif;
-    font-size: clamp(24px, 4vw, 3rem);
-    font-weight: 1000;
-    margin: 0;
-    transition-duration: 200ms;
-}
-
-.header h2 {
-    font-family: 'Nunito', sans-serif;
-    font-size: clamp(16px, 2vw, 2rem);
-    font-weight: 200;
-    font-style: italic;
-    margin: 0;
-    transition-duration: 200ms;
-}
-
-.header:hover h1,
-.header:hover h2 {
-    text-shadow: 0 0 20px #000000;
+    
+    & h1 {
+        font-family: 'Nunito', sans-serif;
+        font-size: clamp(24px, 4vw, 3rem);
+        font-weight: 1000;
+        margin: 0;
+        transition-duration: 200ms;
+    }
+    
+    & h2 {
+        font-family: 'Nunito', sans-serif;
+        font-size: clamp(16px, 2vw, 2rem);
+        font-weight: 200;
+        font-style: italic;
+        margin: 0;
+        transition-duration: 200ms;
+    }
+    
+    &:hover h1,
+    &:hover h2 {
+        text-shadow: 0 0 20px #000000;
+    }
 }
 
 .cards {
@@ -124,15 +124,20 @@ body {
     border-radius: 1rem;
     box-sizing: border-box;
     overflow: hidden;
-}
-
-.card img {
-    width: 100%;
-    height: 100%;
-    color: white;
-    object-fit: cover;
-    user-select: none;
-    -webkit-user-select: none;
+    
+    &:hover {
+        border-radius: .5rem;
+        box-shadow: 0 0 20px var(--hover-accent);
+    }
+    
+    & img {
+        width: 100%;
+        height: 100%;
+        color: white;
+        object-fit: cover;
+        user-select: none;
+        -webkit-user-select: none;
+    }
 }
 
 .overlay {
@@ -143,44 +148,39 @@ body {
     display: flex;
     justify-content: space-between;
     align-content: center;
-}
-
-.overlay::before {
-    content: '';
-
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
-
-    width: 100%;
-    height: 8rem;
-
-    mask: linear-gradient(0deg, #000 40%, rgba(0, 0, 0, 0.8) 80%, #0000 100%);
-    backdrop-filter: blur(70px);
-}
-
-.card:hover {
-    border-radius: .5rem;
-    box-shadow: 0 0 20px var(--hover-accent);
-}
-
-.overlay h1 {
-    align-self: center;
-    color: white;
-    margin-left: var(--margin);
-    font-family: 'Nunito', sans-serif;
-    font-size: clamp(24px, 4vw, 2rem);
-    font-weight: 1000;
-    z-index: 2;
-}
-
-.overlay h2 {
-    align-self: center;
-    color: white;
-    margin-right: var(--margin);
-    font-family: 'Nunito', sans-serif;
-    font-size: clamp(24px, 3vw, 2rem);
-    font-weight: 200;
-    font-style: italic;
-    z-index: 2;
+    
+    &::before {
+        content: '';
+    
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    
+        width: 100%;
+        height: 8rem;
+    
+        mask: linear-gradient(0deg, #000 40%, rgba(0, 0, 0, 0.8) 80%, #0000 100%);
+        backdrop-filter: blur(70px);
+    }
+    
+    & h1 {
+        align-self: center;
+        color: white;
+        margin-left: var(--margin);
+        font-family: 'Nunito', sans-serif;
+        font-size: clamp(24px, 4vw, 2rem);
+        font-weight: 1000;
+        z-index: 2;
+    }
+    
+    & h2 {
+        align-self: center;
+        color: white;
+        margin-right: var(--margin);
+        font-family: 'Nunito', sans-serif;
+        font-size: clamp(24px, 3vw, 2rem);
+        font-weight: 200;
+        font-style: italic;
+        z-index: 2;
+    }
 }

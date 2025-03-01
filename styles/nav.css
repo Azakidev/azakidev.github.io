@@ -114,26 +114,21 @@ nav {
 }
 
 @keyframes appear {
-    from {
-        translate: 0 -150%;
-    }
-
-    to {
-        translate: 0;
-    }
+    from { translate: 0 -150%; }
+    to { translate: 0; }
 }
 
 .left {
     height: inherit;
     display: flex;
     align-items: center;
-}
-
-.left>h1 {
-    font-family: 'Nunito', sans-serif;
-    font-size: var(--nav-text-title);
-    font-weight: 1000 !important;
-    color: white;
+    
+    &>h1 {
+        font-family: 'Nunito', sans-serif;
+        font-size: var(--nav-text-title);
+        font-weight: 1000 !important;
+        color: white;
+    }
 }
 
 #logo {
@@ -141,67 +136,51 @@ nav {
     max-height: 80px;
     transition-duration: 200ms;
     filter: drop-shadow(0px 0px 2px #00000044);
-}
-
-#logo:hover {
-    scale: 1.1;
-    animation: spinny 400ms forwards;
+    
+    &:hover {
+        scale: 1.1;
+        animation: spinny 400ms forwards;
+    }
 }
 
 @keyframes spinny {
-    from {
-        rotate: 0;
-    }
-
-    33% {
-        rotate: -8deg;
-    }
-
-    66% {
-        rotate: 8deg;
-    }
-
-    to {
-        rotate: 0;
-    }
+    from { rotate: 0; }
+    33% { rotate: -8deg; }
+    66% { rotate: 8deg; }
+    to { rotate: 0; }
 }
 
 .right {
     display: flex;
     align-items: center;
-}
+    
+    &>a {
+        font-family: 'Nunito', sans-serif;
+        font-size: var(--nav-text-link);
+        font-weight: 1000;
+        letter-spacing: normal;
+        text-decoration: none;
+    
+        color: white;
+        transition-duration: 200ms;
+        
+        &:hover {
+            letter-spacing: 1.5px;
+        }
+    }
+    
+    & #prices {
+        padding: .5rem 1.2rem;
+        background-color: rgb(var(--button));
+        border-radius: 6rem;
+        
+        &:hover {
+            background-color: var(--main-accent);
+            font-weight: 400;
+            font-style: italic;
+        }
+    }
 
-.right>a {
-    font-family: 'Nunito', sans-serif;
-    font-size: var(--nav-text-link);
-    font-weight: 1000;
-    letter-spacing: normal;
-    text-decoration: none;
-
-    color: white;
-    transition-duration: 200ms;
-}
-
-.right>a:hover {
-    letter-spacing: 1.5px;
-}
-
-.right #prices {
-    padding: .5rem 1.2rem;
-    background-color: rgb(var(--button));
-    border-radius: 6rem;
-}
-
-.right #labs:hover {
-    color: var(--labs-accent);
-}
-
-.right #ych:hover {
-    color: var(--ych-accent);
-}
-
-.right #prices:hover {
-    background-color: var(--main-accent);
-    font-weight: 400;
-    font-style: italic;
+    & #labs:hover { color: var(--labs-accent); }
+    & #ych:hover { color: var(--ych-accent); }
 }

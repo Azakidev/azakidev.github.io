@@ -5,10 +5,10 @@
     .content {
         flex-direction: column !important;
         justify-content: space-evenly;
-    }
-
-    .content img {
-        width: 100% !important;
+        
+        & img {
+            width: 100% !important;
+        }
     }
 
     .card {
@@ -62,23 +62,23 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.card h1 {
-    font-size: var(--text-large);
-    font-weight: 1000;
-    color: white;
-
-    margin: 0;
-    margin-bottom: 20px;
-}
-
-.card p {
-    font-size: var(--text-medium);
-    font-weight: 200;
-    color: var(--text-soft);
     
-    text-align: center;
+    & h1 {
+        font-size: var(--text-large);
+        font-weight: 1000;
+        color: white;
+    
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    
+    & p {
+        font-size: var(--text-medium);
+        font-weight: 200;
+        color: var(--text-soft);
+        
+        text-align: center;
+    }
 }
 
 img {

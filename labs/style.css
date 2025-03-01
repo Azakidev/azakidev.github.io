@@ -15,13 +15,9 @@
     }
 }
 
-:root {
-    --hover-accent: var(--labs-accent);
-}
+:root { --hover-accent: var(--labs-accent); }
 
-body {
-    background-color: rgb(var(--labs-bg-rgb));
-}
+body { background-color: rgb(var(--labs-bg-rgb)); }
 
 .grid {
     background: linear-gradient(90deg, rgba(255, 255, 255, .25) 2px, transparent 2px),
@@ -32,18 +28,10 @@ body {
     transition-duration: 200ms;
 }
 
-.header:hover>.grid {
-    background-size: 7vmin 7vmin;
-}
+.header:hover>.grid { background-size: 7vmin 7vmin; }
 
-#refs {
-    object-position: top;
-}
+#refs { object-position: top; }
 
-#lless {
-    object-position: 0 20%;
-}
+#lless { object-position: 0 20%; }
 
-#animloop {
-    object-position: top;
-}
+#animloop { object-position: top; }
