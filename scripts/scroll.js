@@ -5,10 +5,18 @@ const cards = document.getElementsByClassName("cards")[0];
 function scrollhandler() {
     let opacity = window.getComputedStyle(arrow).getPropertyValue("opacity");
     if (opacity != 0) {
-        layout.scrollIntoView({behavior: 'smooth' })
+        layout.scrollIntoView({ behavior: 'smooth' })
     }
 }
 
 function cardsscrollhandler() {
-    cards.scrollIntoView({behavior: 'smooth' })
+    cards.scrollIntoView({ behavior: 'smooth' })
+}
+
+function ychscrollhandler() {
+    document.getElementById('offerych').scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
+
+function labsscrollhandler() {
+    document.getElementById('offerlabs').scrollIntoView({ behavior: 'smooth', block: 'start' })
 }

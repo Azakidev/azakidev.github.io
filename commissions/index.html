@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="darkreader-lock">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The main sheet of prices for FatDawlf's commissions, it may also contain any sales currently active.">
+    <meta name="description"
+        content="The main sheet of prices for FatDawlf's commissions, it may also contain any sales currently active.">
     <title>FatDawlf - Commissioning</title>
-    
+
     <!-- Opengraph metadata -->
     <meta property="og:title" content="FatDawlf - Commissioning" />
     <meta property="og:type" content="article" />
     <meta property="og:image" content="https://azakidev.github.io/images/prices/sheet.png" />
     <meta property="og:url" content="https://azakidev.github.io/commissions" />
     <meta property="og:description" content="FatDawlf's commission pricing and information">
-    
+
     <meta name="twitter:card" content="summary_large_image" />
-    
+
     <!-- Styling -->
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@200..1000&display=swap" type="text/css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@200..1000&display=swap"
+        type="text/css">
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/00d9ff1293.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="navcont">
         <nav>
             <div class="left">
                 <img src="../images/Logo.png" alt="FatDawlf's logo" id="logo">
-                <h1>FatDawlf</h1>    
+                <h1>FatDawlf</h1>
             </div>
             <div class="right">
-                <a href="../ych/" id="ych">YCH</a>
-                <a href="../labs/" id="labs">LABS</a>
+                <a onclick="ychscrollhandler()" id="ych">YCH</a>
+                <a onclick="labsscrollhandler()" id="labs">LABS</a>
                 <a href="../" id="prices">Contact me</a>
             </div>
         </nav>
     </div>
-    <div class="dot-grid"><div id="blob"></div></div>
+    <div class="dot-grid">
+        <div id="blob"></div>
+    </div>
 
     <!-- NOTE TO SELF: Remove top padding of layout when showing a banner-->
 
@@ -68,7 +75,14 @@
                         More styles and examples below!
                     </p>
                 </div>
-                <span class="button" onclick="cardsscrollhandler()" role="button" tabindex="0">Show me! <i class="fa-solid fa-arrow-right"></i></span>
+                <div class="buttons">
+                    <span class="button" onclick="ychscrollhandler()" role="button" tabindex="0">YCH <i
+                            class="fa-solid fa-plus"></i></span>
+                    <span class="button" onclick="labsscrollhandler()" role="button" tabindex="0">LABS <i
+                            class="fa-solid fa-flask"></i></span>
+                    <span class="button" onclick="cardsscrollhandler()" role="button" tabindex="0">Show me! <i
+                            class="fa-solid fa-arrow-right"></i></span>
+                </div>
             </div>
         </div>
     </section>
@@ -143,9 +157,105 @@
             </div>
         </div>
     </section>
+    <section class="ych-labs">
+        <div class="offerrow" id="offerlabs">
+            <h1>LABS</h1>
+            <h2>Experimental prices</h2>
+            <div id="labscardwrapper">
+                <a aria-roledescription="button" class="offerarrow" id="left"> <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <a aria-roledescription="button" class="offerarrow" id="right"> <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <div id="labscards">
+                    <div class="offercard">
+                        <img src="../images/labs/refs.png" id="refs" alt="Ref sheets, starting at 40€"
+                            loading="lazy"></img>
+                        <div class="overlay">
+                            <h1>Ref. Sheets</h1>
+                            <h2>40€+</h2>
+                        </div>
+                    </div>
+                    <div class="offercard">
+                        <img src="../images/labs/cels.png" id="lless" alt="Nathaki painted in a lineless style"
+                            loading="lazy"></img>
+                        <div class="overlay">
+                            <h1>Cel shade</h1>
+                            <h2>30€</h2>
+                        </div>
+                    </div>
+                    <div class="offercard">
+                        <img src="../images/labs/animloop.avif" id="animloop" alt="A short breathing animation"
+                            loading="lazy"></img>
+                        <div class="overlay">
+                            <h1>Short animation</h1>
+                            <h2>Ask!</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offerrow" id="offerych">
+            <h1>YCH</h1>
+            <h2>Your Character Here sales currently active</h2>
+            <div id="ychcardwrapper">
+                <a aria-roledescription="button" class="offerarrow" id="left"> <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <a aria-roledescription="button" class="offerarrow" id="right"> <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <div id="ychcards">
+                    <div class="offercard">
+                        <img
+                            src="../images/ych/gurgle.png"
+                            alt="A character's close up image of their belly, with the text 'Gurgle' beside it."
+                            loading="lazy">
+                        </img>
+                        <div class="overlay">
+                            <h1>Gurgle</h1>
+                            <h2>10€</h2>
+                        </div>
+                    </div>
+                    <div class="offercard">
+                        <img 
+                            src="../images/ych/facesit.png"
+                            alt="Two characters, one much fatter than the other. The larger one sitting on the smaller one's face and looking quite smug."
+                            loading="lazy">
+                        </img>
+                        <div class="overlay">
+                            <h1>Facesit</h1>
+                            <h2>20/40€</h2>
+                        </div>
+                    </div>
+                    <div class="offercard">
+                        <img 
+                            src="../images/ych/bellyhat.png"
+                            alt="Two characters, one's belly on top of the other's head."
+                            loading="lazy">
+                        </img>
+                        <div class="overlay">
+                            <h1>Belly hat</h1>
+                            <h2>20/40€</h2>
+                        </div>
+                    </div>
+                    <div class="offercard">
+                        <img
+                            src="../images/ych/walled.png"
+                            alt="Two characters, one squishing another against a wall."
+                            loading="lazy"></img>
+                        <div class="overlay">
+                            <h1>Walled</h1>
+                            <h2>30/40€</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
     <footer>Website by FatDawlf</footer>
     <script src="../scripts/scroll.js"></script>
     <script src="../scripts/blob.js"></script>
     <script src="../scripts/lazy.js"></script>
+    <script src="../scripts/offers.js"></script>
 </body>
+
 </html>
