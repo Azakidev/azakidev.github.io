@@ -14,9 +14,9 @@ function cardsscrollhandler() {
 }
 
 function ychscrollhandler() {
-    document.getElementById('offerych').scrollIntoView({ behavior: 'smooth', block: 'start' })
+    document.getElementById('offerych').scrollIntoView({ behavior: 'smooth', block: 'end' })
 }
 
 function labsscrollhandler() {
-    document.getElementById('offerlabs').scrollIntoView({ behavior: 'smooth', block: 'start' })
+    document.getElementById('offerlabs').scrollIntoView({ behavior: 'smooth', block: 'end' })
 }
