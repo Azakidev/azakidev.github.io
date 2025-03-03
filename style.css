@@ -70,6 +70,8 @@ body {
 
 .blobwrap {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -270,10 +272,5 @@ section {
     & .card {
         max-width: 65ch;
         transition-duration: 200ms;
-        scale: 1;
-        
-        &:hover.rotateable {
-            scale: 1.05;
-        }
     }
 }
