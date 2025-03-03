@@ -38,6 +38,7 @@
     #ychcards .offercard:not(.active) {
         max-width: 5rem !important;
         border-radius: 6rem;
+        cursor: pointer;
 
         .overlay {
             bottom: -100%;
