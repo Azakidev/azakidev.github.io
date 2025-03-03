@@ -6,6 +6,17 @@ const ychCardScroller = document.getElementById('ychcards');
 var ychCard = Math.floor(ychCardScroller.children.length / 2);
 ychCardScroller.children[ychCard].classList.add('active');
 
+const labsLeftArrow = document.querySelector('#labscardwrapper #left');
+const labsRightArrow = document.querySelector('#labscardwrapper #right');
+
+const ychLeftArrow = document.querySelector('#ychcardwrapper #left');
+const ychRightArrow = document.querySelector('#ychcardwrapper #right');
+
+labsLeftArrow.addEventListener("click", (e) => { handleScroll(e) })
+labsRightArrow.addEventListener("click", (e) => { handleScroll(e) })
+ychLeftArrow.addEventListener("click", (e) => { handleScroll(e) })
+ychRightArrow.addEventListener("click", (e) => { handleScroll(e) })
+
 Array.from(labsCardScroller.children).forEach(card => {
     card.addEventListener('click', (e) => {
         swapto(e)
@@ -17,17 +28,6 @@ Array.from(ychCardScroller.children).forEach(card => {
         swapto(e)
     })
 });
-
-const labsLeftArrow = document.querySelector('#labscardwrapper #left');
-const labsRightArrow = document.querySelector('#labscardwrapper #right');
-
-const ychLeftArrow = document.querySelector('#ychcardwrapper #left');
-const ychRightArrow = document.querySelector('#ychcardwrapper #right');
-
-labsLeftArrow.addEventListener("click", (e) => { handleScroll(e) })
-labsRightArrow.addEventListener("click", (e) => { handleScroll(e) })
-ychLeftArrow.addEventListener("click", (e) => { handleScroll(e) })
-ychRightArrow.addEventListener("click", (e) => { handleScroll(e) })
 
 function handleScroll(event) {
     console.log(event.target)
@@ -48,7 +48,6 @@ function handleScroll(event) {
             labsCard += 1;
         }
         labsCardScroller.children[labsCard].classList.add('active');
-        
     }
     if (event.target == ychLeftArrow) {
         ychCardScroller.children[ychCard].classList.remove('active');
@@ -71,15 +70,15 @@ function handleScroll(event) {
 }
 
 function swapto(event){
-    if (labsCardScroller == event.target.parentNode.parentNode) {
-        labsCardScroller.children[labsCard].classList.remove('active');
-        labsCard = Array.from(event.target.parentNode.parentNode.children).indexOf(event.target.parentNode);
-        labsCardScroller.children[labsCard].classList.add('active');
-    }
-    if ( ychCardScroller == event.target.parentNode.parentNode) {
-        console.log(event.parentNode)
-        ychCardScroller.children[ychCard].classList.remove('active');
-        ychCard = Array.from(event.target.parentNode.parentNode.children).indexOf(event.target.parentNode);
-        ychCardScroller.children[ychCard].classList.add('active');
+    if (!event.target.parentNode.parentNode.classList.contains('active')) {
+        if (labsCardScroller === event.target.parentNode.parentNode) {
+            labsCardScroller.children[labsCard].classList.remove('active');
+            labsCard = Array.from(event.target.parentNode.parentNode.children).indexOf(event.target.parentNode);
+            labsCardScroller.children[labsCard].classList.add('active');
+        } else {
+            ychCardScroller.children[ychCard].classList.remove('active');
+            ychCard = Array.from(event.target.parentNode.parentNode.children).indexOf(event.target.parentNode);
+            ychCardScroller.children[ychCard].classList.add('active');
+        }
     }
 }
