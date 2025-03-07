@@ -101,7 +101,7 @@
             font-size: var(--text-medium);
             
             padding: 16px;
-            transition-duration: 200ms;
+            transition-duration: 100ms;
             
             border-radius: 6rem;
             box-shadow: 0 3px rgba(from black r g b / 0.5);

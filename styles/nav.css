@@ -96,6 +96,18 @@
     z-index: 99;
 }
 
+
+::view-transition-old(nav) {
+    animation: none !important;
+    translate: 0 !important;
+}
+  
+::view-transition-new(nav) {
+    animation: none !important;
+    translate: 0 !important;
+}
+
+
 nav {
     border: solid 2px rgba(var(--button), 0.6);
     border-radius: 6rem;

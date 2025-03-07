@@ -6,6 +6,10 @@
     }
 }
 
+@view-transition {
+    navigation: auto;
+}
+
 @media only screen and (width < 800px) and (width > 500px) {
     :root {
         --text-large: 48px;
@@ -94,6 +98,7 @@
     font-weight: 1000;
     text-decoration: none;
     letter-spacing: normal;
+    text-wrap-mode: nowrap;
 
     background: rgb(var(--button));
     color: white;
