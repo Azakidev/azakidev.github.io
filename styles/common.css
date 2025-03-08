@@ -6,10 +6,6 @@
     }
 }
 
-@view-transition {
-    navigation: auto;
-}
-
 @media only screen and (width < 800px) and (width > 500px) {
     :root {
         --text-large: 48px;
@@ -24,6 +20,12 @@
         --text-medium: 26px;
         --text-small: 20px;
     }
+}
+
+@view-transition { navigation: auto; }
+
+@media (hover: none) {
+    #blob  { display: none; }
 }
 
 :root {
@@ -92,8 +94,42 @@
     to { opacity: 1; }
 }
 
-.button {
+section>* {
+    color: white;
     font-family: 'Nunito', sans-serif;
+}
+
+.card {
+    text-align: center;
+    border: 2px solid rgb(var(--container-border));
+    border-radius: 2rem;
+
+    backdrop-filter: blur(70px);
+
+    width: 45%;
+    max-width: 80ch;
+    padding: var(--margin);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    &>h1 {
+        font-size: var(--text-large);
+        font-weight: 1000;
+        margin: 0;
+    }
+    
+    &>p {
+        font-size: var(--text-medium);
+        font-weight: 200;
+        margin: 0;
+    }
+}
+
+.button {
     font-size: clamp(20px, 5vw, 2rem);
     font-weight: 1000;
     text-decoration: none;
@@ -128,7 +164,7 @@ footer {
     right: 0;
     color: white;
     opacity: 0.5;
-    font-family: 'Nunito sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 1vmin;
     user-select: none;
     -webkit-user-select: none;

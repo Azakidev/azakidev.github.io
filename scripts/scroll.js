@@ -1,6 +1,6 @@
 const arrow = document.getElementById("scroller");
 const layout = document.getElementsByClassName("layout")[0];
-const cards = document.getElementsByClassName("cards")[0];
+const cards = document.getElementById("pcards");
 
 function scrollhandler() {
     let opacity = window.getComputedStyle(arrow).getPropertyValue("opacity");

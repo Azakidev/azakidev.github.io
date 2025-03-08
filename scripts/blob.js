@@ -38,12 +38,3 @@ document.body.onpointermove = event => {
         }
     }
 }
-
-document.body.ontouchmove = event => {
-    const {clientX, clientY} = event
-
-    blob.animate({
-        left: `${clientX}px`,
-        top: `${clientY}px`,
-    }, {duration: 1500, fill: "forwards"});
-}

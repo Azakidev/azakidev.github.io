@@ -79,7 +79,6 @@
     }
 }
 
-html,
 body {
     background-color: rgb(var(--bg-rgb));
     margin: 0;
@@ -178,7 +177,7 @@ body {
 
     gap: var(--margin);
     
-    & img {
+    &>img {
         max-width: 45%;
         min-width: 0;
         aspect-ratio: 1;
@@ -200,51 +199,7 @@ body {
 
 .card {
     align-self: center;
-    padding: var(--margin);
-
-    border: 2px solid rgb(var(--container-border));
-    border-radius: 2rem;
-
-    backdrop-filter: blur(70px);
-    -webkit-backdrop-filter: blur(70px);
-
-
-    display: flex;
-    flex-direction: column;
     align-content: space-between;
-    justify-content: center;
-}
-
-.text {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
-    gap: var(--margin);
-    margin-bottom: var(--margin);
-    
-    & h1 {
-        font-family: 'Nunito', sans-serif;
-        font-size: var(--text-large);
-        font-weight: 1000;
-        color: var(--text-soft);
-        transition: 500ms;
-        margin: 0 !important;
-        
-        &:hover {
-            color: white;
-        }
-    }
-    
-    & p {
-        font-family: 'Nunito', sans-serif;
-        font-size: var(--text-medium);
-        font-weight: 200;
-        text-align: center;
-        color: var(--text-soft);
-    
-        margin: 0;
-    }
 }
 
 .buttons {

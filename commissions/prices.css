@@ -23,7 +23,7 @@
         &:hover {
             height: calc(var(--small-card-height) * 1.8);
     
-            & .pcard {
+            &>.pcard {
                 border-radius: calc(var(--margin) / 4);
 
                 &:first-child {
@@ -44,7 +44,7 @@
     }
 }
 
-.cards {
+#pcards {
     display: flex;
     flex-direction: column;
     padding-top: 0;
