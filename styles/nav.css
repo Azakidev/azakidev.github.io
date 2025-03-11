@@ -120,6 +120,11 @@ nav {
     to { translate: 0; }
 }
 
+::view-transition-group(content) {
+    animation-timing-function: var(--nav-timing);
+    animation-duration: 0.6s;
+}
+
 ::view-transition-old(content) {
     translate: 0 -150%;
 }
