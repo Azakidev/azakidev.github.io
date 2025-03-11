@@ -28,6 +28,40 @@
     #blob  { display: none; }
 }
 
+::view-transition-group(price-img), ::view-transition-group(price-card) {
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+::view-transition-old(price-img), ::view-transition-old(price-card) {
+    animation-name: blur-in;
+}
+::view-transition-new(price-img), ::view-transition-new(price-card) {
+    animation-name: blur-out;
+}
+
+@keyframes blur-in {
+    from {
+        filter: blur(10px);
+        opacity: 1;
+        scale: 1;
+    }
+    to {
+        opacity: 0;
+        scale: 0.8;
+    }
+}
+  
+@keyframes blur-out {
+    from {
+        opacity: 0;
+        scale: 0.8;
+    }
+    to {
+      filter: blur(0px);
+      opacity: 1;
+      scale: 1;
+    }
+}
+
 :root {
     /*  Sizes   */
     --d: 2.5px;

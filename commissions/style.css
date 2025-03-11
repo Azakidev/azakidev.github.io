@@ -166,6 +166,15 @@ body {
     padding-top: calc(var(--margin) * 4);
 
     justify-content: center;
+
+
+    & .card {
+        view-transition-name: price-card;
+    }
+
+    & img {
+        view-transition-name: price-img;
+    }
 }
 
 .wrap {
