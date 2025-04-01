@@ -30,7 +30,6 @@ Array.from(ychCardScroller.children).forEach(card => {
 });
 
 function handleScroll(event) {
-    console.log(event.target)
     if (event.target == labsLeftArrow) {
         labsCardScroller.children[labsCard].classList.remove('active');
         if (labsCard - 1 < 0) {

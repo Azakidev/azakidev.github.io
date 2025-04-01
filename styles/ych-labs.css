@@ -111,6 +111,11 @@
             pointer-events: none;
         }
 
+        &:hover>i {
+            box-shadow: 0 6px rgba(from black r g b / 0.5);
+            translate: 0 -3px;
+        }
+
         &:active i {
             box-shadow: none;
             translate: 0 3px;
