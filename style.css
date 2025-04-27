@@ -24,6 +24,10 @@
     .card {
         width: auto !important;
     }
+
+    .projects .card {
+        transform: none !important;
+    }
 }
 
 @media only screen and (width < 800px) and (width > 500px) {
@@ -131,6 +135,7 @@ section {
         
         & h2 {
             font-size: var(--text-medium);
+            font-style: normal;
             font-weight: 200;
             color: var(--text-soft);
             max-width: 80ch;
