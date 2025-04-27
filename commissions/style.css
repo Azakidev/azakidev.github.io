@@ -68,14 +68,28 @@
 @media only screen and (width > 1300px) {
     .arrow {
         animation: forwards fade-in 2.1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s;
-    }
-
-    .arrow i {
-        animation: forwards slide 2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s;
+        i {
+            animation: forwards slide 2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s;
+        }
     }
 
     .banner {
         height: 98vh;
+    }
+
+    #tos, #process {
+        .card {
+            align-self: stretch !important;
+            justify-content: start;
+        }
+    }
+
+    #process .card:last-of-type {
+        justify-content: center;
+        &>h1 {
+            position: absolute;
+            top: var(--margin);
+        }
     }
 }
 
@@ -131,27 +145,14 @@ body {
 }
 
 @keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 0.8;
-    }
+    from { opacity: 0; }
+    10% { opacity: 0; }
+    to { opacity: 0.8; }
 }
 
 @keyframes slide {
-    from {
-        translate: 0 -100%;
-    }
-
-    to {
-        translate: 0 0;
-    }
+    from { translate: 0 -100%; }
+    to { translate: 0 0; }
 }
 
 .layout {
@@ -218,4 +219,34 @@ body {
     flex-wrap: nowrap;
     justify-content: center;
     gap: calc(var(--margin) / 2);
+}
+
+#tos, #process {
+    margin: var(--margin);
+    
+    h2 {
+        font-size: calc(var(--text-large) * .8);
+        font-style: italic;
+        font-weight: 200;
+        text-align: center;
+
+        margin: calc(var(--margin) * 2) 0;
+        margin-top: 0;
+    }
+    
+    h1 {
+        font-size: calc(var(--text-medium) * 1.25) !important;
+    }
+
+    b {
+        font-weight: 1000;
+    }
+}
+
+.subtext {
+    color: var(--text-soft);
+    font-weight: 200;
+    font-style: italic;
+    margin-left: var(--margin);
+    font-size: var(--text-small);
 }
