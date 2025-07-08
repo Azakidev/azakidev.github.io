@@ -115,8 +115,9 @@ section {
     
         background-image: url(images/bg.png);
         background-position: center;
+        background-size: cover;
         opacity: 0.3;
-        filter: blur(5px);
+        filter: blur(5px) saturate(1.2);
         scale: 1.01;
         z-index: -1;
     }
