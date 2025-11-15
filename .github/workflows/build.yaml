@@ -38,6 +38,9 @@ jobs:
         run: |
           npm ci
           npm run build
+          rm -rf ./_build/prices/
+          rm -rf ./_build/ych/
+          rm -rf ./_build/labs/
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

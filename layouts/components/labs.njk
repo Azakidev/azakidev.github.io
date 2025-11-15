@@ -1,0 +1,22 @@
+<div class="offerrow" id="offerlabs">
+    <h1>LABS</h1>
+    <h2>Experimental prices</h2>
+    <div id="labscardwrapper">
+        <a aria-roledescription="button" class="offerarrow left"> <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <a aria-roledescription="button" class="offerarrow right"> <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <div id="labscards">
+            {%- for price in collections.labs -%}
+                <div class="offercard">
+                    <img src="/media/labs/{{ price.data.name }}"
+                    alt="{{ price.data.description }}">
+                    </img>
+                    <div class="overlay">
+                        {{ price.templateContent | safe }}
+                    </div>
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>

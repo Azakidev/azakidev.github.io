@@ -1,0 +1,22 @@
+<div class="offerrow" id="offerych">
+    <h1>YCH</h1>
+    <h2>Your Character Here sales currently active</h2>
+    <div id="ychcardwrapper">
+        <a aria-roledescription="button" class="offerarrow left"> <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <a aria-roledescription="button" class="offerarrow right"> <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <div id="ychcards">
+            {%- for price in collections.ych -%}
+                <div class="offercard">
+                    <img src="/media/ych/{{ price.data.name }}.png"
+                    alt="{{ price.data.description }}">
+                    </img>
+                    <div class="overlay">
+                        {{ price.templateContent | safe }}
+                    </div>
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>

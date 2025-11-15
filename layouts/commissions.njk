@@ -97,164 +97,18 @@ hasBlob: true
     </section>
     <section id="pcards">
         <h2>More examples!</h2>
-        <div class="row">
-            <div class="pcard" data-bgimage="llps" tabindex="0">
-            </div>
+        {%- for price in collections.prices -%}
+        <div class="row" id="row{{price.data.order}}">
+            <!-- Image -->
+            <div class="pcard" data-bgimage="{{ price.data.imageId }}" id="{{ price.data.imageId }}" tabindex="0"></div>
+            <!-- Text -->
             <div class="pcard text">
-                <h1>80€</h1>
-                <h2 class="name">Lineless painted shaded</h2>
-                <h2>Detailed, lively, textured</h2>
+                {{ price.templateContent | safe }}
             </div>
         </div>
-        <div class="row" id="reverse">
-            <div class="pcard" data-bgimage="lcs" tabindex="0"></div>
-            <div class="pcard">
-                <h1>60€</h1>
-                <h2 class="name">Lined colored shaded</h2>
-                <h2>Refined, clean, soft</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="pcard" data-bgimage="css" id="css" tabindex="0">
-            </div>
-            <div class="pcard text">
-                <h1>50€</h1>
-                <h2 class="name">Colored shaded sketch</h2>
-                <h2>Bold, expressive, textured</h2>
-            </div>
-        </div>
-        <div class="row reverse">
-            <div class="pcard" data-bgimage="cl" tabindex="0"></div>
-            <div class="pcard">
-                <h1>40€</h1>
-                <h2 class="name">Colored lineart</h2>
-                <h2>Flat, legible, simple</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="pcard" data-bgimage="cs" id="cs" tabindex="0">
-            </div>
-            <div class="pcard text">
-                <h1>30€</h1>
-                <h2 class="name">Colored sketch</h2>
-                <h2>Expressive, clear, focused</h2>
-            </div>
-        </div>
-        <div class="row reverse">
-            <div class="pcard" data-bgimage="l" tabindex="0"></div>
-            <div class="pcard">
-                <h1>25€</h1>
-                <h2 class="name">Lineart</h2>
-                <h2>Budget conscious, clean, inspiring</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="pcard" data-bgimage="ss" tabindex="0">
-            </div>
-            <div class="pcard text">
-                <h1>25€</h1>
-                <h2 class="name">Shaded sketch</h2>
-                <h2>Conceptual, bold, budget conscious</h2>
-            </div>
-        </div>
-        <div class="row reverse">
-            <div class="pcard" data-bgimage="s" id="s" tabindex="0">
-            </div>
-            <div class="pcard" id="text">
-                <h1>20€</h1>
-                <h2 class="name">Sketch</h2>
-                <h2>Budget minded, scrappy, expressive</h2>
-            </div>
-        </div>
+        {%- endfor -%}
     </section>
     <section class="ych-labs">
-        <div class="offerrow" id="offerlabs">
-            <h1>LABS</h1>
-            <h2>Experimental prices</h2>
-            <div id="labscardwrapper">
-                <a aria-roledescription="button" class="offerarrow left"> <i class="fa-solid fa-arrow-left"></i>
-                </a>
-                <a aria-roledescription="button" class="offerarrow right"> <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <div id="labscards">
-                    <div class="offercard">
-                        <img src="/media/labs/refs.png" alt="Ref sheets, starting at 40€"></img>
-                        <div class="overlay">
-                            <h1>Ref. Sheets</h1>
-                            <h2>40€+</h2>
-                        </div>
-                    </div>
-                    <div class="offercard">
-                        <img src="/media/labs/cels.png" alt="Nathaki painted in a lineless style"></img>
-                        <div class="overlay">
-                            <h1>Cel shade</h1>
-                            <h2>30€</h2>
-                        </div>
-                    </div>
-                    <div class="offercard">
-                        <img src="/media/labs/animloop.avif" alt="A short breathing animation"></img>
-                        <div class="overlay">
-                            <h1>Short animation</h1>
-                            <h2>Ask!</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="offerrow" id="offerych">
-            <h1>YCH</h1>
-            <h2>Your Character Here sales currently active</h2>
-            <div id="ychcardwrapper">
-                <a aria-roledescription="button" class="offerarrow left"> <i class="fa-solid fa-arrow-left"></i>
-                </a>
-                <a aria-roledescription="button" class="offerarrow right"> <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <div id="ychcards">
-                    <div class="offercard">
-                        <img src="/media/ych/gurgle.png"
-                            alt="A character's close up image of their belly, with the text 'Gurgle' beside it.">
-                        </img>
-                        <div class="overlay">
-                            <h1>Gurgle</h1>
-                            <h2>10€</h2>
-                        </div>
-                    </div>
-                    <div class="offercard">
-                        <img src="/media/ych/facesit.png"
-                            alt="Two characters, one much fatter than the other. The larger one sitting on the smaller one's face and looking quite smug.">
-                        </img>
-                        <div class="overlay">
-                            <h1>Facesit</h1>
-                            <h2>20/40€</h2>
-                        </div>
-                    </div>
-                    <div class="offercard">
-                        <img src="/media/ych/pinned.png"
-                            alt="A POV of someone being pinned by a larger fur."></img>
-                        <div class="overlay">
-                            <h1>Pinned!</h1>
-                            <h2>10/30€</h2>
-                        </div>
-                    </div>
-                    <div class="offercard">
-                        <img src="/media/ych/bellyhat.png"
-                            alt="Two characters, one's belly on top of the other's head.">
-                        </img>
-                        <div class="overlay">
-                            <h1>Belly hat</h1>
-                            <h2>20/40€</h2>
-                        </div>
-                    </div>
-                    <div class="offercard">
-                        <img src="/media/ych/sit.png"
-                            alt="Two characters, one sitting on the other's face'."></img>
-                        <div class="overlay">
-                            <h1>Sit sticker</h1>
-                            <h2>10/20€</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        {% include "./components/labs.njk" %}
+        {% include "./components/ych.njk" %}
     </section>

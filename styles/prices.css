@@ -35,7 +35,7 @@
                 }
             }
 
-            & .name {
+            & h2:first-of-type {
                 color: white;
                 font-weight: 400;
             }
@@ -120,13 +120,14 @@
         font-style: italic;
         margin: 0;
         transition-duration: 200ms;
+        
+        &:first-of-type {
+            font-size: var(--text-medium);
+            margin-bottom: .5rem;
+            transition-duration: 200ms;
+        }
     }
 
-    & .name {
-        font-size: var(--text-medium);
-        margin-bottom: .5rem;
-        transition-duration: 200ms;
-    }
 }
 
 #css {
