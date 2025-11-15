@@ -5,6 +5,10 @@ description: A collection of links for FatDawlf's social media and commission pr
 thumbnail: hero
 ---
 
+# Projects
+
+<div class="wrap">
+
 <div class="card">
 
 # The dolfare
@@ -76,5 +80,7 @@ A tool for cropping and applying templates to images.
 I made this tool to learn how to use technologies such as electron, as well as to speed up making posts for my social media.
 
 <a href="http://github.com/Azakidev/Plantilla" class="button">Check it out!</a>
+
+</div>
 
 </div>

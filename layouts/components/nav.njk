@@ -5,10 +5,10 @@
                 <h1>FatDawlf</h1>
             </div>
             <div class="right">
-                {%- if title != "Characters" %}
+                {%- if not isCharacters %}
                 <a href="/characters/">Characters</a>
                 {%- endif %}
-                {%- if title != "Commissions" %}
+                {%- if not isCommissions %}
                 <a href="/commissions/" id="prices">Prices</a>
                 {%- else %}
                 <a onclick="ychscrollhandler()" id="ych">YCH</a>
