@@ -1,0 +1,39 @@
+- id: llps
+  name: Lineless painted shaded
+  description: Detailed, lively, textured
+  price: 80
+
+- id: lcs
+  name: Lined colored shaded
+  description: Refined, clean, soft
+  price: 60
+
+- id: css
+  name: Colored shaded sketch
+  description: Bold, expressive, textured
+  price: 50
+
+- id: cl
+  name: Colored lineart
+  description: Flat, legible, simple
+  price: 40
+
+- id: cs
+  name: Colored sketch
+  description: Expressive, clear, focused
+  price: 30
+
+- id: l
+  name: Lineart
+  description: Budget conscious, clean, inspiring
+  price: 25
+
+- id: ss
+  name: Shaded sketch
+  description: Conceptual, bold, budget conscious
+  price: 25
+
+- id: s
+  name: Sketch
+  description: Budget minded, scrappy, expressive
+  price: 20

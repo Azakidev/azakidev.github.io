@@ -30,3 +30,17 @@ if ('IntersectionObserver' in window) {
         header.style.backgroundImage = "url('"+path+header.dataset.bgimage+".png')";
     });
 }
+
+const pcards = document.getElementById("pcards")
+const rows = pcards.getElementsByClassName("row")
+
+var index = 0
+
+Array.from(rows)
+  .forEach(node => {
+      if (index % 2 == 0) {
+          node.classList.add("reverse")
+      }
+      index++
+      pcards.appendChild(node)
+  });

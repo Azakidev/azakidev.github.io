@@ -1,0 +1,25 @@
+- id: bellyhat
+  name: Belly hat
+  description: Two characters, one's belly on top of the other's head.
+  price: 20/40
+
+- id: facesit
+  name: Facesit
+  description: Two characters, one much fatter than the other. The larger one sitting on the smaller one's face and looking quite smug.
+  price: 20/40
+
+- id: pinned
+  name: Pinned!
+  description: A POV of someone being pinned by a larger fur.
+  price: 10/30
+
+- id: gurgle
+  name: Gurgle
+  description: A character's close up image of their belly, with the text 'Gurgle' beside it.
+  price: 10
+
+- id: sit
+  name: Sit sticker
+  description: Two characters, one sitting on the other's face.
+  price: 10/20
+

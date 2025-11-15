@@ -22,11 +22,11 @@
     }
 }
 
-@view-transition { navigation: auto; }
-
 @media (hover: none) {
     #blob  { display: none; }
 }
+
+@view-transition { navigation: auto; }
 
 ::view-transition-group(price-img), ::view-transition-group(price-card) {
     animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);

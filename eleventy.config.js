@@ -1,16 +1,19 @@
 // import { IdAttributePlugin } from "@11ty/eleventy"
 import { minify } from "terser";
+import YAML from "yaml";
 
 export default async function(eleventyConfig) {
     // Folders
-    eleventyConfig.setInputDirectory("pages/");
+    eleventyConfig.setInputDirectory("./pages/");
+    eleventyConfig.setDataDirectory("../_data/");
     eleventyConfig.setLayoutsDirectory("../layouts/");
-    eleventyConfig.setOutputDirectory("./_build");
 
+    // Resources
     eleventyConfig.addPassthroughCopy("./media/")
     eleventyConfig.addPassthroughCopy("./sitemap.xml")
     eleventyConfig.addPassthroughCopy("./robots.txt")
-
+    
+    // Watch
     eleventyConfig.addWatchTarget("./src/*")
     eleventyConfig.addWatchTarget("./styles/*")
 
@@ -27,4 +30,6 @@ export default async function(eleventyConfig) {
             return code;
         }
     });
+
+    eleventyConfig.addDataExtension("yaml", (contents) => YAML.parse(contents));
 };

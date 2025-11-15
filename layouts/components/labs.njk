@@ -7,16 +7,17 @@
         <a aria-roledescription="button" class="offerarrow right"> <i class="fa-solid fa-arrow-right"></i>
         </a>
         <div id="labscards">
-            {%- for price in collections.labs -%}
+            {% for price in labs %}
                 <div class="offercard">
-                    <img src="/media/labs/{{ price.data.name }}"
-                    alt="{{ price.data.description }}">
+                    <img src="/media/labs/{{ price.id }}"
+                    alt="{{ price.description }}">
                     </img>
                     <div class="overlay">
-                        {{ price.templateContent | safe }}
+                        <h1>{{ price.name }}</h1>
+                        <h2>{{ price.price }}</h2>
                     </div>
                 </div>
-            {%- endfor -%}
+            {% endfor %}
         </div>
     </div>
 </div>

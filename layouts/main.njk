@@ -85,20 +85,20 @@
     {% include "../src/lazy.js" %}
     {% include "../src/offers.js" %}
     {% include "../src/scroll.js" %}
-    {% include "../src/pricecards.js" %}
     {%- endif %}
     
     {%- if isCharacters %}
+    {% include "../node_modules/jquery/dist/jquery.min.js" %}
     {% include "../src/characters.js" %}
     {%- endif %}
 
     {% endset %}
 
-    {%- if isCharacters %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    {%- endif %}
-
-    <script>
+    <script 
+        {%- if isCharacters %}
+        type="module"
+        {%- endif %}
+        >
         {{ js | jsmin | safe}}
     </script>
 </body>
