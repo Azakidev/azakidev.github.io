@@ -1,0 +1,58 @@
+@media only screen and (width < 500px) {
+    :root {
+        --text-large: 42px;
+        --text-medium: 16px;
+        --text-small: 14px;
+    }
+}
+
+@media only screen and (width < 800px) and (width > 500px) {
+    :root {
+        --text-large: 48px;
+        --text-medium: 20px;
+        --text-small: 16px;
+    }
+}
+
+@media only screen and (width > 800px) {
+    :root {
+        --text-large: 64px;
+        --text-medium: 26px;
+        --text-small: 20px;
+    }
+}
+
+:root {
+    /*  Sizes   */
+    --d: 2.5px;
+    --button-radius: 14px;
+    --margin: 2rem;
+    --logo-size: 80px;
+
+    --nav-text-title: clamp(14px, 3vw, 2.25rem);
+    --nav-text-link: clamp(12px, 3vw, 1.75rem);
+    --nav-padding: 15px;
+
+    /*  Misc color  */
+    --bg: #191919;
+    --ych-bg: #28192d;
+    --labs-bg: #0a284b;
+
+    --container-border: #414141;
+    --container-bg: #464646;
+    --button: #5A5A5A;
+
+    /*  Brand Colors  */
+    --main-accent: #C22BDF;
+    --ych-accent: #831299;
+    --labs-accent: #2B97DF;
+
+    --main-glow: #E27BF7;
+    --labs-glow: #51D4FF;
+
+    --text-soft: #CACACA;
+
+    /* Timings */
+    --nav-timing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --card-timing: cubic-bezier(.65, .05, .36, 1);
+}

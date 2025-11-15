@@ -1,5 +1,5 @@
 :root {
-    --margin: 10%
+    --margin: 10% !important;
 }
 
 @media only screen and (width < 900px) {
@@ -110,7 +110,7 @@
         
         border-radius: 6rem;
         box-shadow: 0 3px rgba(from black r g b / 0.5);
-        background-color: rgba(var(--button), 0.8);
+        background-color: rgb(from var(--button) r g b / 0.8);
         backdrop-filter: blur(12px);
     }
     
@@ -129,12 +129,6 @@
     from { opacity: 0; }
     10% { opacity: 0; }
     to { opacity: 1; }
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background-color: white;
 }
 
 #arrow {
@@ -165,7 +159,7 @@ body {
 
             border-radius: 6rem;
             box-shadow: 0 3px rgba(from black r g b / 0.5);
-            background-color: rgba(var(--button), 0.8);
+            background-color: rgb(from var(--button) r g b / 0.8);
             backdrop-filter: blur(12px);
         }
 
@@ -230,7 +224,6 @@ section {
     align-content: start;
 
     box-sizing: border-box;
-    color: white;
 }
 
 h1 {
@@ -260,7 +253,5 @@ h2 {
 }
 
 p {
-    font-family: 'Nunito sans', sans-serif;
-    font-size: var(--text-medium);
     margin-bottom: 0;
 }

@@ -1,7 +1,7 @@
 @media only screen and (width < 500px) {
     :root {
-        --nav-text-title: clamp(14px, 3vw, 1.5rem);
-        --nav-text-link: clamp(12px, 3vw, 1rem);
+        --nav-text-title: clamp(14px, 3vw, 1.5rem) !important;
+        --nav-text-link: clamp(12px, 3vw, 1rem) !important;
         --logo-size: 50px !important;
     }
 
@@ -21,8 +21,8 @@
 
 @media only screen and (width < 800px) and (width > 500px) {
     :root {
-        --nav-text-title: clamp(14px, 3vw, 1.5rem);
-        --nav-text-link: clamp(12px, 3vw, 1rem);
+        --nav-text-title: clamp(14px, 3vw, 1.5rem) !important;
+        --nav-text-link: clamp(12px, 3vw, 1rem) !important;
         --logo-size: 64px !important;
         --nav-padding: 23px;
     }
@@ -38,12 +38,6 @@
 }
 
 @media only screen and (width < 1150px) and (width > 800px) {
-    :root {
-        --nav-text-title: clamp(14px, 3vw, 2.25rem);
-        --nav-text-link: clamp(12px, 3vw, 1.75rem);
-        --nav-padding: 15px;
-    }
-
     nav {
         margin: calc(var(--margin) / 1.5) var(--margin);
         height: calc(var(--margin) + 48px);
@@ -71,10 +65,6 @@
     }
 }
 
-:root {
-    --nav-timing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
 .navcont {
     position: fixed;
     top: 0;
@@ -83,13 +73,14 @@
 }
 
 nav {
-    border: solid 2px rgba(var(--button), 0.6);
+    border: solid 2px rgb(from var(--button) r g b / 0.6);
     border-radius: 6rem;
-    background-color: rgba(var(--container-bg), 0.5);
+    background-color: rgb(from var(--container-bg) r g b / 0.5);
+
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
 
-    transition-duration: 200ms;
+    transition-duration: 0.2s;
     transition-timing-function: var(--nav-timing);
     view-transition-name: navtransition;
 
@@ -105,10 +96,9 @@ nav {
         margin-left: calc(var(--nav-padding) / 2);
 
         &>h1 {
-            font-family: 'Nunito', sans-serif;
             font-size: var(--nav-text-title);
-            font-weight: 1000 !important;
-            color: white;
+            user-select: none;
+            -webkit-user-select: none;
         }
     }
 
@@ -125,8 +115,6 @@ nav {
             letter-spacing: normal;
             text-decoration: none;
 
-
-            color: white;
             transition-duration: 0.2s;
             transition-delay: 0.1s;
 
@@ -137,7 +125,7 @@ nav {
 
         & #prices {
             padding: .5rem 1.2rem;
-            background-color: rgb(var(--button));
+            background-color: var(--button);
             border-radius: 6rem;
 
             font-weight: 800;

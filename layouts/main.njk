@@ -28,10 +28,15 @@
 
     {% set css %}
 
+    {% include "../styles/vars.css" %}
     {% include "../styles/common.css" %}
     
     {%- if not hideNav %}
     {% include "../styles/nav.css" %}
+    {%- endif %}
+
+    {%- if hasBlob or hasDotGrid %}
+    {% include "../styles/effects.css" %}
     {%- endif %}
     
     {%- if isHero %}

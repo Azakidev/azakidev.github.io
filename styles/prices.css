@@ -27,7 +27,7 @@
                 border-radius: calc(var(--margin) / 4);
 
                 &:first-child {
-                    box-shadow: 0 0 20px var(--main-accent);
+                    box-shadow: 0 3px 0px var(--main-accent);
                 }
 
                 & h1 {
@@ -36,7 +36,6 @@
             }
 
             & h2:first-of-type {
-                color: white;
                 font-weight: 400;
             }
         }
@@ -69,7 +68,14 @@
     flex-direction: row;
 
     height: var(--small-card-height);
-    transition-duration: 200ms;
+    
+    transition-duration: 0.2s;
+    transition-delay: 0.1s;
+
+    & * {
+        transition-duration: 0.2s;
+        transition-delay: 0.1s;
+    }
 
     &.reverse {
         flex-direction: row-reverse;
@@ -79,15 +85,12 @@
 
 .pcard {
     border-radius: calc(var(--margin) / 2);
-    background-color: rgba(var(--container-bg), .6);
+    background-color: rgb(from var(--container-bg) r g b / 0.6);
 
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
 
     text-align: center;
-    font-family: 'Nunito', sans-serif;
-    transition-duration: 200ms;
-    transition-delay: 200ms;
 
     &:first-child {
         width: var(--big-card-width);
@@ -105,12 +108,7 @@
     }
 
     & h1 {
-        color: white;
-        font-size: var(--text-large);
-        font-weight: 1000;
-        margin: 0;
         margin-bottom: calc(var(--margin) / 2);
-        transition-duration: 200ms;
     }
 
     & h2 {
@@ -119,12 +117,10 @@
         font-weight: 200;
         font-style: italic;
         margin: 0;
-        transition-duration: 200ms;
         
         &:first-of-type {
             font-size: var(--text-medium);
             margin-bottom: .5rem;
-            transition-duration: 200ms;
         }
     }
 

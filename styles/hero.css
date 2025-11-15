@@ -63,12 +63,6 @@
     }
 }
 
-body {
-    overflow-x: hidden;
-    margin: 0;
-    background-color: rgb(var(--bg-rgb));
-}
-
 .blobwrap {
     position: fixed;
     top: 0;
@@ -83,7 +77,6 @@ body {
     position: absolute;
     z-index: 2;
     background: radial-gradient(circle at var(--d) var(--d),
-
             rgba(255, 255, 255, 0.1) calc(var(--d) - 1px),
             #00000000 var(--d)) 10px 10px;
     background-size: 40px 40px;
@@ -124,11 +117,6 @@ section {
         
         &>* {
             transition-duration: 200ms;
-        }
-        
-        & h1 {
-            font-size: var(--text-large);
-            font-weight: 1000;
         }
         
         & h2 {
@@ -211,8 +199,6 @@ section {
     
     & img {
         width: 45%;
-        max-width: 1000px;
-        max-height: 1000px;
         border-radius: 1rem;
         aspect-ratio: 1;
         user-select: none;
@@ -226,7 +212,6 @@ section {
     height: fit-content;
     
     &>h1 {
-        font-size: var(--text-large);
         font-weight: 200;
         font-style: italic;
         text-align: center;

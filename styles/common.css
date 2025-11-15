@@ -1,40 +1,25 @@
-@media only screen and (width < 500px) {
-    :root {
-        --text-large: 42px;
-        --text-medium: 16px;
-        --text-small: 14px;
-    }
-}
-
-@media only screen and (width < 800px) and (width > 500px) {
-    :root {
-        --text-large: 48px;
-        --text-medium: 20px;
-        --text-small: 16px;
-    }
-}
-
-@media only screen and (width > 800px) {
-    :root {
-        --text-large: 64px;
-        --text-medium: 26px;
-        --text-small: 20px;
-    }
-}
-
 @media (hover: none) {
-    #blob  { display: none; }
+    #blob {
+        display: none;
+    }
 }
 
-@view-transition { navigation: auto; }
+@view-transition {
+    navigation: auto;
+}
 
-::view-transition-group(price-img), ::view-transition-group(price-card) {
+::view-transition-group(price-img),
+::view-transition-group(price-card) {
     animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-::view-transition-old(price-img), ::view-transition-old(price-card) {
+
+::view-transition-old(price-img),
+::view-transition-old(price-card) {
     animation-name: blur-in;
 }
-::view-transition-new(price-img), ::view-transition-new(price-card) {
+
+::view-transition-new(price-img),
+::view-transition-new(price-card) {
     animation-name: blur-out;
 }
 
@@ -44,98 +29,60 @@
         opacity: 1;
         scale: 1;
     }
+
     to {
         opacity: 0;
         scale: 0.8;
     }
 }
-  
+
 @keyframes blur-out {
     from {
         opacity: 0;
         scale: 0.8;
     }
+
     to {
-      filter: blur(0px);
-      opacity: 1;
-      scale: 1;
+        filter: blur(0px);
+        opacity: 1;
+        scale: 1;
     }
 }
 
-:root {
-    /*  Sizes   */
-    --d: 2.5px;
-    --button-radius: 14px;
-    --margin: 2rem;
-    --logo-size: 80px;
-
-    /*  Misc color  */
-    --bg-rgb: 25, 25, 25;
-    --ych-bg-rgb: 40, 25, 45;
-    --labs-bg-rgb: 10, 40, 75;
-
-    --container-border: 65, 65, 65;
-    --container-bg: 70, 70, 70;
-    --button: 90, 90, 90;
-
-    /*  Brand Colors  */
-    --main-accent: #C22BDF;
-    --ych-accent: #831299;
-    --labs-accent: #2B97DF;
-
-    --main-glow: #E27BF7;
-    --labs-glow: #51D4FF;
-
-    --text-soft: #CACACA;
+body {
+    background-color: var(--bg);
+    
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
-.dot-grid {
-    position: fixed;
-    z-index: 0;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-
-    background: radial-gradient(circle at var(--d) var(--d),
-
-            rgba(255, 255, 255, 0.1) calc(var(--d) - 1px),
-            #00000000 var(--d)) 10px 10px;
-    background-size: 40px 40px;
-}
-
-#blob {
-    background-color: #fff;
-
-    border-radius: 50%;
-    height: 100px;
-    aspect-ratio: 1;
-    filter: blur(50px);
-
-    opacity: 0;
-    animation: fade 1s ease-in 1s forwards;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-@keyframes fade {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-section>* {
+* {
     color: white;
     font-family: 'Nunito', sans-serif;
 }
 
+h1 {
+    font-size: var(--text-large);
+    font-weight: 1000;
+    margin: 0;
+}
+
+p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: var(--text-medium);
+    font-weight: 200;
+
+    margin: 0;
+}
+
+strong {
+    font-weight: 1000 !important;
+}
+
 .card {
     text-align: center;
-    border: 2px solid rgb(var(--container-border));
+    border: 2px solid var(--container-border);
     border-radius: 2rem;
 
     backdrop-filter: blur(70px);
@@ -149,18 +96,6 @@ section>* {
     gap: 20px;
     justify-content: center;
     align-items: center;
-
-    &>h1 {
-        font-size: var(--text-large);
-        font-weight: 1000;
-        margin: 0;
-    }
-    
-    &>p {
-        font-size: var(--text-medium);
-        font-weight: 200;
-        margin: 0;
-    }
 }
 
 .button {
@@ -170,23 +105,22 @@ section>* {
     letter-spacing: normal;
     text-wrap-mode: nowrap;
 
-    background: rgb(var(--button));
-    color: white;
+    background: var(--button);
 
     padding: calc(var(--margin) / 1.5);
     border-radius: 6rem;
 
     transition-duration: 200ms;
-    
+
     &:hover {
         letter-spacing: 2px;
         font-weight: 400;
         font-style: italic;
-    
+
         background: var(--main-accent);
         box-shadow: 0 0 20px var(--main-glow);
     }
-    
+
     &:active {
         padding: calc(var(--margin) / 1.8);
     }
@@ -197,7 +131,6 @@ footer {
     bottom: 0;
     right: 0;
     z-index: 999;
-    color: white;
     opacity: 0.5;
     font-family: 'Nunito', sans-serif;
     font-size: 1vmin;
