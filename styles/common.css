@@ -80,6 +80,10 @@ strong {
     font-weight: 1000 !important;
 }
 
+a {
+    text-decoration: none;
+}
+
 .card {
     text-align: center;
     border: 2px solid var(--container-border);
@@ -101,8 +105,7 @@ strong {
 .button {
     font-size: clamp(20px, 5vw, 2rem);
     font-weight: 1000;
-    text-decoration: none;
-    letter-spacing: normal;
+
     text-wrap-mode: nowrap;
 
     background: var(--button);

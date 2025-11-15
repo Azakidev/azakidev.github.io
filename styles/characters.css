@@ -1,5 +1,5 @@
 :root {
-    --margin: 10% !important;
+    --char-margin: 10% !important;
 }
 
 @media only screen and (width < 900px) {
@@ -57,7 +57,7 @@
     }
 
     h2 {
-        margin-bottom: var(--margin);
+        margin-bottom: var(--char-margin);
     }
 
     .reverse {
@@ -94,7 +94,6 @@
     margin: 1rem;
     left: 0;
     top: 0;
-    text-decoration: none;
     
     &>i {
         aspect-ratio: 1;
@@ -138,6 +137,7 @@
     right: 0;
     
     margin: 1rem;
+    margin-bottom: var(--margin);
     
 
     display: flex;

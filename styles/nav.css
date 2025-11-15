@@ -93,12 +93,32 @@ nav {
         display: flex;
         align-items: center;
 
-        margin-left: calc(var(--nav-padding) / 2);
-
-        &>h1 {
-            font-size: var(--nav-text-title);
+        &>a {
+            gap: 0;
             user-select: none;
             -webkit-user-select: none;
+
+            transition-duration: 0.2s;
+            transition-delay: 0.1s;
+
+            &>h1 {
+                font-family: 'Nunito', sans-serif;
+                font-weight: 1000;
+                font-size: var(--nav-text-title);
+            }
+
+            &>* {
+                margin: 0;
+            }
+
+            &:hover {
+                text-shadow: 0px 3px 0px rgb(from black r g b / 1);
+
+                &>#logo {
+                    scale: 1.1;
+                    animation: spinny 400ms forwards;
+                }
+            }
         }
     }
 
@@ -112,8 +132,6 @@ nav {
             font-family: 'Nunito', sans-serif;
             font-size: var(--nav-text-link);
             font-weight: 400;
-            letter-spacing: normal;
-            text-decoration: none;
 
             transition-duration: 0.2s;
             transition-delay: 0.1s;
@@ -167,15 +185,12 @@ nav {
 
 
 #logo {
-    height: var(--logo-size);
-    max-height: 80px;
-    transition-duration: 200ms;
+    height: 100%;
+    max-height: var(--logo-size);
+
+    transition-duration: 0.2s;
     filter: drop-shadow(0px 0px 2px #00000044);
 
-    &:hover {
-        scale: 1.1;
-        animation: spinny 400ms forwards;
-    }
 }
 
 @keyframes spinny {

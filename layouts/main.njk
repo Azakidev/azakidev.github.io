@@ -31,10 +31,6 @@
     {% include "../styles/vars.css" %}
     {% include "../styles/common.css" %}
     
-    {%- if not hideNav %}
-    {% include "../styles/nav.css" %}
-    {%- endif %}
-
     {%- if hasBlob or hasDotGrid %}
     {% include "../styles/effects.css" %}
     {%- endif %}
@@ -56,6 +52,10 @@
     {%- if isCharacters %}
     {% include "../styles/characters.css" %}
     {% include "../styles/accents.css" %}
+    {%- endif %}
+
+    {%- if not hideNav %}
+    {% include "../styles/nav.css" %}
     {%- endif %}
 
     {% endset %}
