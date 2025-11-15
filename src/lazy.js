@@ -1,4 +1,4 @@
-const path = "../images/prices/";
+const path = "/media/prices/";
 
 // Check for IntersectionObserver support
 if ('IntersectionObserver' in window) {

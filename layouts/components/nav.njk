@@ -1,0 +1,20 @@
+    <div class="navcont">
+        <nav>
+            <div class="left">
+                <img src="/media/Logo.png" alt="FatDawlf's logo" id="logo">
+                <h1>FatDawlf</h1>
+            </div>
+            <div class="right">
+                {%- if title != "Characters" %}
+                <a href="/characters/">Characters</a>
+                {%- endif %}
+                {%- if title != "Commissioning" %}
+                <a href="/commissions/" id="prices">Prices</a>
+                {%- else %}
+                <a onclick="ychscrollhandler()" id="ych">YCH</a>
+                <a onclick="labsscrollhandler()" id="labs">LABS</a>
+                <a href="/" id="prices">Contact me</a>
+                {%- endif %}
+            </div>
+        </nav>
+    </div>

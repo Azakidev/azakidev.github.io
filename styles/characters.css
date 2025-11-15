@@ -1,6 +1,3 @@
-@import url(../styles/common.css);
-@import url(accents.css);
-
 :root {
     --margin: 10%
 }
@@ -198,8 +195,8 @@ section {
     border-top: .5rem solid #FFFFFFDD;
 }
 
-#reverseimg img {
-    scale: -1 1;
+.reverseimg img {
+    transform: rotateY(180deg);
 
     &:hover img {
         scale: -1.05 1.05;

@@ -1,0 +1,38 @@
+---
+layout: ./main.njk
+isHero: true
+hasBlob: true
+---
+
+    <section class="hero" tabindex="0">
+        <div class="text">
+            <h1>Hi</h1>
+            <h2>I'm an artist that draws furries of all shapes and sizes.<br>
+                I offer art for fair prices, check them out in my social media here!</h2>
+        </div>
+        {% include "./components/socials.njk" %}
+    </section>
+    <div class="content">
+        <section class="pricespeek">
+            <div class="wrap">
+                <div class="card">
+                    <h1>Commissions</h1>
+                    <p>
+                        I offer a variety of styles so you can bring your ideas to life while staying affordable.<br>
+                        Check my social media for availability or for any questions you may have.
+                    </p>
+                    <p>
+                        More information, running sales, and examples linked below!
+                    </p>
+                    <a href="/commissions/" class="button">Check it out! <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <img class="rotateable" id="image" src="/media/commspeek.png" alt="A drawing for flavor">
+            </div>
+        </section>
+        <section class="projects">
+            <h1>My projects</h1>
+            <div class="wrap">
+                {{ content | safe }}
+            </div>
+        </section>
+    </div>

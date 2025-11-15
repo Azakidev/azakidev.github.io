@@ -70,11 +70,12 @@
 
     height: var(--small-card-height);
     transition-duration: 200ms;
+
+    &.reverse {
+        flex-direction: row-reverse;
+    }
 }
 
-#reverse {
-    flex-direction: row-reverse;
-}
 
 .pcard {
     border-radius: calc(var(--margin) / 2);

@@ -1,3 +1,5 @@
+node_modules/
+_build/
 oldpage/
 gallery/
 Logofs.png

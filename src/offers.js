@@ -6,11 +6,11 @@ const ychCardScroller = document.getElementById('ychcards');
 var ychCard = Math.floor(ychCardScroller.children.length / 2);
 ychCardScroller.children[ychCard].classList.add('active');
 
-const labsLeftArrow = document.querySelector('#labscardwrapper #left');
-const labsRightArrow = document.querySelector('#labscardwrapper #right');
+const labsLeftArrow = document.querySelector('#labscardwrapper .offerarrow.left');
+const labsRightArrow = document.querySelector('#labscardwrapper .offerarrow.right');
 
-const ychLeftArrow = document.querySelector('#ychcardwrapper #left');
-const ychRightArrow = document.querySelector('#ychcardwrapper #right');
+const ychLeftArrow = document.querySelector('#ychcardwrapper .offerarrow.left');
+const ychRightArrow = document.querySelector('#ychcardwrapper .offerarrow.right');
 
 labsLeftArrow.addEventListener("click", (e) => { handleScroll(e) })
 labsRightArrow.addEventListener("click", (e) => { handleScroll(e) })

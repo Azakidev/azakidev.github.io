@@ -88,15 +88,15 @@
         align-self: center;
         
         
-        &#left {
+        &.left {
             left: var(--margin);
         }
         
-        &#right {
+        &.right {
             right: var(--margin);
         }
         
-        i {
+        & i {
             color: var(--text-soft);
             font-size: var(--text-medium);
             
@@ -161,7 +161,7 @@
         &:is(.active) {
             scale: 1.05;
             border-radius: 0.5rem;
-            box-shadow: 0 0 20px var(--hover-accent);
+            box-shadow: 0px 3px 0px var(--hover-accent);
         }
         &:not(.active):hover {
             scale: 1.05;
