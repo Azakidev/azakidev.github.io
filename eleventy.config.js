@@ -5,7 +5,7 @@ import YAML from "yaml";
 export default async function(eleventyConfig) {
     // Folders
     eleventyConfig.setInputDirectory("./pages/");
-    eleventyConfig.setDataDirectory("../_data/");
+    eleventyConfig.setDataDirectory("../data/");
     eleventyConfig.setLayoutsDirectory("../layouts/");
 
     // Resources
