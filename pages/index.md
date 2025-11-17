@@ -7,9 +7,9 @@ thumbnail: hero
 
 # Projects
 
-<div class="wrap">
+<div class="hc fw jc">
 
-<div class="card">
+<div class="card vc">
 
 # The dolfare
 
@@ -21,7 +21,7 @@ Free to make and open source, they're open for collaboration, ideas, and partici
 
 </div>
 
-<div class="card ">
+<div class="card vc">
 
 # NS0X
 
@@ -33,7 +33,7 @@ NS0X is the story of his creation and the people who made his existence possible
 
 </div>
 
-<div class="card">
+<div class="card vc">
 
 # Tales of Laraybis
 
@@ -45,7 +45,7 @@ It's certainly one of my most incomplete projects, as it is also the largest as 
 
 </div>
 
-<div class="card">
+<div class="card vc">
 
 # Heart of Sea
 
@@ -55,11 +55,11 @@ Heart of Sea is a short tale following an unnamed outsider to Laraybis in a vaca
 
 Despite happening long after the main story, it exposes some world-building and context for the series in a self contained way.
 
-<a href="https://www.furaffinity.net/view/60995405/" class="button">Check it out!</a>
+<br><a href="https://www.furaffinity.net/view/60995405/" class="button">Check it out!</a>
 
 </div>
 
-<div class="card">
+<div class="card vc">
 
 # This website
 
@@ -71,7 +71,7 @@ My plans for this site is to continue expanding it with more information about w
 
 </div>
 
-<div class="card">
+<div class="card vc">
 
 # Plantilla
 
@@ -79,7 +79,7 @@ A tool for cropping and applying templates to images.
 
 I made this tool to learn how to use technologies such as electron, as well as to speed up making posts for my social media.
 
-<a href="http://github.com/Azakidev/Plantilla" class="button">Check it out!</a>
+<br><a href="http://github.com/Azakidev/Plantilla" class="button">Check it out!</a>
 
 </div>
 

@@ -4,17 +4,19 @@ isHero: true
 hasBlob: true
 ---
 
-    <section class="hero" tabindex="0">
-        <div class="text">
-            <h1>Hi</h1>
-            <h2>I'm an artist that draws furries of all shapes and sizes.<br>
-                I offer art for fair prices, check them out in my social media here!</h2>
+    <section class="hero gc" tabindex="0">
+        <div class="vc ac">
+            <div class="text">
+                <h1>Hi</h1>
+                <h2>I'm an artist that draws furries of all shapes and sizes.<br>
+                    I offer art for fair prices, check them out in my social media here!</h2>
+            </div>
+            {% include "./components/socials.njk" %}
         </div>
-        {% include "./components/socials.njk" %}
     </section>
-    <div class="content">
-        <section class="pricespeek">
-            <div class="wrap">
+    <div class="content vc">
+        <section class="gc" id="pricesPeek">
+            <div class="hc ac jsb reflow">
                 <div class="card">
                     <h1>Commissions</h1>
                     <p>
@@ -29,7 +31,7 @@ hasBlob: true
                 <img class="rotateable" id="image" src="/media/commspeek.png" alt="A drawing for flavor">
             </div>
         </section>
-        <section class="projects">
+        <section id="projects">
             {{ content | safe }}
         </section>
     </div>

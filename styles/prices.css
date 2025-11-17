@@ -1,25 +1,65 @@
-@media only screen and (width < 1100px) {
+@media only screen and (width < 950px) {
     :root {
         --small-card-height: 40vh;
         --big-card-width: 70%;
     }
 
-    .row {
-        margin: var(--margin);
+    #pcards>.hc {
         gap: calc(var(--margin) / 2);
+        
+        &:hover {
+            &.hc {
+                height: 80vh !important;
+            }
+            & .pcard {
+                border-radius: calc(var(--margin) / 4);
+
+                &:not(.text) {
+                    height: 60vh !important;
+                }
+
+                &:first-child {
+                    height: 40vh;
+                    width: 100% !important;
+                    box-shadow: 0 3px 0px var(--main-accent);
+                }
+
+                & h1 {
+                    font-size: 96px;
+                }
+            }
+
+            & h2:first-of-type {
+                font-weight: 400;
+                color: white;
+            }
+        }
+    }
+
+    .pcard {
+        &:first-child {
+            height: var(--big-card-width);
+            width: auto !important;
+        }
+
+        &:last-child {
+            height: calc(100% - var(--big-card-width));
+            width: auto !important;
+        }
+    }
+
+    .text {
+        padding: var(--margin);
     }
 }
 
-@media only screen and (width > 1100px) {
+@media only screen and (950px < width < 1100px) {
     :root {
         --small-card-height: 40vh;
         --big-card-width: 70%;
     }
 
-    .row {
-        margin: var(--margin) calc(var(--margin) * 3);
-        gap: var(--margin);
-
+    #pcards>.hc {
         &:hover {
             height: calc(var(--small-card-height) * 1.8);
 
@@ -37,16 +77,46 @@
 
             & h2:first-of-type {
                 font-weight: 400;
+                color: white;
             }
         }
+    }
+}
 
+@media only screen and (width > 1100px) {
+    :root {
+        --small-card-height: 40vh;
+        --big-card-width: 70%;
+    }
+
+    #pcards>.hc {
+        &:hover {
+            height: calc(var(--small-card-height) * 1.8);
+
+            &>.pcard {
+                border-radius: calc(var(--margin) / 4);
+
+                &:first-child {
+                    box-shadow: 0 3px 0px var(--main-accent);
+                }
+
+                & h1 {
+                    font-size: 96px;
+                }
+            }
+
+            & h2:first-of-type {
+                font-weight: 400;
+                color: white;
+            }
+        }
     }
 }
 
 #pcards {
-    display: flex;
-    flex-direction: column;
     padding-top: 0;
+    margin: 0 calc(var(--margin));
+    margin-bottom: calc(var(--margin) * 2);
 
     &:hover>.row:not(:hover) {
         height: calc(var(--small-card-height) - var(--small-card-height) / 7)
@@ -61,27 +131,23 @@
         margin-top: var(--margin);
         margin-bottom: var(--margin);
     }
-}
 
-.row {
-    display: flex;
-    flex-direction: row;
+    &>.hc {
+        height: var(--small-card-height);
 
-    height: var(--small-card-height);
-    
-    transition-duration: 0.2s;
-    transition-delay: 0.1s;
-
-    & * {
         transition-duration: 0.2s;
         transition-delay: 0.1s;
-    }
 
-    &.reverse {
-        flex-direction: row-reverse;
+        & * {
+            transition-duration: 0.2s;
+            transition-delay: 0.1s;
+        }
+
+        &.reverse {
+            flex-direction: row-reverse;
+        }
     }
 }
-
 
 .pcard {
     border-radius: calc(var(--margin) / 2);
@@ -93,6 +159,7 @@
     text-align: center;
 
     &:first-child {
+        flex-grow: 1;
         width: var(--big-card-width);
         background-size: cover;
         background-position: center;
@@ -117,7 +184,7 @@
         font-weight: 200;
         font-style: italic;
         margin: 0;
-        
+
         &:first-of-type {
             font-size: var(--text-medium);
             margin-bottom: .5rem;

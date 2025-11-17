@@ -4,8 +4,8 @@ isCommissions: true
 hasBlob: true
 ---
 
-    <section class="layout">
-        <div class="wrap">
+    <section class="gc">
+        <div class="hc jc ac reflow" id="sheet">
             <img src="/media/prices/sheet.png" alt="A price sheet">
             <div class="card">
                 <h1>Pricing</h1>
@@ -20,7 +20,7 @@ hasBlob: true
                     <br>
                     More styles and examples below!
                 </p>
-                <div class="buttons">
+                <div class="hc fw jc" id="buttons">
                     <a class="button" onclick="cardsscrollhandler()" role="button" tabindex="0">
                         Show me!
                         <i class="fa-solid fa-fw fa-arrow-right"></i>
@@ -36,11 +36,11 @@ hasBlob: true
 
     {{ content | safe }}
 
-    <section id="pcards">
+    <section class="vc" id="pcards">
         <h2>More examples!</h2>
 
         {% for price in prices %}
-        <div class="row">
+        <div class="row hc reflow">
             <!-- Image -->
             <div class="pcard" data-bgimage="{{ price.id }}" id="{{ price.id }}" tabindex="0"></div>
             <!-- Text -->

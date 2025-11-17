@@ -6,10 +6,9 @@
     }
 
     nav {
-        flex-direction: column;
-        align-items: center;
         margin: calc(var(--margin) / 1.5) calc(var(--margin) * 1.25);
         padding: .5rem 0;
+        justify-content: center !important;
 
         & :last-child {
             gap: calc(var(--margin) / 2);
@@ -29,7 +28,9 @@
 
     nav {
         margin: calc(var(--margin) / 1.5) var(--margin);
-        height: calc(var(--margin) + 48px);
+        /* height: calc(var(--margin) + 48px); */
+        height: auto;
+        justify-content: center !important;
 
         & :last-child {
             gap: calc(var(--margin) / 2);
@@ -73,25 +74,20 @@
 }
 
 nav {
+    --blurSize: 30px;
     border: solid 2px rgb(from var(--button) r g b / 0.6);
     border-radius: 6rem;
     background-color: rgb(from var(--container-bg) r g b / 0.5);
 
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(var(--blurSize));
+    -webkit-backdrop-filter: blur(var(--blurSize));
 
     transition-duration: 0.2s;
     transition-timing-function: var(--nav-timing);
     view-transition-name: navtransition;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
     & :first-child {
         height: inherit;
-        display: flex;
-        align-items: center;
 
         &>a {
             gap: 0;
@@ -123,9 +119,6 @@ nav {
     }
 
     & :last-child {
-        display: flex;
-        align-items: center;
-
         margin-right: calc(var(--nav-padding) / 2);
 
         &>a {

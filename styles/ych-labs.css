@@ -13,7 +13,7 @@
         padding-top: var(--margin) !important;
     }
 
-    .offerrow {
+    .offerRow {
         padding: var(--margin) 0 !important;
     }
 
@@ -46,17 +46,12 @@
     }
 }
 
-.offerrow {
-    display: flex;
-    flex-direction: column;
+.offerRow {
     padding: calc(var(--margin) * 2) 0;
-
-    align-items: center;
 
     &>h1 {
         font-size: var(--text-large);
         font-weight: 1000;
-        color: white;
         margin: 0 !important;
     }
 
