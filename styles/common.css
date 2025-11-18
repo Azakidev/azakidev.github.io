@@ -77,9 +77,8 @@ h1 {
 }
 
 p {
-    font-family: 'Nunito Sans', sans-serif;
     font-size: var(--text-small);
-    font-weight: 200;
+    font-weight: 300;
 
     margin: 0;
 }
