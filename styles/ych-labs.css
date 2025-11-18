@@ -65,9 +65,7 @@
 
 #labscardwrapper,
 #ychcardwrapper {
-    display: flex;
     overflow-x: hidden;
-    justify-content: center;
     width: 100%;
 
     & .offerarrow {
@@ -92,7 +90,7 @@
             font-size: var(--text-medium);
 
             padding: 16px;
-            transition-duration: 100ms;
+            transition-duration: 0.1s;
 
             border-radius: 6rem;
             box-shadow: 0 3px rgba(from black r g b / 0.5);
@@ -128,18 +126,14 @@
 
 #labscards,
 #ychcards {
-    display: flex;
-    flex-direction: row;
     padding: calc(var(--margin) * 2) 0;
     gap: calc(var(--margin) * 1.5);
     height: 35rem;
 
-    align-items: center;
-
     .offercard {
         position: relative;
 
-        transition-duration: 500ms;
+        transition-duration: 0.5s;
         transition-timing-function: var(--card-timing);
 
         border-radius: 1rem;
@@ -171,11 +165,9 @@
             position: absolute;
             bottom: 0;
             width: 100%;
-            transition-duration: 0.2s;
 
-            display: flex;
-            justify-content: space-between;
-            align-content: center;
+            transition-duration: 0.5s;
+            transition-timing-function: var(--card-timing);
 
             &::before {
                 content: '';
@@ -192,16 +184,18 @@
             }
 
             &>h1 {
-                align-self: center;
                 margin-left: var(--margin);
+                margin-bottom: calc(var(--margin) / 2);
+
                 font-size: clamp(24px, 4vw, 2rem);
                 font-weight: 1000;
                 z-index: 2;
             }
 
             &>h2 {
-                align-self: center;
                 margin-right: var(--margin);
+                margin-bottom: calc(var(--margin) / 2);
+                
                 font-size: clamp(24px, 3vw, 2rem);
                 font-weight: 200;
                 font-style: italic;

@@ -17,7 +17,9 @@
 
     <title>FatDawlf - {{ title }}</title>
     <meta name="description" content= "{{ description }}" >
-
+    {% if keywords != "" %}
+    <meta name="keywords" content= "{{ keywords }}" >
+    {% endif %}
     <!-- Styling -->
     <link rel="preconnect" href="/media">
     <link rel="icon" type="image/x-icon" href="/media/favicon.ico">

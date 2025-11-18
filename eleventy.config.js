@@ -12,7 +12,7 @@ export default async function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./media/")
     eleventyConfig.addPassthroughCopy("./sitemap.xml")
     eleventyConfig.addPassthroughCopy("./robots.txt")
-    
+
     // Watch
     eleventyConfig.addWatchTarget("./src/*")
     eleventyConfig.addWatchTarget("./styles/*")
@@ -29,6 +29,14 @@ export default async function(eleventyConfig) {
             // Fail gracefully.
             return code;
         }
+    });
+
+    eleventyConfig.addFilter("head", (arr, num) => {
+        return num ? arr.slice(0, num) : arr;
+    });
+
+    eleventyConfig.addFilter("headafter", (arr, num) => {
+        return num ? arr.slice(num) : arr;
     });
 
     eleventyConfig.addDataExtension("yaml", (contents) => YAML.parse(contents));

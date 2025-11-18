@@ -2,6 +2,7 @@
 layout: hero.njk
 title: Socials
 description: A collection of links for FatDawlf's social media and commission prices
+keywords: furry art, fat fur art, dawlf
 thumbnail: hero
 ---
 

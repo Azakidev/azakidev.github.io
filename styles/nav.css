@@ -97,7 +97,7 @@ nav {
             transition-duration: 0.2s;
             transition-delay: 0.1s;
 
-            &>h1 {
+            &>span {
                 font-family: 'Nunito', sans-serif;
                 font-weight: 1000;
                 font-size: var(--nav-text-title);

@@ -1,18 +1,18 @@
 <div class="vc ac offerRow" id="offerlabs">
     <h1>LABS</h1>
     <h2>Experimental prices</h2>
-    <div id="labscardwrapper">
+    <div class="hc jc" id="labscardwrapper">
         <a aria-roledescription="button" class="offerarrow left"> <i class="fa-solid fa-arrow-left"></i>
         </a>
         <a aria-roledescription="button" class="offerarrow right"> <i class="fa-solid fa-arrow-right"></i>
         </a>
-        <div id="labscards">
+        <div class="hc ac" id="labscards">
             {% for price in labs %}
                 <div class="offercard">
                     <img src="/media/labs/{{ price.id }}"
                     alt="{{ price.description }}">
                     </img>
-                    <div class="overlay">
+                    <div class="hc ac jsb overlay">
                         <h1>{{ price.name }}</h1>
                         <h2>{{ price.price }}</h2>
                     </div>

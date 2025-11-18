@@ -11,7 +11,59 @@ hasBlob: true
                 <h2>I'm an artist that draws furries of all shapes and sizes.<br>
                     I offer art for fair prices, check them out in my social media here!</h2>
             </div>
-            {% include "./components/socials.njk" %}
+            <div class="hc ac jc fw reflow" id="socials">
+                <div class="hc">
+                {% for entry in socials | head(3) %}
+                    <a title="{{ entry.name }}" href="{{ entry.link }}" target="_blank">
+                        <i class="
+                            {% if not entry.isNotBrand %}
+                            fa-brands 
+                            {% else %}
+                            fa-solid
+                            {% endif %}
+
+                            {{ entry.icon }}
+                            "
+                            style="--highlight: {{ entry.color }}"
+                            ></i>
+                    </a>
+                {% endfor %}
+                </div>
+                <div class="hc">
+                {% for entry in socials | headafter(3) | head(3) %}
+                    <a title="{{ entry.name }}" href="{{ entry.link }}" target="_blank">
+                        <i class="
+                            {% if not entry.isNotBrand %}
+                            fa-brands 
+                            {% else %}
+                            fa-solid
+                            {% endif %}
+
+                            {{ entry.icon }}
+                            "
+                            style="--highlight: {{ entry.color }}"
+                            ></i>
+                    </a>
+                {% endfor %}
+                </div>
+                <div class="hc">
+                {% for entry in socials | headafter(6) | head(3) %}
+                    <a title="{{ entry.name }}" href="{{ entry.link }}" target="_blank">
+                        <i class="
+                            {% if not entry.isNotBrand %}
+                            fa-brands 
+                            {% else %}
+                            fa-solid
+                            {% endif %}
+
+                            {{ entry.icon }}
+                            "
+                            style="--highlight: {{ entry.color }}"
+                            ></i>
+                    </a>
+                {% endfor %}
+                </div>
+            </div>  
         </div>
     </section>
     <div class="content vc">

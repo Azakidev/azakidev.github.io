@@ -1,19 +1,19 @@
 <div class="vc ac offerRow" id="offerych">
     <h1>YCH</h1>
     <h2>Your Character Here sales currently active</h2>
-    <div id="ychcardwrapper">
+    <div class="hc jc" id="ychcardwrapper">
         <a aria-roledescription="button" class="offerarrow left"> <i class="fa-solid fa-arrow-left"></i>
         </a>
         <a aria-roledescription="button" class="offerarrow right"> <i class="fa-solid fa-arrow-right"></i>
         </a>
-        <div id="ychcards">
+        <div class="hc ac" id="ychcards">
 
             {%- for price in ych -%}
                 <div class="offercard">
                     <img src="/media/ych/{{ price.id }}.png"
                     alt="{{ price.description }}">
                     </img>
-                    <div class="overlay">
+                    <div class="hc jsb ac overlay">
                         <h1>{{ price.name }}</h1>
                         <h2>{{ price.price }}€</h2>
                     </div>
