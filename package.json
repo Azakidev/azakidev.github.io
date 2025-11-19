@@ -7,7 +7,7 @@
         "yaml": "^2.8.1"
     },
     "scripts": {
-        "build": "npx @11ty/eleventy",
+        "build": "bash ./media/gallery/generate.sh; npx @11ty/eleventy",
         "serve": "npx @11ty/eleventy --serve"
     },
     "devDependencies": {

@@ -30,6 +30,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup ffmpeg
+        uses: FedericoCarboni/setup-ffmpeg@v3
+        id: setup-ffmpeg
+        with:
+          ffmpeg-version: release
+          architecture: ''
+          linking-type: static
+          github-token: ${{ github.server_url == 'https://github.com' && github.token || '' }}
       - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
