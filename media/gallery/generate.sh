@@ -34,9 +34,9 @@ for FILE in $(dirname "$0")/$FULRES_DIR/*.png; do
   # Generate thumbnails if they don't exist
   if ! [ -f "$(dirname "$0")/$THUMBS_DIR/$ID-$IMAGE_NAME.$OUTFORMAT" ]; then
     if [ $OUTFORMAT == "avif" ]; then
-      ffmpeg -hide_banner -loglevel error -i $FILE -vf "scale=$SIZE:$SIZE:force_original_aspect_ratio=decrease" -c:v librav1e -q:v 2 ./$THUMBS_DIR/$ID-$IMAGE_NAME.$OUTFORMAT
+      ffmpeg -hide_banner -loglevel error -i $FILE -vf "scale=$SIZE:$SIZE:force_original_aspect_ratio=decrease" -c:v librav1e -q:v 2 $(dirname "$0")/$THUMBS_DIR/$ID-$IMAGE_NAME.$OUTFORMAT
     else
-      ffmpeg -hide_banner -loglevel error -i $FILE -vf "scale=$SIZE:$SIZE:force_original_aspect_ratio=decrease" -q:v 2 ./$THUMBS_DIR/$ID-$IMAGE_NAME.$OUTFORMAT
+      ffmpeg -hide_banner -loglevel error -i $FILE -vf "scale=$SIZE:$SIZE:force_original_aspect_ratio=decrease" -q:v 2 $(dirname "$0")/$THUMBS_DIR/$ID-$IMAGE_NAME.$OUTFORMAT
     fi
   fi
 
