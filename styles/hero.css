@@ -43,10 +43,10 @@
     #pricesPeek {
         align-items: initial !important;
         height: fit-content !important;
-    }
 
-    #pricesPeek .hc {
-        gap: calc(var(--margin) * 4);
+        & .hc {
+            gap: calc(var(--margin) * 4);
+        }
     }
 
     .projects {
@@ -200,6 +200,7 @@
     }
 
     & .card {
-        max-width: 65ch;
+        width: 80%;
+        max-width: 40ch;
     }
 }

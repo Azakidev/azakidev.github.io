@@ -44,5 +44,9 @@ export default async function(eleventyConfig) {
         return format(date, dateFormat)
     })
 
+    eleventyConfig.addFilter("firstWord", (str) => {
+        return str.split(" ")[0]
+    })
+
     eleventyConfig.addDataExtension("yaml", (contents) => YAML.parse(contents));
 };

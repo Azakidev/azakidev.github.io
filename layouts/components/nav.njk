@@ -7,9 +7,12 @@
                 </a>
             </div>
             <div class="hc ac">
-                {%- if not isCharacters %}
-                <a href="/characters/">Characters</a>
+                {% for entry in collections.destination | reverse %}
+                {%- if entry.data.title != title %}
+                <a href="{{entry.url}}">{{ entry.data.title | firstWord }}</a>
                 {%- endif %}
+                {% endfor %}
+
                 {%- if not isCommissions %}
                 <a href="/commissions/" id="prices">Prices</a>
                 {%- else %}

@@ -28,9 +28,6 @@
 
     nav {
         margin: calc(var(--margin) / 1.5) var(--margin);
-        /* height: calc(var(--margin) + 48px); */
-        height: auto;
-        justify-content: center !important;
 
         & :last-child {
             gap: calc(var(--margin) / 2);
@@ -41,7 +38,6 @@
 @media only screen and (width < 1150px) and (width > 800px) {
     nav {
         margin: calc(var(--margin) / 1.5) var(--margin);
-        height: calc(var(--margin) + 48px);
 
         & :last-child {
             gap: calc(var(--margin) / 1.75);
@@ -58,7 +54,7 @@
 
     nav {
         margin: calc(var(--margin) / 1.5) calc(var(--margin) * 4);
-        height: calc(var(--margin) + 48px);
+        /* height: calc(var(--margin) + 48px); */
 
         & :last-child {
             gap: calc(var(--margin) / 1.5);
