@@ -1,6 +1,7 @@
 // import { IdAttributePlugin } from "@11ty/eleventy"
 import { minify } from "terser";
 import YAML from "yaml";
+import { format } from "date-fns"
 
 export default async function(eleventyConfig) {
     // Folders
@@ -38,6 +39,10 @@ export default async function(eleventyConfig) {
     eleventyConfig.addFilter("headafter", (arr, num) => {
         return num ? arr.slice(num) : arr;
     });
+
+    eleventyConfig.addFilter('date', function(date, dateFormat) {
+        return format(date, dateFormat)
+    })
 
     eleventyConfig.addDataExtension("yaml", (contents) => YAML.parse(contents));
 };
