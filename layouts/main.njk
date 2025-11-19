@@ -58,6 +58,10 @@
     {% include "../styles/accents.css" %}
     {% include "../styles/characters.css" %}
     {%- endif %}
+    
+    {%- if isGallery %}
+    {% include "../styles/gallery.css" %}
+    {%- endif %}
 
     {%- if not hideNav %}
     {% include "../styles/nav.css" %}
@@ -100,6 +104,10 @@
     {%- if isCharacters %}
     {% include "../node_modules/jquery/dist/jquery.min.js" %}
     {% include "../src/characters.js" %}
+    {%- endif %}
+
+    {%- if isGallery %}
+    {% include "../src/gallery.js" %}
     {%- endif %}
 
     {% endset %}

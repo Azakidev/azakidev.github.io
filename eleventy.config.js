@@ -11,8 +11,8 @@ export default async function(eleventyConfig) {
 
     // Resources
     eleventyConfig.addPassthroughCopy("./media/")
-    eleventyConfig.addPassthroughCopy("./sitemap.xml")
     eleventyConfig.addPassthroughCopy("./robots.txt")
+    eleventyConfig.addPassthroughCopy("./data/images.json")
 
     // Watch
     eleventyConfig.addWatchTarget("./src/*")
