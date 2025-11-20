@@ -42,6 +42,10 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Generate thumbnails for gallery
+        run: |
+          mkdir ./media/gallery/thumbs
+          npm run thumbs
       - name: Install dependencies and build
         run: |
           npm ci

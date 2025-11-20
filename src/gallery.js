@@ -8,7 +8,7 @@ const base_url = "https://www.furaffinity.net/view/"
 var files = fetch('/data/images.json')
     .then(response => response.json())
     .then(data => {
-        data.files.sort(compare).reverse().forEach(file => {
+        data.files.sort(compareById).sort(compareByDate).reverse().forEach(file => {
             const container = document.createElement('div');
 
             var name = file.image.replace(/\_/g, ' ').replace('~', '?');
@@ -67,11 +67,21 @@ var files = fetch('/data/images.json')
     .catch(error => console.error('Error fetching images:', error)
     );
 
-let compare = (a, b) => {
+let compareByDate = (a, b) => {
     if (a.ts < b.ts) {
         return -1;
     }
     if (a.ts > b.ts) {
+        return 1;
+    }
+    return 0;
+};
+
+let compareById = (a, b) => {
+    if (a.fa_id < b.fa_id) {
+        return -1;
+    }
+    if (a.fa_id > b.fa_id) {
         return 1;
     }
     return 0;
