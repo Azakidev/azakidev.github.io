@@ -1,8 +1,3 @@
-- id: bellyhat
-  name: Belly hat
-  description: Two characters, one's belly on top of the other's head.
-  price: 20/40
-
 - id: facesit
   name: Facesit
   description: Two characters, one much fatter than the other. The larger one sitting on the smaller one's face and looking quite smug.
@@ -12,6 +7,11 @@
   name: Pinned!
   description: A POV of someone being pinned by a larger fur.
   price: 10/30
+
+- id: mobile
+  name: \"Mobile\"
+  description: A very obese character as seen from a low angle, struggling to hold onto straps coming down from the ceiling, one of them slipped off their hand. Their legs are struggling to catch it again.
+  price: 40
 
 - id: gurgle
   name: Gurgle
