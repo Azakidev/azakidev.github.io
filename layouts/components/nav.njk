@@ -1,0 +1,25 @@
+    <div class="navcont">
+        <nav class="hc ac jsb fw">
+            <div>
+                <a class="hc ac" href="/">
+                    <img src="/media/Logo.png" alt="FatDawlf's logo" id="logo">
+                    <span>FatDawlf</span>
+                </a>
+            </div>
+            <div class="hc ac">
+                {% for entry in collections.destination | reverse %}
+                {%- if entry.data.title != title %}
+                <a href="{{entry.url}}">{{ entry.data.title | firstWord }}</a>
+                {%- endif %}
+                {% endfor %}
+
+                {%- if not isCommissions %}
+                <a href="/commissions/" id="prices">Prices</a>
+                {%- else %}
+                <a onclick="ychscrollhandler()" id="ych">YCH</a>
+                <a onclick="labsscrollhandler()" id="labs">LABS</a>
+                <a href="/" id="prices">Contact me</a>
+                {%- endif %}
+            </div>
+        </nav>
+    </div>

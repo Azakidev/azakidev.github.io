@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="darkreader-lock">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% if isHero or isCommissions or isCharacters %}
+    {% include "./components/opengraph.njk" %}
+    {% endif %}
+
+    <title>FatDawlf - {{ title }}</title>
+    <meta name="description" content= "{{ description }}" >
+    {% if keywords != "" %}
+    <meta name="keywords" content= "{{ keywords }}" >
+    {% endif %}
+    <!-- Styling -->
+    <link rel="preconnect" href="/media">
+    <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@200..1000&display=swap"
+        type="text/css">
+    <script src="https://kit.fontawesome.com/00d9ff1293.js" crossorigin="anonymous"></script>
+
+    {% set css %}
+
+    {% include "../styles/vars.css" %}
+    {% include "../styles/common.css" %}
+    
+    {%- if hasBlob or hasDotGrid %}
+    {% include "../styles/effects.css" %}
+    {%- endif %}
+    
+    {%- if isHero %}
+    {% include "../styles/hero.css" %}
+    {%- endif %}
+    
+    {%- if is404 %}
+    {% include "../styles/404.css" %}
+    {%- endif %}
+
+    {%- if isCommissions %}
+    {% include "../styles/commissions.css" %}
+    {% include "../styles/prices.css" %}
+    {% include "../styles/ych-labs.css" %}
+    {%- endif %}
+    
+    {%- if isCharacters %}
+    {% include "../styles/accents.css" %}
+    {% include "../styles/characters.css" %}
+    {%- endif %}
+    
+    {%- if isGallery %}
+    {% include "../styles/gallery.css" %}
+    {%- endif %}
+
+    {%- if not hideNav %}
+    {% include "../styles/nav.css" %}
+    {%- endif %}
+
+    {% endset %}
+
+    <style>
+        {{ css | safe }}
+    </style>
+</head>
+
+<body>
+    {%- if not hideNav %}
+    {% include "./components/nav.njk" %}
+    {%- endif %}
+    
+    {% include "./components/effects.njk" %}
+
+    {{ content | safe}}
+
+    {% include "./components/footer.njk" %}
+    
+    {% set js %}
+
+    {%- if hasBlob %}
+    {% include "../src/blob.js" %}
+    {%- endif %}
+    
+    {%- if isHero %}
+    {% include "../src/silly.js" %}
+    {%- endif %}
+    
+    {%- if isCommissions %}
+    {% include "../src/lazy.js" %}
+    {% include "../src/offers.js" %}
+    {% include "../src/scroll.js" %}
+    {%- endif %}
+    
+    {%- if isCharacters %}
+    {% include "../node_modules/jquery/dist/jquery.min.js" %}
+    {% include "../src/characters.js" %}
+    {%- endif %}
+
+    {%- if isGallery %}
+    {% include "../src/gallery.js" %}
+    {%- endif %}
+
+    {% endset %}
+
+    <script 
+        {%- if isCharacters %}
+        type="module"
+        {%- endif %}
+        >
+        {{ js | jsmin | safe}}
+    </script>
+</body>

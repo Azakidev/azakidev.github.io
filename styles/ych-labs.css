@@ -13,7 +13,7 @@
         padding-top: var(--margin) !important;
     }
 
-    .offerrow {
+    .offerRow {
         padding: var(--margin) 0 !important;
     }
 
@@ -46,66 +46,55 @@
     }
 }
 
-.offerrow {
-    display: flex;
-    flex-direction: column;
+.offerRow {
     padding: calc(var(--margin) * 2) 0;
 
-    align-items: center;
-
     &>h1 {
-        font-family: 'Nunito', sans-serif;
         font-size: var(--text-large);
         font-weight: 1000;
-        color: white;
         margin: 0 !important;
     }
 
     &>h2 {
-        font-family: 'Nunito', sans-serif;
         font-size: var(--text-medium);
         font-weight: 200;
         font-style: italic;
-        color: white;
         margin: 0 !important;
     }
 }
 
 #labscardwrapper,
 #ychcardwrapper {
-    display: flex;
     overflow-x: hidden;
-    justify-content: center;
     width: 100%;
 
     & .offerarrow {
         height: 55px;
         aspect-ratio: 1;
         cursor: pointer;
-        
+
         position: absolute;
         z-index: 5;
         align-self: center;
-        
-        
-        &#left {
+
+        &.left {
             left: var(--margin);
         }
-        
-        &#right {
+
+        &.right {
             right: var(--margin);
         }
-        
-        i {
+
+        & i {
             color: var(--text-soft);
             font-size: var(--text-medium);
-            
+
             padding: 16px;
-            transition-duration: 100ms;
-            
+            transition-duration: 0.1s;
+
             border-radius: 6rem;
             box-shadow: 0 3px rgba(from black r g b / 0.5);
-            background-color: rgba(var(--button), 0.8);
+            background-color: rgb(from var(--button) r g b / 0.8);
             backdrop-filter: blur(12px);
 
             pointer-events: none;
@@ -124,33 +113,29 @@
 }
 
 #offerlabs {
-    background-color: rgb(var(--labs-bg-rgb));
-    box-shadow: 0 0 2rem rgb(var(--labs-bg-rgb));
+    background-color: var(--labs-bg);
+    box-shadow: 0 0 2rem var(--labs-bg);
     --hover-accent: var(--labs-accent);
 }
 
 #offerych {
-    background-color: rgb(var(--ych-bg-rgb));
-    box-shadow: 0 0 2rem rgb(var(--ych-bg-rgb));
+    background-color: var(--ych-bg);
+    box-shadow: 0 0 2rem var(--ych-bg);
     --hover-accent: var(--ych-accent);
 }
 
 #labscards,
 #ychcards {
-    display: flex;
-    flex-direction: row;
     padding: calc(var(--margin) * 2) 0;
     gap: calc(var(--margin) * 1.5);
     height: 35rem;
 
-    align-items: center;
-
     .offercard {
         position: relative;
 
-        transition-duration: 500ms;
-        transition-timing-function: cubic-bezier(.65, .05, .36, 1);
-        
+        transition-duration: 0.5s;
+        transition-timing-function: var(--card-timing);
+
         border-radius: 1rem;
         overflow: hidden;
 
@@ -161,8 +146,9 @@
         &:is(.active) {
             scale: 1.05;
             border-radius: 0.5rem;
-            box-shadow: 0 0 20px var(--hover-accent);
+            box-shadow: 0px 3px 0px var(--hover-accent);
         }
+
         &:not(.active):hover {
             scale: 1.05;
             border-radius: 2rem;
@@ -171,7 +157,6 @@
         &>img {
             width: 100%;
             height: 100%;
-            color: white;
             object-fit: cover;
             user-select: none;
         }
@@ -180,11 +165,9 @@
             position: absolute;
             bottom: 0;
             width: 100%;
-            transition-duration: 200ms;
 
-            display: flex;
-            justify-content: space-between;
-            align-content: center;
+            transition-duration: 0.5s;
+            transition-timing-function: var(--card-timing);
 
             &::before {
                 content: '';
@@ -196,25 +179,23 @@
                 width: 100%;
                 height: 8rem;
 
-                mask: linear-gradient(0deg, #000 40%, rgba(0, 0, 0, 0.8) 80%, #0000 100%);
+                mask: linear-gradient(0deg, #000 40%, rgb(from black r g b / 0.8) 80%, #0000 100%);
                 backdrop-filter: blur(70px);
             }
 
             &>h1 {
-                align-self: center;
-                color: white;
                 margin-left: var(--margin);
-                font-family: 'Nunito', sans-serif;
+                margin-bottom: calc(var(--margin) / 2);
+
                 font-size: clamp(24px, 4vw, 2rem);
                 font-weight: 1000;
                 z-index: 2;
             }
 
             &>h2 {
-                align-self: center;
-                color: white;
                 margin-right: var(--margin);
-                font-family: 'Nunito', sans-serif;
+                margin-bottom: calc(var(--margin) / 2);
+                
                 font-size: clamp(24px, 3vw, 2rem);
                 font-weight: 200;
                 font-style: italic;

@@ -1,14 +1,6 @@
-@import url(common.css);
-@import url(nav.css);
-
 @media only screen and (width < 800px) {
-    .content {
-        flex-direction: column !important;
-        justify-content: space-evenly;
-        
-        & img {
-            width: 100% !important;
-        }
+    #content img {
+        width: 100% !important;
     }
 
     .card {
@@ -16,73 +8,13 @@
     }
 }
 
-html,
-body {
-    height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
-    margin: 0;
-    background-color: rgb(var(--bg-rgb));
-
-    font-family: "Nunito";
-}
-
-nav {
-    translate: 0;
-    animation: none;
-}
-
-.content {
+#content {
     position: relative;
-
-    height: calc(100% - var(--margin) * 5);
-
-    display: flex;
-    flex-direction: row;
-    gap: var(--margin);
-    align-items: center;
-
-    margin: calc(var(--margin) * 4) calc(var(--margin) * 2);
-    margin-bottom: var(--margin);
-}
-
-.card {
-    text-align: center;
-    border: 2px solid rgb(var(--container-border));
-    border-radius: 2rem;
-
-    backdrop-filter: blur(70px);
-    -webkit-backdrop-filter: blur(70px);
-
-    width: calc(50% - var(--margin) / 2);
-    max-width: 80ch;
-    padding: var(--margin);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    & h1 {
-        font-size: var(--text-large);
-        font-weight: 1000;
-        color: white;
-    
-        margin: 0;
-        margin-bottom: 20px;
-    }
-    
-    & p {
-        font-size: var(--text-medium);
-        font-weight: 200;
-        color: var(--text-soft);
-        
-        text-align: center;
-    }
+    height: 100vh;
+    margin: 0 var(--margin);
 }
 
 img {
     width: calc(50% - var(--margin) / 2);
     border-radius: 1rem;
-    color: white;
 }

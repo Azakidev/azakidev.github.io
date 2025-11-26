@@ -1,0 +1,47 @@
+- name: Bluesky
+  icon: fa-bluesky
+  link: https://bsky.app/profile/fatdawlf.bsky.social
+  color: "#1185fe"
+  isNotBrand: false
+
+- name: FurAffinity
+  icon: fa-paw
+  link: https://www.furaffinity.net/user/akiranoguichi
+  color: "#957779"
+  isNotBrand: true
+
+- name: Twitter
+  icon: fa-twitter
+  link: https://twitter.com/FatDawlf
+  color: "#00a3e8"
+  isNotBrand: false
+
+- name: Discord
+  icon: fa-discord
+  link: https://discordapp.com/users/332940870150258688
+  color: "#5865F2"
+  isNotBrand: false
+
+- name: Mastodon
+  icon: fa-mastodon
+  link: https://wobbl.xyz/@FatDawlf
+  color: "#2b8fda"
+  isNotBrand: false
+
+- name: Github
+  icon: fa-github
+  link: https://github.com/Azakidev
+  color: "#51d4ff"
+  isNotBrand: false
+
+- name: Bandcamp
+  icon: fa-bandcamp
+  link: https://fatdawlf.bandcamp.com
+  color: "#3c9aaa"
+  isNotBrand: false
+
+- name: Email
+  icon: fa-envelope
+  link: mailto:zazaguichi@outlook.com
+  color: var(--main-accent)
+  isNotBrand: true

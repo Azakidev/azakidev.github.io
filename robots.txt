@@ -1,4 +1,4 @@
-Sitemap: https://azakidev.github.io/link-hub/sitemap.xml
+Sitemap: https://fatdawlf.art/sitemap.xml
 User-agent: *
 Disallow:
 User-agent: GPTBot

@@ -1,0 +1,14 @@
+- id: refs.png
+  name: Ref. Sheets
+  description: Reference sheets, starting at 40€
+  price: 40€+
+
+- id: cels.png
+  name: Cel shaded
+  description: Nathaki painted in a cel shaded style
+  price: 40€
+
+- id: animloop.avif
+  name: Short animation
+  description: A short breathing animation of Nathaki
+  price: Ask!

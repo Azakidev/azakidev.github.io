@@ -1,0 +1,60 @@
+---
+layout: ./main.njk
+isCommissions: true
+hasBlob: true
+---
+
+    <section class="gc">
+        <div class="hc jc ac reflow" id="sheet">
+            <img src="/media/prices/sheet.png" alt="A price sheet">
+            <div class="card">
+                <h1>Pricing</h1>
+                <p>
+                    My commissions are priced per character per image.<br><br>
+                    Listed here is the price for the first character per style.<br>
+                    Each additional character cost half the price of the first.<br>
+                    Simple backgrounds are included at no additional cost.<br>
+                    Complex backgrounds may cost up to 20% more than the total character cost.<br>
+                    <br>
+                    Full payment is done beforehand via Paypal.<br>
+                    <br>
+                    More styles and examples below!
+                </p>
+                <div class="hc fw jc" id="buttons">
+                    <a class="button" onclick="cardsscrollhandler()" role="button" tabindex="0">
+                        Show me!
+                        <i class="fa-solid fa-fw fa-arrow-right"></i>
+                    </a>
+                    <!-- <a class="button" href="/gallery/" role="button" tabindex="0">
+                        More examples!
+                        <i class="fa-solid fa-fw fa-arrow-right"></i>
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{ content | safe }}
+
+    <section class="vc" id="pcards">
+        <h2>More examples!</h2>
+
+        {% for price in prices %}
+        <div class="row hc reflow">
+            <!-- Image -->
+            <div class="pcard" data-bgimage="{{ price.id }}" id="{{ price.id }}" tabindex="0"></div>
+            <!-- Text -->
+            <div class="pcard text">
+                <h1>{{ price.price }}€</h1>
+                <h2>{{ price.name }}</h2>
+                <h2>{{ price.description }}</h2>
+            </div>
+        </div>
+        {% endfor %}
+
+    </section>
+
+    <section class="ych-labs">
+        {% include "./components/labs.njk" %}
+        {% include "./components/ych.njk" %}
+    </section>
