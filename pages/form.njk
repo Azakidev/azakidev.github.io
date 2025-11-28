@@ -1,0 +1,59 @@
+---
+eleventyExcludeFromCollections: true
+layout: main.njk
+title: Build a commission
+description: Commission a piece of artwork forom FatDawlf.
+
+permalink: commissions/form/index.html
+isForm: true
+isCommissions: false
+---
+
+<section class="gc">
+    <div class="hc ac jc reflow" id="content">
+        <div class="card">
+            <h1>{{ title }}</h1>
+            <form>
+                <div class="vc">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" placeholder="Your Paypal email" value="">
+                    <div class="hc ac jsb noeq">
+                        <label for="style">Style:</label>
+                        <select id="selector" name="style" value="Pick a style">
+                            <option value="Pick a style">Pick a style</option>
+                            {% for tier in prices %}
+                            <option value="{{tier.id}}">{{tier.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="hc ac jsb noeq">
+                        <label for="charCount" id="charText"> Characters:</label>
+                        <input type="number" name="charCount" id="charCount" value="1" min="1" max="10">
+                    </div>
+                    <label for="contentDescription">Description:</label>
+                    <textarea name="contentDescription" rows="7" placeholder="What do you want in the commission?"></textarea>
+                    <label for="bgComplexity">How complex is the background?</label>
+                    <div class="hc ac noeq">
+                        <input type="range" id="bgComplexity" name="bgComplexity" min="0" max="20" step="5" value="0">
+                        <label for="bgComplexity" id="complexityLevel"></label>
+                    </div>
+                    <div class="hc ac jc reflow" id="confirm">
+                        <p id="subtotal"></p>
+                        <button type="button" onclick="submitComm()">Submit!</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="imgSwap gc" id="example">
+        {% for tier in prices %}
+        <img src="/media/prices/{{tier.id}}.png" alt="{{tier.name}}" id="{{tier.id}}" loading="lazy">
+        {% endfor %}
+        </div>
+    </div>
+</section>
+
+<div class="imgSwap" id="backdrop">
+    {% for tier in prices %}
+    <img src="/media/prices/{{tier.id}}.png" id="{{tier.id}}" alt="{{tier.price}}" loading="lazy">
+    {% endfor %}
+</div>

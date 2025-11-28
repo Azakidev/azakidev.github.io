@@ -3,7 +3,7 @@
 # Set variables
 FULRES_DIR="fullres"
 THUMBS_DIR="thumbs"
-IMAGES_JSON="$(dirname "$0")/../../data/images.json"
+IMAGES_JSON="$(dirname "$0")/../../pages/_data/images.json"
 SIZE=800
 OUTFORMAT="png"
 

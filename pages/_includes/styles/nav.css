@@ -1,4 +1,4 @@
-@media only screen and (width < 500px) {
+@media only screen and (width < 680px) {
     :root {
         --nav-text-title: clamp(14px, 3vw, 1.5rem) !important;
         --nav-text-link: clamp(12px, 3vw, 1rem) !important;
@@ -6,6 +6,7 @@
     }
 
     nav {
+        border-radius: var(--margin) !important;
         margin: calc(var(--margin) / 1.5) calc(var(--margin) * 1.25);
         padding: .5rem 0;
         justify-content: center !important;
@@ -18,7 +19,7 @@
 
 }
 
-@media only screen and (width < 800px) and (width > 500px) {
+@media only screen and (width < 940px) and (width > 680px) {
     :root {
         --nav-text-title: clamp(14px, 3vw, 1.5rem) !important;
         --nav-text-link: clamp(12px, 3vw, 1rem) !important;
@@ -35,7 +36,7 @@
     }
 }
 
-@media only screen and (width < 1150px) and (width > 800px) {
+@media only screen and (width < 1150px) and (width > 940px) {
     nav {
         margin: calc(var(--margin) / 1.5) var(--margin);
 
