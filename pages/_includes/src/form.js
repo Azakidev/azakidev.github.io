@@ -1,13 +1,19 @@
+const form = document.getElementById("form")
+
 const backdrop = document.getElementById("backdrop")
 const example = document.getElementById("example")
 const defaultImg = document.getElementById("defaultImg")
 
-const selector = document.getElementById("selector")
-const charCount = document.getElementById("charCount")
-const charText = document.getElementById("charText")
-const bgComplexity = document.getElementById("bgComplexity")
-const complexityLevel = document.getElementById("complexityLevel")
+const contactSelector = document.getElementById("contactSelector")
+const contact = document.getElementById("contact")
 
+const selector = document.getElementById("selector")
+
+const charCount = document.getElementById("charCount")
+const bgComplexity = document.getElementById("bgComplexity")
+
+const charText = document.getElementById("charText")
+const complexityLevel = document.getElementById("complexityLevel")
 const subtotal = document.getElementById("subtotal")
 
 var basePrice
@@ -35,20 +41,6 @@ function swapStyle(style) {
     })
 }
 
-selector.addEventListener("change", () => {
-    swapStyle(selector.value)
-    updatePrice()
-})
-
-charCount.addEventListener("change", () => {
-    updatePrice()
-})
-
-bgComplexity.addEventListener("change", () => {
-    complexityLevel.innerText = "+" + bgComplexity.value + "%"
-    updatePrice()
-})
-
 function updatePrice() {
     var priceSubtotal
 
@@ -71,10 +63,74 @@ function updatePrice() {
     }
 }
 
-function submitComm() {
-    console.log("mmmph...")
+function handleContactChange() {
+    if (contactSelector.value != "") {
+        contact.classList.remove("hidden")
+        contact.required = true
+        contact.tabIndex = 0
+        if (contactSelector.value == "Other email") {
+            contact.type = "email"
+            contact.placeholder = "Your contact email"
+        } else {
+            contact.type = "text"
+            contact.placeholder = "Your " + contactSelector.value + " handle"
+        }
+    } else {
+        contact.classList.add("hidden")
+        contact.tabIndex = -1
+        contact.value = ""
+        contact.required = false
+    }
 }
+
+function handleSubmit(event) {
+    event.preventDefault();
+
+    const data = new FormData(event.target)
+
+    if (data.get("contactMethod") == "") {
+        data.set("contactMethod", "Email")
+        data.set("contact", "Same as Paypal email")
+    }
+
+    const contact = {
+        email: data.get("email"),
+        contact: {
+            method: data.get("contactMethod"),
+            handle: data.get("contact")
+        },
+        details: {
+            style: data.get("style"),
+            characters: data.get("charCount"),
+            description: data.get("contentDescription"),
+            background: data.get("bgComplexity")
+        }
+    }
+
+    console.log(contact)
+}
+
+form.addEventListener("submit", handleSubmit)
+
+selector.addEventListener("change", () => {
+    swapStyle(selector.value)
+    updatePrice()
+})
+
+contactSelector.addEventListener("change", () => {
+    handleContactChange()
+})
+
+charCount.addEventListener("change", () => {
+    updatePrice()
+})
+
+bgComplexity.addEventListener("change", () => {
+    complexityLevel.innerText = "+" + bgComplexity.value + "%"
+    updatePrice()
+})
 
 swapStyle(selector.value)
 updatePrice()
+handleContactChange()
 complexityLevel.innerText = "+" + bgComplexity.value + "%"

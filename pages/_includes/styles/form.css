@@ -42,6 +42,10 @@ section {
     width: 100vw;
 }
 
+h1 {
+    font-size: calc(var(--text-large) * 0.85);
+}
+
 #content {
     gap: calc(var(--margin) * 2);
 
@@ -145,8 +149,12 @@ form {
         font-size: calc(var(--text-small) * 0.8);
     }
 
+    & .vc {
+        gap: calc(var(--margin) / 4)
+    }
+
     & label {
-        min-width: 10ch;
+        min-width: 13ch;
         text-align: start;
     }
 
@@ -156,6 +164,14 @@ form {
 
     & .ac label {
         align-self: center;
+    }
+
+    & .ng {
+        gap: 0 !important;
+
+        &:not(:has(input.hidden)) {
+            gap: calc(var(--margin) / 4) !important
+        }
     }
 
     & input,
@@ -179,6 +195,17 @@ form {
         &:focus,
         &:focus-visible {
             border: 2px solid rgb(from var(--main-glow) r g b / 0.8) !important;
+        }
+    }
+
+    & input {
+        transition-property: border, height, padding, opacity, filter;
+        &.hidden {
+            height: 0;
+            padding: 0 !important;
+            border: none;
+            opacity: 0;
+            filter: blur(5px);
         }
     }
 

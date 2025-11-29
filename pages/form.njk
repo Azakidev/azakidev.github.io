@@ -13,14 +13,29 @@ isCommissions: false
     <div class="hc ac jc reflow" id="content">
         <div class="card">
             <h1>{{ title }}</h1>
-            <form>
+            <form id="form">
                 <div class="vc">
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" placeholder="Your Paypal email" value="">
+                    <div class="hc ac jsb noeq">
+                        <label for="email">Payment email:</label>
+                        <input type="email" name="email" placeholder="Your Paypal email" value="" required>
+                    </div>
+                    <div class="vc ng">
+                        <div class="hc ac jsb noeq">
+                            <label for="contactMethod">Contact method:</label>
+                            <select id="contactSelector" name="contactMethod" value="">
+                                <option value="">Same as payment email</option>
+                                <option value="Discord">Discord</option>
+                                <option value="Bluesky">Bluesky</option>
+                                <option value="Telegram">Telegram</option>
+                                <option value="Other email">Other email address</option>
+                            </select>
+                        </div>
+                        <input class="hidden" id="contact" type="text" name="contact" value="">
+                    </div>
                     <div class="hc ac jsb noeq">
                         <label for="style">Style:</label>
-                        <select id="selector" name="style" value="Pick a style">
-                            <option value="Pick a style">Pick a style</option>
+                        <select id="selector" name="style" value="" required>
+                            <option value="">Pick a style</option>
                             {% for tier in prices %}
                             <option value="{{tier.id}}">{{tier.name}}</option>
                             {% endfor %}
@@ -28,10 +43,10 @@ isCommissions: false
                     </div>
                     <div class="hc ac jsb noeq">
                         <label for="charCount" id="charText"> Characters:</label>
-                        <input type="number" name="charCount" id="charCount" value="1" min="1" max="10">
+                        <input type="number" name="charCount" id="charCount" value="1" min="1" max="10" required>
                     </div>
                     <label for="contentDescription">Description:</label>
-                    <textarea name="contentDescription" rows="7" placeholder="What do you want in the commission?"></textarea>
+                    <textarea name="contentDescription" rows="7" placeholder="What do you want in the commission?" required></textarea>
                     <label for="bgComplexity">How complex is the background?</label>
                     <div class="hc ac noeq">
                         <input type="range" id="bgComplexity" name="bgComplexity" min="0" max="20" step="5" value="0">
@@ -39,7 +54,7 @@ isCommissions: false
                     </div>
                     <div class="hc ac jc reflow" id="confirm">
                         <p id="subtotal"></p>
-                        <button type="button" onclick="submitComm()">Submit!</button>
+                        <button type="submit" value="Submit">Submit!</button>
                     </div>
                 </div>
             </form>
