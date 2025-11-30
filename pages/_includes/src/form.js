@@ -171,5 +171,6 @@ bgComplexity.addEventListener("change", () => {
 
 swapStyle(selector.value)
 updatePrice()
-handleContactChange()
 complexityLevel.innerText = "+" + bgComplexity.value + "%"
+contactSelector.value = ""
+handleContactChange()
