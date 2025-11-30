@@ -32,7 +32,9 @@
     }
 
     .card {
-        width: 80% !important;
+        width: auto !important;
+        max-width: calc(100% - var(--margin) * 1.5);
+        padding: calc(var(--margin) / 2);
     }
 }
 
@@ -143,8 +145,6 @@ h1 {
 }
 
 form {
-    width: 90%;
-
     & * {
         font-size: calc(var(--text-small) * 0.8);
     }
@@ -156,10 +156,6 @@ form {
     & label {
         min-width: 13ch;
         text-align: start;
-    }
-
-    .hc:not(.noeq) * {
-        width: 50%;
     }
 
     & .ac label {
