@@ -6,17 +6,14 @@ import { format } from "date-fns"
 export default async function(eleventyConfig) {
     // Folders
     eleventyConfig.setInputDirectory("./pages/");
-    eleventyConfig.setDataDirectory("../data/");
-    eleventyConfig.setLayoutsDirectory("../layouts/");
 
     // Resources
     eleventyConfig.addPassthroughCopy("./media/")
     eleventyConfig.addPassthroughCopy("./robots.txt")
-    eleventyConfig.addPassthroughCopy("./data/images.json")
+    eleventyConfig.addPassthroughCopy("./pages/_data/images.json")
 
     // Watch
-    eleventyConfig.addWatchTarget("./src/*")
-    eleventyConfig.addWatchTarget("./styles/*")
+    eleventyConfig.addWatchTarget("./_includes/**/*")
 
     // Plugins
     // eleventyConfig.addPlugin(IdAttributePlugin);

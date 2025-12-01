@@ -5,7 +5,7 @@ const swap = document.getElementById('swap');
 const outformat = "png";
 const base_url = "https://www.furaffinity.net/view/"
 
-var files = fetch('/data/images.json')
+var files = fetch('/_data/images.json')
     .then(response => response.json())
     .then(data => {
         data.files.sort(compareById).sort(compareByDate).reverse().forEach(file => {

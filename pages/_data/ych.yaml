@@ -9,7 +9,7 @@
   price: 10/30
 
 - id: mobile
-  name: \"Mobile\"
+  name: '"Mobile"'
   description: A very obese character as seen from a low angle, struggling to hold onto straps coming down from the ceiling, one of them slipped off their hand. Their legs are struggling to catch it again.
   price: 40
 

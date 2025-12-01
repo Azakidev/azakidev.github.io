@@ -3,6 +3,7 @@
         --text-large: 36px;
         --text-medium: 16px;
         --text-small: 18px;
+        --nav-safe: calc(var(--margin) * 5) !important;
     }
 }
 
@@ -11,6 +12,7 @@
         --text-large: 42px;
         --text-medium: 20px;
         --text-small: 18px;
+        --nav-safe: calc(var(--margin) * 5) !important;
     }
 }
 
@@ -32,6 +34,7 @@
     --nav-text-title: clamp(14px, 3vw, 2.25rem);
     --nav-text-link: clamp(12px, 3vw, 1.75rem);
     --nav-padding: 15px;
+    --nav-safe: calc(var(--margin) * 4);
 
     /*  Misc color  */
     --bg: #191919;

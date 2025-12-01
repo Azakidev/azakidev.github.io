@@ -1,0 +1,296 @@
+@media only screen and (width < 950px) {
+    body {
+        overflow-y: visible !important;
+    }
+
+    #backdrop::before {
+        backdrop-filter: none;
+    }
+
+    #content {
+        width: 100%;
+
+        gap: 0 !important;
+        padding-bottom: var(--margin);
+
+        & #example {
+            width: 80% !important;
+            height: 60vh;
+        }
+
+        & img {
+            width: 100% !important;
+        }
+    }
+
+    .imgSwap img {
+        translate: 0% 5% !important;
+
+        &.visible {
+            translate: 0 0 !important;
+        }
+    }
+
+    .card {
+        width: auto !important;
+        max-width: calc(100% - var(--margin) * 1.5);
+        padding: calc(var(--margin) / 2);
+    }
+}
+
+section {
+    padding-top: var(--nav-safe);
+    height: calc(100vh - var(--nav-safe));
+    width: 100vw;
+}
+
+h1 {
+    font-size: calc(var(--text-large) * 0.85);
+}
+
+#content {
+    gap: calc(var(--margin) * 2);
+
+    & #example {
+        width: calc(50vw - var(--margin) / 2);
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+.imgSwap {
+    &#backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        width: 100vw;
+        height: 100vh;
+
+        user-select: none;
+        -webkit-user-select: none;
+        pointer-events: none;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+
+            height: 100%;
+            width: 60vw;
+
+            backdrop-filter: blur(40px) saturate(1.5);
+            mask: linear-gradient(90deg, #000 70%, rgb(from black r g b / 0.8) 80%, #0000 100%);
+        }
+
+        & img {
+            filter: blur(15px);
+            translate: 5% 0% !important;
+            scale: 1.2 !important;
+
+            &.visible {
+                translate: 0 0 !important;
+                opacity: 0.4;
+            }
+        }
+    }
+
+    &#example {
+        & img {
+            position: relative !important;
+
+            height: min-content;
+            max-height: 80vh;
+
+            grid-area: 1 / 1 / 2 / 2;
+
+            filter: drop-shadow(0px 0px 5px rgb(from black r g b / 0.25));
+
+            &.visible {
+                translate: 0 0;
+                opacity: 1;
+                scale: 1;
+            }
+        }
+    }
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        opacity: 0;
+        translate: 15% 0%;
+        scale: 0.8;
+
+        transition-property: opacity, translate, scale;
+        transition-duration: 0.5s;
+    }
+}
+
+.card {
+    background-color: rgb(from var(--container-bg) r g b / 0.4);
+    border: none;
+    border-top: 1px solid rgb(from white r g b / 0.4);
+    border-bottom: 2px solid rgb(from white r g b / 0.2);
+}
+
+form {
+    & * {
+        font-size: calc(var(--text-small) * 0.8);
+    }
+
+    & .vc {
+        gap: calc(var(--margin) / 4)
+    }
+
+    & label {
+        min-width: 13ch;
+        text-align: start;
+    }
+
+    & .ac label {
+        align-self: center;
+    }
+
+    & .ng {
+        gap: 0 !important;
+
+        &:not(:has(input.hidden)) {
+            gap: calc(var(--margin) / 4) !important
+        }
+    }
+
+    & input,
+    select,
+    textarea {
+        flex-grow: 1;
+
+        border-radius: 14px;
+        padding: calc(var(--margin) / 4) !important;
+
+        background-color: rgb(from var(--container-bg) r g b / 0.3);
+        border: 2px solid rgb(from var(--button) r g b);
+
+        transition-duration: 0.2s;
+        transition-property: border;
+
+        &:active {
+            border: 2px solid rgb(from var(--main-glow) r g b);
+        }
+
+        &:focus,
+        &:focus-visible {
+            border: 2px solid rgb(from var(--main-glow) r g b / 0.8) !important;
+        }
+    }
+
+    & input {
+        transition-property: border, height, padding, opacity, filter;
+        &.hidden {
+            height: 0;
+            padding: 0 !important;
+            border: none;
+            opacity: 0;
+            filter: blur(5px);
+        }
+    }
+
+    & select {
+        &::picker-icon {
+            padding-right: var(--margin);
+        }
+
+        &:open::picker-icon {
+            rotate: 180deg;
+        }
+
+        & option {
+            background-color: var(--container-bg);
+            padding: calc(var(--margin) / 2);
+            transition: 0.4s;
+
+            &:hover {
+                background-color: var(--main-glow);
+            }
+
+            &:first-of-type {
+                border-radius: 14px 14px 0px 0px;
+            }
+
+            &:last-of-type {
+                border-radius: 0px 0px 14px 14px;
+            }
+        }
+
+        ::picker(select) {
+            border: none;
+            border-radius: 8px;
+        }
+    }
+
+    & textarea {
+        resize: none;
+    }
+
+    & button {
+        border-radius: var(--margin);
+        background-color: var(--main-accent);
+        border: none;
+
+        font-weight: 1000;
+
+        padding: calc(var(--margin) / 2) !important;
+
+        cursor: pointer;
+
+        transition-delay: 0.1s;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-out;
+
+        &:hover {
+            box-shadow: 0px 0px 8px var(--main-glow);
+        }
+
+        &:active {
+            padding: calc(var(--margin) / 3) !important;
+        }
+    }
+
+    & #bgComplexity {
+        flex-grow: 1;
+    }
+
+    & #complexityLevel {
+        min-width: auto !important;
+    }
+}
+
+#subtotal {
+    text-wrap-mode: nowrap;
+}
+
+#confirm {
+    width: 100%;
+}
+
+#css {
+    object-position: 10% 0;
+}
+
+#cs {
+    object-position: 25% 0;
+}
+
+#ss, #s {
+    object-position: 5% 0;
+}

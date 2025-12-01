@@ -24,42 +24,47 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@200..1000&display=swap"
         type="text/css">
+    <link rel="preconnect" href="https://kit.fontawesome.com">
     <script src="https://kit.fontawesome.com/00d9ff1293.js" crossorigin="anonymous"></script>
 
     {% set css %}
 
-    {% include "../styles/vars.css" %}
-    {% include "../styles/common.css" %}
+    {% include "./styles/vars.css" %}
+    {% include "./styles/common.css" %}
     
     {%- if hasBlob or hasDotGrid %}
-    {% include "../styles/effects.css" %}
+    {% include "./styles/effects.css" %}
     {%- endif %}
     
     {%- if isHero %}
-    {% include "../styles/hero.css" %}
+    {% include "./styles/hero.css" %}
     {%- endif %}
     
     {%- if is404 %}
-    {% include "../styles/404.css" %}
+    {% include "./styles/404.css" %}
     {%- endif %}
 
     {%- if isCommissions %}
-    {% include "../styles/commissions.css" %}
-    {% include "../styles/prices.css" %}
-    {% include "../styles/ych-labs.css" %}
+    {% include "./styles/commissions.css" %}
+    {% include "./styles/prices.css" %}
+    {% include "./styles/ych-labs.css" %}
     {%- endif %}
     
     {%- if isCharacters %}
-    {% include "../styles/accents.css" %}
-    {% include "../styles/characters.css" %}
+    {% include "./styles/accents.css" %}
+    {% include "./styles/characters.css" %}
     {%- endif %}
     
     {%- if isGallery %}
-    {% include "../styles/gallery.css" %}
+    {% include "./styles/gallery.css" %}
+    {%- endif %}
+
+    {%- if isForm %}
+    {% include "./styles/form.css" %}
     {%- endif %}
 
     {%- if not hideNav %}
-    {% include "../styles/nav.css" %}
+    {% include "./styles/nav.css" %}
     {%- endif %}
 
     {% endset %}
@@ -83,26 +88,30 @@
     {% set js %}
 
     {%- if hasBlob %}
-    {% include "../src/blob.js" %}
+    {% include "./src/blob.js" %}
     {%- endif %}
     
     {%- if isHero %}
-    {% include "../src/silly.js" %}
+    {% include "./src/silly.js" %}
     {%- endif %}
     
     {%- if isCommissions %}
-    {% include "../src/lazy.js" %}
-    {% include "../src/offers.js" %}
-    {% include "../src/scroll.js" %}
+    {% include "./src/lazy.js" %}
+    {% include "./src/offers.js" %}
+    {% include "./src/scroll.js" %}
     {%- endif %}
     
     {%- if isCharacters %}
-    {% include "../node_modules/jquery/dist/jquery.min.js" %}
-    {% include "../src/characters.js" %}
+    {% include "../../node_modules/jquery/dist/jquery.min.js" %}
+    {% include "./src/characters.js" %}
     {%- endif %}
 
     {%- if isGallery %}
-    {% include "../src/gallery.js" %}
+    {% include "./src/gallery.js" %}
+    {%- endif %}
+
+    {%- if isForm %}
+    {% include "./src/form.js" %}
     {%- endif %}
 
     {% endset %}

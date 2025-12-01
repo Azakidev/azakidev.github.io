@@ -52,7 +52,7 @@
     gap: var(--margin);
 
     padding: var(--margin);
-    padding-top: calc(var(--margin) * 4.5);
+    padding-top: var(--nav-safe);
     transition-duration: 200ms;
 
     &>div {

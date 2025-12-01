@@ -1,8 +1,12 @@
 ---
 layout: commissions.njk
+
 title: Commissions
 description: Pricing, terms of service, examples and other information regarding commissioning FatDawlf.
 thumbnail: prices
+
+isCommissions: true
+hasBlob: true
 ---
 
 <section id="tos">
